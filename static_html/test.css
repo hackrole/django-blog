@@ -1,0 +1,17 @@
+header,aside,section,article,footer{
+	display:block;
+}
+header{
+	max-width:1020px;
+	height:120px;
+	margin:0px auto;
+	background-color:#00f0e0;
+}
+#header_content{
+	margin-left:10px;
+	margin-top:20px;
+	float:left;
+	color:#808080;
+	font-size:16px;
+}
+
