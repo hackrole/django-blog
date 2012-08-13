@@ -15,3 +15,5 @@ def add_blog(request):
         return render_to_response('time.html',{'time':now})
     return render_to_response('form.html')
 
+def login(request):
+
