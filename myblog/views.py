@@ -31,5 +31,8 @@ def logon(request):
             return HttpResponseRedirect("/login/")
     return render_to_response('error.html')
 
+def (request):
+
+	return render_to_response('',{})
 
 # vim:st=4:sts=4:sw=4:et
