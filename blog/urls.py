@@ -16,4 +16,6 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^time', 'myblog.views.current_datetime'),
     url(r'^form', 'myblog.views.form'),
+    url(r'^login/', 'myblog.views.login'),
+    url(r'^logon/', 'myblog.views.logon'),
 )
