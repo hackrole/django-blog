@@ -18,4 +18,5 @@ urlpatterns = patterns('',
     url(r'^form', 'myblog.views.form'),
     url(r'^login/', 'myblog.views.login'),
     url(r'^logon/', 'myblog.views.logon'),
+    url(r'latest/$','book.views.latest_book'),
 )
