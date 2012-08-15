@@ -19,4 +19,5 @@ urlpatterns = patterns('',
     url(r'^login/', 'myblog.views.login'),
     url(r'^logon/', 'myblog.views.logon'),
     url(r'latest/$','book.views.latest_book'),
+    url(r'current/$','book.views.current_datetime'),
 )
