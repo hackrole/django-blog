@@ -1,0 +1,49 @@
+
+makefile,64
+dir=/var/www/blogdir1,0
+sed_dir=\/var\/www\/blogsed_dir2,18
+
+manage.py,135
+import osos2,22
+import syssys3,32
+    from django.core.management import execute_from_command_lineexecute_from_command_line8,141
+
+blog/urls.py,234
+from django.conf.urls import patterns, include, urlpatterns1,0
+from django.conf.urls import patterns, include, urlinclude1,0
+from django.conf.urls import patterns, include, urlurl1,0
+urlpatterns = patterns('',urlpatterns7,164
+
+blog/wsgi.py,154
+import osos16,658
+from django.core.wsgi import get_wsgi_applicationget_wsgi_application23,909
+application = get_wsgi_application()application24,959
+
+blog/settings.py,1034
+DEBUG = TrueDEBUG3,37
+TEMPLATE_DEBUG = DEBUGTEMPLATE_DEBUG4,50
+ADMINS = (ADMINS6,74
+MANAGERS = ADMINSMANAGERS10,135
+DATABASES = {DATABASES12,154
+TIME_ZONE = 'America/Chicago'TIME_ZONE30,1108
+LANGUAGE_CODE = 'en-us'LANGUAGE_CODE34,1268
+SITE_ID = 1SITE_ID36,1293
+USE_I18N = TrueUSE_I18N40,1426
+USE_L10N = TrueUSE_L10N44,1558
+USE_TZ = TrueUSE_TZ47,1649
+MEDIA_ROOT = ''MEDIA_ROOT51,1795
+MEDIA_URL = ''MEDIA_URL56,1978
+STATIC_ROOT = ''STATIC_ROOT62,2250
+STATIC_URL = '/static/'STATIC_URL66,2346
+STATICFILES_DIRS = (STATICFILES_DIRS69,2410
+STATICFILES_FINDERS = (STATICFILES_FINDERS77,2707
+SECRET_KEY = 'ps*7&amp;va^vku0diya!5)^*r1)nd$ynul1s@f4w52%cg*01prv-k'SECRET_KEY84,2973
+TEMPLATE_LOADERS = (TEMPLATE_LOADERS87,3120
+MIDDLEWARE_CLASSES = (MIDDLEWARE_CLASSES93,3292
+ROOT_URLCONF = 'blog.urls'ROOT_URLCONF103,3729
+WSGI_APPLICATION = 'blog.wsgi.application'WSGI_APPLICATION106,3830
+TEMPLATE_DIRS = (TEMPLATE_DIRS108,3874
+INSTALLED_APPS = (INSTALLED_APPS114,4097
+LOGGING = {LOGGING132,4783
+
+blog/__init__.py,0
