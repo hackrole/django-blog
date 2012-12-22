@@ -16,6 +16,6 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 )
 
-# urlpatterns += patterns('webblog',
-#                         url(r'^/$', 'views.index'),
-# )
+urlpatterns += patterns('webblog',
+                        url(r'^/$', 'views.index'),
+)
