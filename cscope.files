@@ -1,0 +1,5 @@
+./manage.py
+./blog/urls.py
+./blog/wsgi.py
+./blog/settings.py
+./blog/__init__.py

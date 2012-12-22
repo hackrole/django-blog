@@ -1,0 +1,1303 @@
+cscope 15 /var/www/blog -q 0000000249 0000006035
+	@blog/__init__.py
+
+	@blog/settings.py
+
+1 #DjªgØ
+£‰šgs
+ 
+blog
+ 
+´ojeù
+.
+
+3 
+	gDEBUG
+ = 
+True
+
+
+4 
+TEMPLATE_DEBUG
+ = 
+DEBUG
+
+
+6 
+ADMINS
+ = (
+
+10 
+	gMANAGERS
+ = 
+ADMINS
+
+
+12 
+DATABASES
+ = {
+
+14 'ENGINE': 'djªgo.db.back’ds.', #Add 'po¡g»sql_psycİg2', 'mysql', 'sql™e3' 
+Ü
+ 'oracle'.
+
+15 'NAME': '', #O¸
+·th
+ 
+to
+ 
+d©aba£
+ 
+fe
+ 
+usšg
+ 
+sql™e3
+.
+
+16 'USER': '', #NÙ 
+u£d
+ 
+w™h
+ 
+sql™e3
+.
+
+17 'PASSWORD': '', #NÙ 
+u£d
+ 
+w™h
+ 
+sql™e3
+.
+
+18 'HOST': '', #S‘ 
+to
+ 
+em±y
+ 
+¡ršg
+ 
+loÿlho¡
+. 
+NÙ
+ 
+u£d
+ 
+w™h
+ 
+sql™e3
+.
+
+19 'PORT': '', #S‘ 
+to
+ 
+em±y
+ 
+¡ršg
+ . 
+NÙ
+ 
+u£d
+ 
+w™h
+ 
+sql™e3
+.
+
+23 #LoÿÈ
+time
+ 
+zÚe
+ 
+this
+ 
+š¡®ÏtiÚ
+. 
+Choiûs
+ 
+ÿn
+ 
+be
+ 
+found
+ 
+h”e
+:
+
+25 #®though 
+nÙ
+ 
+®l
+ 
+choiûs
+ 
+may
+ 
+be
+ 
+avaabË
+ 
+Ú
+‡Î 
+İ”©šg
+ 
+sy¡ems
+.
+
+26 #OÀ
+Unix
+ 
+sy¡ems
+, 
+a
+ 
+v®ue
+ 
+of
+ 
+NÚe
+ 
+wl
+ 
+ÿu£
+ 
+Djªgo
+ 
+to
+ 
+u£
+ 
+the
+ 
+§me
+
+
+27 #timezÚ
+as
+ 
+the
+ 
+İ”©šg
+ 
+sy¡em
+.
+
+28 #Ià
+ruÂšg
+ 
+š
+ 
+a
+ 
+Wšdows
+ 
+’vœÚm’t
+ 
+this
+ 
+mu¡
+ 
+be
+ 
+£t
+ 
+to
+ 
+the
+ 
+§me
+ 
+as
+ 
+your
+
+
+29 #sy¡em 
+time
+ 
+zÚe
+.
+
+30 
+	gTIME_ZONE
+ = 'America/Chicago'
+
+32 #Lªguag
+code
+ 
+this
+ 
+š¡®ÏtiÚ
+. 
+AÎ
+ 
+choiûs
+ 
+ÿn
+ 
+be
+ 
+found
+ 
+h”e
+:
+
+34 
+LANGUAGE_CODE
+ = 'en-us'
+
+36 
+SITE_ID
+ = 1
+
+38 #Ià
+you
+ 
+£t
+ 
+this
+ 
+to
+ 
+F®£
+, 
+Djªgo
+ 
+wl
+ 
+make
+ 
+some
+ 
+İtimiz©iÚs
+ 
+so
+ 
+as
+ 
+nÙ
+
+
+39 #tØ
+lßd
+ 
+the
+ 
+š‹º©iÚ®iz©iÚ
+ 
+machš”y
+.
+
+40 
+	gUSE_I18N
+ = 
+True
+
+
+42 #Ià
+you
+ 
+£t
+ 
+this
+ 
+to
+ 
+F®£
+, 
+Djªgo
+ 
+wl
+ 
+nÙ
+ 
+fÜm©
+ 
+d©es
+, 
+numb”s
+ 
+ªd
+
+
+43 #ÿËnd¬ 
+accÜdšg
+ 
+to
+ 
+the
+ 
+cu¼’t
+ 
+loÿË
+.
+
+44 
+	gUSE_L10N
+ = 
+True
+
+
+46 #Ià
+you
+ 
+£t
+ 
+this
+ 
+to
+ 
+F®£
+, 
+Djªgo
+ 
+wl
+ 
+nÙ
+ 
+u£
+ 
+timezÚe
+-
+aw¬e
+ 
+d©‘imes
+.
+
+47 
+	gUSE_TZ
+ = 
+True
+
+
+49 #AbsŞu‹ 
+fesy¡em
+ 
+·th
+ 
+to
+ 
+the
+ 
+dœeùÜy
+ 
+th©
+ 
+wl
+ 
+hŞd
+ 
+u£r
+-
+u¶ßded
+ 
+fes
+.
+
+51 
+MEDIA_ROOT
+ = ''
+
+53 #URL 
+th©
+ 
+hªdËs
+ 
+the
+ 
+medŸ
+ 
+£rved
+ 
+äom
+ 
+MEDIA_ROOT
+. 
+Make
+ 
+su»
+ 
+to
+ 
+u£
+ 
+a
+
+
+54 #Œašg 
+¦ash
+.
+
+56 
+	gMEDIA_URL
+ = ''
+
+58 #AbsŞu‹ 
+·th
+ 
+to
+ 
+the
+ 
+dœeùÜy
+ 
+fes
+ 
+should
+ 
+be
+ 
+cŞËùed
+o.
+
+60 #š 
+­ps
+' "static/" subdirectories‡nd in STATICFILES_DIRS.
+
+62 
+STATIC_ROOT
+ = ''
+
+64 #URL 
+´efix
+ 
+fes
+.
+
+66 
+STATIC_URL
+ = '/static/'
+
+68 #Add™iÚ® 
+loÿtiÚs
+ 
+of
+ 
+fes
+
+
+69 
+STATICFILES_DIRS
+ = (
+
+70 #Puˆ
+¡ršgs
+ 
+h”e
+, 
+like
+ "/home/html/¡©ic" 
+Ü
+ "C:/www/django/static".
+
+71 #Alway 
+u£
+ 
+fÜw¬d
+ 
+¦ashes
+, 
+ev’
+ 
+Ú
+ 
+Wšdows
+.
+
+75 #Li¡ 
+of
+ 
+fšd”
+ 
+şas£s
+ 
+th©
+ 
+know
+ 
+how
+ 
+to
+ 
+fšd
+ 
+fes
+ 
+š
+
+
+76 #v¬iou 
+loÿtiÚs
+.
+
+77 
+	gSTATICFILES_FINDERS
+ = (
+
+80 #'
+djªgo
+.
+cÚŒib
+.
+¡©icfes
+.
+fšd”s
+.
+DeçuÉStÜageFšd”
+',
+
+83 #Mak
+this
+ 
+unique
+, 
+ªd
+ 
+dÚ
+'t share it with‡nybody.
+
+84 
+	gSECRET_KEY
+ = 'ps*7&amp;va^vku0diya!5)^*r1)nd$ynul1s@f4w52%cg*01prv-k'
+
+86 #Li¡ 
+of
+ 
+ÿÎabËs
+ 
+th©
+ 
+know
+ 
+how
+ 
+to
+ 
+impÜt
+ 
+‹m¶©es
+ 
+äom
+ 
+v¬ious
+ 
+sourûs
+.
+
+87 
+TEMPLATE_LOADERS
+ = (
+
+90 #'
+djªgo
+.
+‹m¶©e
+.
+lßd”s
+.
+eggs
+.
+Lßd”
+',
+
+93 
+	gMIDDLEWARE_CLASSES
+ = (
+
+99 #Uncomm’ˆ
+the
+ 
+Ãxt
+ 
+lše
+ 
+sim¶e
+ 
+şickjackšg
+ 
+´ÙeùiÚ
+:
+
+100 #'
+djªgo
+.
+middËw¬e
+.
+şickjackšg
+.
+XF¿meO±iÚsMiddËw¬e
+',
+
+103 
+	gROOT_URLCONF
+ = 'blog.urls'
+
+105 #PythÚ 
+dÙ‹d
+ 
+·th
+ 
+to
+ 
+the
+ 
+WSGI
+ 
+­¶iÿtiÚ
+ 
+u£d
+ 
+by
+ 
+Djªgo
+'s„unserver.
+
+106 
+WSGI_APPLICATION
+ = 'blog.wsgi.application'
+
+108 
+TEMPLATE_DIRS
+ = (
+
+109 #Puˆ
+¡ršgs
+ 
+h”e
+, 
+like
+ "/home/html/djªgo_‹m¶©es" 
+Ü
+ "C:/www/django/templates".
+
+110 #Alway 
+u£
+ 
+fÜw¬d
+ 
+¦ashes
+, 
+ev’
+ 
+Ú
+ 
+Wšdows
+.
+
+114 
+	gINSTALLED_APPS
+ = (
+
+121 #Uncomm’ˆ
+the
+ 
+Ãxt
+ 
+lše
+ 
+to
+ 
+’abË
+h
+admš
+:
+
+122 #'
+djªgo
+.
+cÚŒib
+.
+admš
+',
+
+123 #Uncomm’ˆ
+the
+ 
+Ãxt
+ 
+lše
+ 
+to
+ 
+’abË
+ 
+admš
+ 
+docum’tiÚ
+:
+
+124 #'
+djªgo
+.
+cÚŒib
+.
+admšdocs
+',
+
+127 #A 
+§m¶e
+ 
+loggšg
+ 
+cÚfigu¿tiÚ
+. 
+The
+ 
+Úly
+ 
+ngibË
+†ogging
+
+128 #³rfÜmed 
+by
+ 
+this
+ 
+cÚfigu¿tiÚ
+ 
+is
+ 
+to
+ 
+£nd
+ 
+ª
+ 
+ema
+o
+
+129 #th
+s™e
+ 
+admšs
+ 
+Ú
+ 
+ev”y
+ 
+HTTP
+ 500 
+”rÜ
+ 
+wh’
+ 
+DEBUG
+=
+F®£
+.
+
+130 #S“ 
+h‰p
+:
+
+131 #mÜ
+d‘as
+ 
+Ú
+ 
+how
+ 
+to
+ 
+cu¡omize
+ 
+your
+ 
+loggšg
+ 
+cÚfigu¿tiÚ
+.
+
+132 
+	gLOGGING
+ = {
+
+134 'di§bË_exi¡šg_logg”s': 
+F®£
+,
+
+151 '´İag©e': 
+True
+,
+
+	@blog/urls.py
+
+1 
+äom
+ 
+	gdjªgo
+.
+	gcÚf
+.
+u¾s
+ 
+impÜt
+ 
+	g·‰”ns
+, 
+	gšşude
+, 
+	gu¾
+
+
+3 #Uncomm’ˆ
+the
+ 
+Ãxt
+ 
+two
+ 
+lšes
+ 
+to
+ 
+’abË
+h
+admš
+:
+
+4 #äom 
+djªgo
+.
+cÚŒib
+ 
+impÜt
+ 
+admš
+
+
+5 #admš.
+autodiscov”
+()
+
+7 
+	gu¾·‰”ns
+ = 
+·‰”ns
+('',
+
+9 #u¾(
+r
+'^$', 'blog.v›ws.home', 
+Çme
+='home'),
+
+10 #u¾(
+r
+'^blog/', 
+šşude
+('blog.foo.urls')),
+
+12 #Uncomm’ˆ
+the
+ 
+admš
+/
+doc
+ 
+lše
+ 
+b–ow
+ 
+to
+ 
+’abË
+‡dmš 
+docum’tiÚ
+:
+
+13 #u¾(
+r
+'^admš/doc/', 
+šşude
+('django.contrib.admindocs.urls')),
+
+15 #Uncomm’ˆ
+the
+ 
+Ãxt
+ 
+lše
+ 
+to
+ 
+’abË
+h
+admš
+:
+
+16 #u¾(
+r
+'^admš/', 
+šşude
+(
+admš
+.
+s™e
+.
+u¾s
+)),
+
+	@blog/wsgi.py
+
+2 
+WSGI
+ 
+cÚfig
+ 
+blog
+ 
+	g´ojeù
+.
+
+4 
+This
+ 
+moduË
+ 
+cÚšs
+ 
+the
+ 
+WSGI
+ 
+­¶iÿtiÚ
+ 
+u£d
+ 
+by
+ 
+	gDjªgo
+'s development server
+
+5 
+ªd
+ 
+ªy
+ 
+´oduùiÚ
+ 
+WSGI
+ 
+	gd•loym’ts
+. 
+It
+ 
+should
+ 
+expo£
+ 
+a
+ 
+	gmoduË
+-
+Ëv–
+ 
+v¬ŸbË
+
+
+6 
+	gÇmed
+ ``
+	g­¶iÿtiÚ
+``. 
+	gDjªgo
+'s ``runserver``‡nd ``runfcgi`` commands discover
+
+7 
+this
+ 
+­¶iÿtiÚ
+ 
+vŸ
+ 
+	gthe
+ ``
+	gWSGI_APPLICATION
+`` 
+	g£‰šg
+.
+
+9 
+Usu®ly
+ 
+you
+ 
+wl
+ 
+have
+ 
+the
+ 
+¡ªd¬d
+ 
+Djªgo
+ 
+WSGI
+ 
+­¶iÿtiÚ
+ 
+	gh”e
+, 
+but
+ 
+™
+ 
+®so
+
+
+10 
+might
+ 
+make
+ 
+£n£
+ 
+to
+ 
+»¶aû
+ 
+the
+ 
+whŞe
+ 
+Djªgo
+ 
+WSGI
+ 
+­¶iÿtiÚ
+ 
+w™h
+ 
+a
+ 
+cu¡om
+ 
+Úe
+
+
+11 
+th©
+ 
+Ï‹r
+ 
+d–eg©es
+ 
+to
+ 
+the
+ 
+Djªgo
+ 
+	gÚe
+. 
+FÜ
+ 
+	gexam¶e
+, 
+you
+ 
+could
+ 
+šŒoduû
+ 
+WSGI
+
+
+12 
+middËw¬e
+ 
+	gh”e
+, 
+Ü
+ 
+combše
+ 
+a
+ 
+Djªgo
+ 
+­¶iÿtiÚ
+ 
+w™h
+ 
+ª
+‡µliÿtiÚ 
+of
+ 
+ªÙh”
+
+
+13 
+	gäamewÜk
+.
+
+16 
+impÜt
+ 
+os
+
+
+18 
+	gos
+.
+	g’vœÚ
+.
+£tdeçuÉ
+("DJANGO_SETTINGS_MODULE", "blog.settings")
+
+20 #Thi 
+­¶iÿtiÚ
+ 
+objeù
+ 
+is
+ 
+u£d
+ 
+by
+ 
+ªy
+ 
+WSGI
+ 
+£rv”
+ 
+cÚfigu»d
+ 
+to
+ 
+u£
+ 
+this
+
+
+21 #fe. 
+This
+ 
+šşudes
+ 
+Djªgo
+'s development server, ifhe WSGI_APPLICATION
+
+22 #£‰šg 
+pošts
+ 
+h”e
+.
+
+23 
+äom
+ 
+	gdjªgo
+.
+	gcÜe
+.
+wsgi
+ 
+impÜt
+ 
+g‘_wsgi_­¶iÿtiÚ
+
+
+24 
+	g­¶iÿtiÚ
+ = 
+	$g‘_wsgi_­¶iÿtiÚ
+()
+
+26 #Aµly 
+WSGI
+ 
+middËw¬e
+ 
+h”e
+.
+
+27 #äom 
+h–lowÜld
+.
+wsgi
+ 
+impÜt
+ 
+H–loWÜldAµliÿtiÚ
+
+
+28 #­¶iÿtiÚ = 
+	`H–loWÜldAµliÿtiÚ
+(
+­¶iÿtiÚ
+)
+
+	@manage.py
+
+1 #!/
+u¤
+/
+bš
+/
+’v
+ 
+pythÚ
+
+
+2 
+impÜt
+ 
+os
+
+
+3 
+impÜt
+ 
+sys
+
+
+5 
+	g__Çme__
+ == "__main__":
+
+6 
+os
+.
+’vœÚ
+.
+£tdeçuÉ
+("DJANGO_SETTINGS_MODULE", "blog.settings")
+
+8 
+äom
+ 
+	gdjªgo
+.
+	gcÜe
+.
+mªagem’t
+ 
+impÜt
+ 
+execu‹_äom_commªd_lše
+
+
+10 
+execu‹_äom_commªd_lše
+(
+sys
+.
+¬gv
+)
+
+	@
+1
+.
+1
+/usr/include
+5
+70
+blog/__init__.py
+blog/settings.py
+blog/urls.py
+blog/wsgi.py
+manage.py

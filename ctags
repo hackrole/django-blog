@@ -1,0 +1,43 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ADMINS	/var/www/blog/blog/settings.py	/^ADMINS = ($/;"	v
+DATABASES	/var/www/blog/blog/settings.py	/^DATABASES = {$/;"	v
+DEBUG	/var/www/blog/blog/settings.py	/^DEBUG = True$/;"	v
+INSTALLED_APPS	/var/www/blog/blog/settings.py	/^INSTALLED_APPS = ($/;"	v
+LANGUAGE_CODE	/var/www/blog/blog/settings.py	/^LANGUAGE_CODE = 'en-us'$/;"	v
+LOGGING	/var/www/blog/blog/settings.py	/^LOGGING = {$/;"	v
+MANAGERS	/var/www/blog/blog/settings.py	/^MANAGERS = ADMINS$/;"	v
+MEDIA_ROOT	/var/www/blog/blog/settings.py	/^MEDIA_ROOT = ''$/;"	v
+MEDIA_URL	/var/www/blog/blog/settings.py	/^MEDIA_URL = ''$/;"	v
+MIDDLEWARE_CLASSES	/var/www/blog/blog/settings.py	/^MIDDLEWARE_CLASSES = ($/;"	v
+ROOT_URLCONF	/var/www/blog/blog/settings.py	/^ROOT_URLCONF = 'blog.urls'$/;"	v
+SECRET_KEY	/var/www/blog/blog/settings.py	/^SECRET_KEY = 'ps*7&amp;va^vku0diya!5)^*r1)nd$ynul1s@f4w52%cg*01prv-k'$/;"	v
+SITE_ID	/var/www/blog/blog/settings.py	/^SITE_ID = 1$/;"	v
+STATICFILES_DIRS	/var/www/blog/blog/settings.py	/^STATICFILES_DIRS = ($/;"	v
+STATICFILES_FINDERS	/var/www/blog/blog/settings.py	/^STATICFILES_FINDERS = ($/;"	v
+STATIC_ROOT	/var/www/blog/blog/settings.py	/^STATIC_ROOT = ''$/;"	v
+STATIC_URL	/var/www/blog/blog/settings.py	/^STATIC_URL = '\/static\/'$/;"	v
+TEMPLATE_DEBUG	/var/www/blog/blog/settings.py	/^TEMPLATE_DEBUG = DEBUG$/;"	v
+TEMPLATE_DIRS	/var/www/blog/blog/settings.py	/^TEMPLATE_DIRS = ($/;"	v
+TEMPLATE_LOADERS	/var/www/blog/blog/settings.py	/^TEMPLATE_LOADERS = ($/;"	v
+TIME_ZONE	/var/www/blog/blog/settings.py	/^TIME_ZONE = 'America\/Chicago'$/;"	v
+USE_I18N	/var/www/blog/blog/settings.py	/^USE_I18N = True$/;"	v
+USE_L10N	/var/www/blog/blog/settings.py	/^USE_L10N = True$/;"	v
+USE_TZ	/var/www/blog/blog/settings.py	/^USE_TZ = True$/;"	v
+WSGI_APPLICATION	/var/www/blog/blog/settings.py	/^WSGI_APPLICATION = 'blog.wsgi.application'$/;"	v
+application	/var/www/blog/blog/wsgi.py	/^application = get_wsgi_application()$/;"	v
+dir	/var/www/blog/makefile	/^dir=\/var\/www\/blog$/;"	m
+execute_from_command_line	/var/www/blog/manage.py	/^    from django.core.management import execute_from_command_line$/;"	i
+get_wsgi_application	/var/www/blog/blog/wsgi.py	/^from django.core.wsgi import get_wsgi_application$/;"	i
+include	/var/www/blog/blog/urls.py	/^from django.conf.urls import patterns, include, url$/;"	i
+os	/var/www/blog/blog/wsgi.py	/^import os$/;"	i
+os	/var/www/blog/manage.py	/^import os$/;"	i
+patterns	/var/www/blog/blog/urls.py	/^from django.conf.urls import patterns, include, url$/;"	i
+sed_dir	/var/www/blog/makefile	/^sed_dir=\\\/var\\\/www\\\/blog$/;"	m
+sys	/var/www/blog/manage.py	/^import sys$/;"	i
+url	/var/www/blog/blog/urls.py	/^from django.conf.urls import patterns, include, url$/;"	i
+urlpatterns	/var/www/blog/blog/urls.py	/^urlpatterns = patterns('',$/;"	v
