@@ -67,6 +67,4 @@ class Comment(models.Model):
     def __unicode__(self):
         return 'the %s has say: %s' % (author_name, content[:10]+'..')
 
-
-
     
