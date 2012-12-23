@@ -17,5 +17,5 @@ urlpatterns = patterns('',
 )
 
 urlpatterns += patterns('webblog',
-                        url(r'^/$', 'views.index'),
+                        url(r'^blog/$', 'views.index'),
 )

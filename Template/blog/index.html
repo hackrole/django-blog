@@ -1,0 +1,15 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+<div>
+  <p>个人blog首页</p>
+  <p>暂时没想好页面要做什么</p>
+  <div id="category">
+      <ul>
+        {% for c in cate %}
+          <li>{{ c }}</li>
+        {% endfor %}
+      </ul>
+  </div>
+</div>
+{% endblock %}
