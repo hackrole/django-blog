@@ -1,5 +1,6 @@
+{% comment %}
 {% extends "blog/base.html" %}
-
+{% endcomment %}
 {% block content %}
 <div>
   <p>个人blog首页</p>
@@ -8,6 +9,18 @@
       <ul>
         {% for c in cate %}
           <li>{{ c }}</li>
+        {% endfor %}
+      </ul>
+      <ul>
+        {% for t in tag %}
+        <li> {{ t }}</li>
+         <ul>
+             <li>{{ t.tag_id }}</li>        
+             <li><a href="{% url webblog.views.list t.tag_id 0 %}">{{ t.tag_name }}</a></li>
+             <li>{{ t.desc }}</li>
+             <li>{{ t.create_time }}</li>
+             <li>{{ t.tag_rate }}</li>
+         </ul>
         {% endfor %}
       </ul>
   </div>

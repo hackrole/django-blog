@@ -15,7 +15,7 @@ this is my first djagno project. It is a blog system.
 1) 数据库参数配置
 2) template_dir
 3) installed_app
-高级配置:
+TODO 高级配置:
 1) logging配置
 2) cache配置
 3) 其他配置
@@ -28,7 +28,7 @@ this is my first djagno project. It is a blog system.
 3) Tag
 4) Category
 5) 联系集Blog_Tag
-*** TODO admin管理功能
+*** DONE admin管理功能
 基于django admin的后台功能还是不错的。不过发现model在定义上的一些问题。
 需要做修改。另一个问题，发现先创建model init很有必要。这样在后续处理中
 就可以方便的调用clearsql 等命令，而不用担心要重建数据。
@@ -41,3 +41,11 @@ this is my first djagno project. It is a blog system.
 
 *** TODO 前台功能，views与模板
 *** TODO 附加选项
+** 项目总结
+项目进度基本可以认为失败,失败原因和后续补进如下:
+1) model层并不难理解，基本的field和meta配置需要时查文档即可。难点在于
+   都整体不够熟悉，会导致考虑欠缺和设计不完善。例外外键是难点，
+2) 虽然基本建模不难，但是熟练model的API还是有难度的。
+3) Admin层研究不够，做的太粗糙。
+4) urlconf配置要强化下，包括模板标签等。
+5) django项目现在调试会比较困难，因为输出变量等都未知

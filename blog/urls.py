@@ -18,4 +18,6 @@ urlpatterns = patterns('',
 
 urlpatterns += patterns('webblog',
                         url(r'^blog/$', 'views.index'),
+                        url(r'^blog/list/(\d+)/(\d+)$', 'views.list'),
+                        url(r'^blog/detail/(?P<id>\d+)$', 'views.detail'),
 )
