@@ -24,5 +24,5 @@ def list(request, bid, btype):
 def detail(request, id):
     blog = Blog.objects.get(blog_id=id)
     print blog
-    for i blog.
+    # for i blog.
     return render_to_response('blog/detail.html', {'blog':blog,})
