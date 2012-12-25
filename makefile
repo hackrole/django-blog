@@ -1,19 +1,19 @@
 dir=/var/www/blog
 
-all: ctags  etags filenametags cscope
+all: ctagsfile  etags filenametags cscope
 	echo "succus"
 
-ctags:
+ctagsfile:
 	ctags -R -o ctags ${dir}
 
-etags:
+etagsfile:
 	ctags -e -o etags -R ${dir}
 
 cscope:
 	find ${dir} -type f -regex '.*\.\(py\|js\)' > cscope.files
 	cscope -bq
 
-filenametags:
+filenametagsnew:
 	echo -e "!_TAG_FILE_SORTED\t2\t2/2=foldcase/" > filenametags
 	find ${dir} -not -regex '.*\.\(png\|gif\|jpg\)' -type f -printf "%f\t%p\t0\n" | sort -f >> filenametags
 
