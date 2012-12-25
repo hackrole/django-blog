@@ -66,6 +66,6 @@ class Comment(models.Model):
     blog_id = models.ForeignKey(Blog, blank=True, null=True)
     
     def __unicode__(self):
-        return 'the %s has say: %s' % (author_name, content[:10]+'..')
+        return 'the %s has say: %s' % (self.author_name, self.content[:10]+'..')
 
     
