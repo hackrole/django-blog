@@ -1,7 +1,7 @@
-cscope 15 /var/www/blog -q 0000000249 0000006035
-	@blog/__init__.py
+cscope 15 /var/www/blog -q 0000000382 0000012656
+	@/var/www/blog/blog/__init__.py
 
-	@blog/settings.py
+	@/var/www/blog/blog/settings.py
 
 1 #DjªgØ
 £‰šgs
@@ -37,11 +37,11 @@ ADMINS
 DATABASES
  = {
 
-14 'ENGINE': 'djªgo.db.back’ds.', #Add 'po¡g»sql_psycİg2', 'mysql', 'sql™e3' 
+14 'ENGINE': 'djªgo.db.back’ds.sql™e3', #Add 'po¡g»sql_psycİg2', 'mysql', 'sql™e3' 
 Ü
  'oracle'.
 
-15 'NAME': '', #O¸
+15 'NAME': '/v¬/www/blog/sql/maš.db', #O¸
 ·th
  
 to
@@ -661,7 +661,7 @@ WSGI_APPLICATION
 TEMPLATE_DIRS
  = (
 
-109 #Puˆ
+110 #Puˆ
 ¡ršgs
  
 h”e
@@ -671,7 +671,7 @@ like
 Ü
  "C:/www/django/templates".
 
-110 #Alway 
+111 #Alway 
 u£
  
 fÜw¬d
@@ -685,11 +685,11 @@ ev’
 Wšdows
 .
 
-114 
+115 
 	gINSTALLED_APPS
  = (
 
-121 #Uncomm’ˆ
+122 #Uncomm’ˆ
 the
  
 Ãxt
@@ -703,15 +703,9 @@ to
 admš
 :
 
-122 #'
-djªgo
-.
-cÚŒib
-.
-admš
-',
-
-123 #Uncomm’ˆ
+124 ## 
+Uncomm’t
+ 
 the
  
 Ãxt
@@ -727,15 +721,7 @@ admš
 docum’tiÚ
 :
 
-124 #'
-djªgo
-.
-cÚŒib
-.
-admšdocs
-',
-
-127 #A 
+129 #A 
 §m¶e
  
 loggšg
@@ -749,7 +735,7 @@ The
 ngibË
 †ogging
 
-128 #³rfÜmed 
+130 #³rfÜmed 
 by
  
 this
@@ -767,7 +753,7 @@ to
 ema
 o
 
-129 #th
+131 #th
 s™e
  
 admšs
@@ -787,11 +773,11 @@ DEBUG
 F®£
 .
 
-130 #S“ 
+132 #S“ 
 h‰p
 :
 
-131 #mÜ
+133 #mÜ
 d‘as
  
 Ú
@@ -809,19 +795,19 @@ loggšg
 cÚfigu¿tiÚ
 .
 
-132 
+134 
 	gLOGGING
  = {
 
-134 'di§bË_exi¡šg_logg”s': 
+136 'di§bË_exi¡šg_logg”s': 
 F®£
 ,
 
-151 '´İag©e': 
+153 '´İag©e': 
 True
 ,
 
-	@blog/urls.py
+	@/var/www/blog/blog/urls.py
 
 1 
 äom
@@ -857,8 +843,10 @@ to
 admš
 :
 
-4 #äom 
-djªgo
+4 
+äom
+ 
+	gdjªgo
 .
 cÚŒib
  
@@ -867,14 +855,16 @@ impÜt
 admš
 
 
-5 #admš.
-autodiscov”
+5 
+	gadmš
+.
+	$autodiscov”
 ()
 
 7 
-	gu¾·‰”ns
+u¾·‰”ns
  = 
-·‰”ns
+	`·‰”ns
 ('',
 
 9 #u¾(
@@ -886,7 +876,7 @@ r
 10 #u¾(
 r
 '^blog/', 
-šşude
+	`šşude
 ('blog.foo.urls')),
 
 12 #Uncomm’ˆ
@@ -907,10 +897,12 @@ to
 docum’tiÚ
 :
 
-13 #u¾(
+13 
+	`u¾
+(
 r
 '^admš/doc/', 
-šşude
+	`šşude
 ('django.contrib.admindocs.urls')),
 
 15 #Uncomm’ˆ
@@ -927,10 +919,12 @@ to
 admš
 :
 
-16 #u¾(
+16 
+	`u¾
+(
 r
 '^admš/', 
-šşude
+	`šşude
 (
 admš
 .
@@ -939,7 +933,31 @@ s™e
 u¾s
 )),
 
-	@blog/wsgi.py
+19 
+u¾·‰”ns
+ +ğ
+	`·‰”ns
+('webblog',
+
+20 
+	`u¾
+(
+r
+'^blog/$', 'views.index'),
+
+21 
+	`u¾
+(
+r
+'^blog/list/(\d+)/(\d+)$', 'views.list'),
+
+22 
+	`u¾
+(
+r
+'^blog/detail/(?P<id>\d+)$', 'views.detail'),
+
+	@/var/www/blog/blog/wsgi.py
 
 2 
 WSGI
@@ -1231,7 +1249,7 @@ H–loWÜldAµliÿtiÚ
 ­¶iÿtiÚ
 )
 
-	@manage.py
+	@/var/www/blog/manage.py
 
 1 #!/
 u¤
@@ -1289,15 +1307,1302 @@ sys
 ¬gv
 )
 
+	@/var/www/blog/webblog/__init__.py
+
+	@/var/www/blog/webblog/admin.py
+
+1 #codšg=
+utf
+-8
+
+3 
+äom
+ 
+	gdjªgo
+.
+cÚŒib
+ 
+impÜt
+ 
+admš
+
+
+4 
+äom
+ 
+	gwebblog
+.
+mod–s
+ 
+impÜt
+ *
+
+5 
+äom
+ 
+	gdjªgo
+.
+h‰p
+ 
+impÜt
+ 
+H‰pRe¥Ú£
+
+
+6 
+äom
+ 
+	gdjªgo
+.
+cÜe
+ 
+impÜt
+ 
+£rŸliz”s
+
+
+7 
+äom
+ 
+	gdjªgo
+.
+cÚŒib
+ 
+impÜt
+ 
+admš
+
+
+8 
+äom
+ 
+	gdjªgo
+.
+h‰p
+ 
+impÜt
+ 
+	gH‰pRe¥Ú£Redœeù
+
+
+10 #deà
+expÜt_£Ëùed_objeùs
+(
+mod–admš
+, 
+»que¡
+, 
+qu”y£t
+):
+
+11 #£Ëùed = 
+»que¡
+.
+POST
+.
+g‘li¡
+(
+admš
+.
+ACTION_CHECKBOX_NAME
+)
+
+12 #ù = 
+CÚ‹ÁTy³
+.
+objeùs
+.
+g‘_fÜ_mod–
+(
+qu”y£t
+.
+mod–
+)
+
+13 #»tuº 
+H‰pRe¥Ú£Redœeù
+("/expÜt/?ù=%s&ids=%s" % (
+ù
+.
+pk
+, ",".
+još
+(
+£Ëùed
+))
+
+15 #admš.
+s™e
+.
+add_aùiÚ
+(
+expÜt_£Ëùed_objeùs
+, "export")
+
+17 
+def
+ 
+	$expÜt_as_jsÚ
+(
+mod–admš
+, 
+»que¡
+, 
+qu”y£t
+):
+
+18 
+»¥Ú£
+ = 
+	`H‰pRe¥Ú£
+(
+mim‘y³
+="text/javascript")
+
+19 
+£rŸliz”s
+.
+	`£rŸlize
+("jsÚ", 
+qu”y£t
+, 
+¡»am
+=
+»¥Ú£
+)
+
+20  
+»¥Ú£
+
+
+22 
+admš
+.
+s™e
+.
+	$add_aùiÚ
+(
+expÜt_as_jsÚ
+)
+
+24 
+şass
+ 
+	$BlogAdmš
+(
+admš
+.
+Mod–Admš
+):
+
+26 
+aùiÚs
+ = ['close_blog', 'pub_blog', 'show_blog']
+
+28 
+def
+ 
+	$şo£_blog
+(
+£lf
+, 
+»que¡
+, 
+qu”y£t
+):
+
+29 
+rows
+ = 
+qu”y£t
+.
+	$upd©e
+(
+is_şo£
+ = 
+True
+)
+
+30 
+mes§ge_b™
+ = "% blog w”şo£" % 
+rows
+
+
+31 
+£lf
+.
+	`mes§ge_u£r
+(
+»que¡
+, "% now" % 
+mes§ge_b™
+)
+
+32 
+şo£_blog
+.
+shÜt_desütiÚ
+ = "closehe blog so it won't be show"
+
+33 
+def
+ 
+	$pub_blog
+(
+£lf
+, 
+»que¡
+, 
+qu”y£t
+):
+
+34 
+qu”y£t
+.
+	$upd©e
+(
+is_pub
+ = 
+True
+)
+
+35 
+»¥Ú£
+ = 
+	`H‰pRe¥Ú£
+(
+mim‘y³
+="text/javascript")
+
+36 
+£rŸliz”s
+.
+	`£rŸlize
+("jsÚ", 
+qu”y£t
+, 
+¡»am
+=
+»¥Ú£
+)
+
+37  
+»¥Ú£
+
+
+38 
+pub_blog
+.
+shÜt_desütiÚ
+ = "publishhis blog"
+
+39 
+def
+ 
+	$show_blog
+(
+£lf
+, 
+»que¡
+, 
+qu”y£t
+):
+
+40 
+blog
+ 
+š
+ 
+qu”y£t
+:
+
+41 
+blog
+.
+is_visŸbË
+ = 
+True
+
+
+42 
+blog
+.
+	$§ve
+()
+
+43 
+show_blog
+.
+shÜt_desütiÚ
+ = "makehis blogo be show"
+
+45 
+şass
+ 
+	$TagAdmš
+(
+admš
+.
+Mod–Admš
+):
+
+46 
+·ss
+
+
+49 
+def
+ 
+	$up_¿‹
+(
+mod–Admš
+, 
+»que¡
+, 
+qu”y£t
+):
+
+50 #qu”y£t.
+	`upd©e
+(
+ÿ‹gÜy_¿‹
+=1)
+
+51 
+ÿ‹
+ 
+š
+ 
+qu”y£t
+:
+
+52 
+ÿ‹
+.
+ÿ‹gÜy_¿‹
+ = cate.category_rate + 1
+
+53 
+ÿ‹
+.
+	$§ve
+()
+
+54 
+up_¿‹
+.
+shÜt_desütiÚ
+ = "updatehe category„ate by 1"
+
+56 
+şass
+ 
+	$C©egÜyAdmš
+(
+admš
+.
+Mod–Admš
+):
+
+58 
+Üd”šg
+ = ['-category_rate']
+
+59 
+aùiÚs
+ = [
+up_¿‹
+]
+
+62 
+şass
+ 
+	$Comm’tAdmš
+(
+admš
+.
+Mod–Admš
+):
+
+63 
+·ss
+
+
+65 
+şass
+ 
+	$Blog_TagAdmš
+(
+admš
+.
+Mod–Admš
+):
+
+66 
+·ss
+
+
+68 
+admš
+.
+s™e
+.(
+Blog
+, 
+BlogAdmš
+)
+
+69 
+admš
+.
+s™e
+.(
+C©egÜy
+, 
+C©egÜyAdmš
+)
+
+70 
+admš
+.
+s™e
+.(
+Tag
+, 
+TagAdmš
+)
+
+71 
+admš
+.
+s™e
+.(
+Comm’t
+, 
+Comm’tAdmš
+)
+
+72 
+admš
+.
+s™e
+.(
+Blog_Tag
+, 
+Blog_TagAdmš
+)
+
+	@/var/www/blog/webblog/form.py
+
+	@/var/www/blog/webblog/models.py
+
+1 #codšg=
+utf
+-8
+
+2 
+äom
+ 
+	gdjªgo
+.
+db
+ 
+impÜt
+ 
+	gmod–s
+
+
+4 #C»©
+your
+ 
+mod–s
+ 
+h”e
+.
+
+6 
+şass
+ 
+	$C©egÜy
+(
+mod–s
+.
+Mod–
+):
+
+7 
+ÿ‹gÜy_id
+ = 
+mod–s
+.
+	$AutoF›ld
+(
+´im¬y_key
+=
+True
+)
+
+8 
+Çme
+ = 
+mod–s
+.
+	$Ch¬F›ld
+(
+max_Ëngth
+=20)
+
+9 
+ü—‹_time
+ = 
+mod–s
+.
+	$D©eTimeF›ld
+(
+auto_now
+=
+True
+)
+
+10 
+ÿ‹gÜy_¿‹
+ = 
+mod–s
+.
+	`Sm®lIÁeg”F›ld
+(
+v”bo£_Çme
+="æ’å")
+
+12 
+def
+ 
+	$__unicode__
+(
+£lf
+):
+
+13  
+£lf
+.
+Çme
+
+
+15 
+şass
+ 
+	$Blog
+(
+mod–s
+.
+Mod–
+):
+
+16 
+blog_id
+ = 
+mod–s
+.
+	$AutoF›ld
+(
+´im¬y_key
+=
+True
+)
+
+17 
+ÿ‹gÜy_id
+ = 
+mod–s
+.
+	$FÜeignKey
+(
+C©egÜy
+)
+
+18 
+t™Ë
+ = 
+mod–s
+.
+	$Ch¬F›ld
+(
+max_Ëngth
+=20, 
+db_šdex
+=
+True
+, 
+unique
+=True)
+
+19 
+desc
+ = 
+mod–s
+.
+	$Ch¬F›ld
+(
+max_Ëngth
+=150)
+
+20 
+cÚ‹Á
+ = 
+mod–s
+.
+	$TextF›ld
+()
+
+21 
+pub_time
+ = 
+mod–s
+.
+	$D©eTimeF›ld
+(
+auto_now
+=
+True
+,
+db_šdex
+=True)
+
+22 
+upd©e_time
+ = 
+mod–s
+.
+	$D©eTimeF›ld
+()
+
+23 
+is_pub
+ = 
+mod–s
+.
+	$BoŞ—nF›ld
+()
+
+24 
+is_şo£
+ = 
+mod–s
+.
+	$BoŞ—nF›ld
+()
+
+25 
+is_visŸbË
+ = 
+mod–s
+.
+	$BoŞ—nF›ld
+()
+
+27 
+def
+ 
+	$__unicode__
+(
+£lf
+):
+
+28  
+£lf
+.
+t™Ë
+
+
+30 
+şass
+ 
+M‘a
+:
+
+31 
+db_bË
+ = 'blog'
+
+32 
+Üd”šg
+ = ['-pub_time']
+
+34 
+şass
+ 
+	$Tag
+(
+mod–s
+.
+Mod–
+):
+
+35 
+g_id
+ = 
+mod–s
+.
+	$AutoF›ld
+(
+´im¬y_key
+=
+True
+)
+
+36 
+g_Çme
+ = 
+mod–s
+.
+	$Ch¬F›ld
+(
+max_Ëngth
+=20, 
+db_šdex
+=
+True
+,
+unique
+=True)
+
+37 
+desc
+ = 
+mod–s
+.
+	$Ch¬F›ld
+(
+max_Ëngth
+=50)
+
+38 
+ü—‹_time
+ = 
+mod–s
+.
+	$D©eF›ld
+(
+auto_now
+=
+True
+)
+
+39 
+g_¿‹
+ = 
+mod–s
+.
+	$Sm®lIÁeg”F›ld
+()
+
+41 
+def
+ 
+	$__unicode__
+(
+£lf
+):
+
+42  
+£lf
+.
+g_Çme
+
+
+44 
+şass
+ 
+	$Blog_Tag
+(
+mod–s
+.
+Mod–
+):
+
+45 
+»ÏtiÚ_id
+ = 
+mod–s
+.
+	$AutoF›ld
+(
+´im¬y_key
+=
+True
+)
+
+46 
+blog_id
+ = 
+mod–s
+.
+	$FÜeignKey
+(
+Blog
+)
+
+47 
+g_id
+ = 
+mod–s
+.
+	$FÜeignKey
+(
+Tag
+)
+
+49 
+def
+ 
+	$__unicode__
+(
+£lf
+):
+
+50 
+s
+ = "th%d„–©thblog %d‡ndhTag %d" % (
+£lf
+.
+»ÏtiÚ_id
+, s–f.
+blog_id
+.blog_id, s–f.
+g_id
+.tag_id)
+
+51  
+s
+
+
+53 
+şass
+ 
+	$Comm’t
+(
+mod–s
+.
+Mod–
+):
+
+54 
+COMMENT_LEVEL_CHOICES
+ = (
+
+58 
+comm’t_id
+ = 
+mod–s
+.
+	$AutoF›ld
+(
+´im¬y_key
+=
+True
+)
+
+59 
+authÜ_Çme
+ = 
+mod–s
+.
+	$Ch¬F›ld
+(
+max_Ëngth
+=10)
+
+60 
+authÜ_ema
+ = 
+mod–s
+.
+	$EmaF›ld
+()
+
+61 
+cÚ‹Á
+ = 
+mod–s
+.
+	$TextF›ld
+()
+
+62 
+is_şo£
+ = 
+mod–s
+.
+	$BoŞ—nF›ld
+()
+
+63 
+is_disÿrd
+ = 
+mod–s
+.
+	$BoŞ—nF›ld
+()
+
+64 
+comm’t_Ëv–
+ = 
+mod–s
+.
+	$Sm®lIÁeg”F›ld
+(
+choiûs
+=
+COMMENT_LEVEL_CHOICES
+)
+
+65 
+·»Á_id
+ = 
+mod–s
+.
+	`FÜeignKey
+('£lf', 
+bÏnk
+=
+True
+, 
+nuÎ
+=True)
+
+66 
+blog_id
+ = 
+mod–s
+.
+	$FÜeignKey
+(
+Blog
+, 
+bÏnk
+=
+True
+, 
+nuÎ
+=True)
+
+68 
+def
+ 
+	$__unicode__
+(
+£lf
+):
+
+69  'th% ha §y: %s' % (
+£lf
+.
+authÜ_Çme
+, s–f.
+cÚ‹Á
+[:10]+'..')
+
+	@/var/www/blog/webblog/static/js/blog.js
+
+	@/var/www/blog/webblog/tests.py
+
+2 
+This
+ 
+fe
+ 
+demÚ¡¿‹s
+ 
+wr™šg
+ 
+‹¡s
+ 
+usšg
+ 
+the
+ 
+un™‹¡
+ 
+	gmoduË
+. 
+The£
+ 
+wl
+ 
+·ss
+
+
+3 
+wh’
+ 
+you
+ 
+	grun
+ "manage.pyest".
+
+5 
+R•Ïû
+ 
+this
+ 
+w™h
+ 
+mÜe
+ 
+­´İrŸ‹
+ 
+‹¡s
+ 
+your
+ 
+	g­¶iÿtiÚ
+.
+
+8 
+äom
+ 
+	gdjªgo
+.
+‹¡
+ 
+impÜt
+ 
+Te¡Ca£
+
+
+11 
+şass
+ 
+	$Sim¶eTe¡
+(
+Te¡Ca£
+):
+
+12 
+def
+ 
+	$‹¡_basic_add™iÚ
+(
+£lf
+):
+
+14 
+Te¡s
+ 
+th©
+ 1 + 1 
+®ways
+ 
+equ®s
+ 2.
+
+16 
+£lf
+.
+	`as£¹Equ®
+(1 + 1, 2)
+
+	@/var/www/blog/webblog/views.py
+
+1 #C»©
+your
+ 
+v›ws
+ 
+h”e
+.
+
+3 
+äom
+ 
+	gwebblog
+.
+mod–s
+ 
+impÜt
+ *
+
+4 
+äom
+ 
+	gdjªgo
+.
+h‰p
+ 
+impÜt
+ 
+H‰pRe¥Ú£
+
+
+5 
+äom
+ 
+	gdjªgo
+.
+shÜtcuts
+ 
+impÜt
+ 
+»nd”_to_»¥Ú£
+
+
+7 
+def
+ 
+	$šdex
+(
+»que¡
+):
+
+8 
+ÿ‹
+ = 
+C©egÜy
+.
+objeùs
+.
+	$®l
+()
+
+9 
+gs
+ = 
+Tag
+.
+objeùs
+.
+	$®l
+()
+
+11  
+	`»nd”_to_»¥Ú£
+('blog/šdex.html',{'ÿ‹':
+ÿ‹
+, 'g':
+gs
+})
+
+12 #»tuº 
+H‰pRe¥Ú£
+('hello world,ƒverybody')
+
+14 
+def
+ 
+	$li¡
+(
+»que¡
+, 
+bid
+, 
+bty³
+):
+
+15 
+bty³
+ == 1:
+
+16 
+d©a
+ = 
+Blog
+.
+objeùs
+.
+	`f‹r
+('ÿ‹gÜy_id_id = %s' % 
+bid
+)
+
+18 
+d©a
+ = 
+Blog_Tag
+.
+objeùs
+.
+	$f‹r
+(
+g_id
+=
+bid
+)
+
+19 #d©¨ğ[{'id':1, 'Çme':'emacs'
+	}
+}, {'id':2, 'name':'vim'}]
+
+21  
+»nd”_to_»¥Ú£
+('blog/li¡.html', {'d©a': 
+d©a
+, 'bid': 
+bid
+, 'bty³': 
+bty³
+})
+
+24 
+def
+ 
+	$d‘a
+(
+»que¡
+, 
+id
+):
+
+25 
+blog
+ = 
+Blog
+.
+objeùs
+.
+	$g‘
+(
+blog_id
+=
+id
+)
+
+26 
+´št
+ 
+blog
+
+
+27 #fÜ 
+i
+ 
+blog
+.
+
+28  
+	`»nd”_to_»¥Ú£
+('blog/d‘a.html', {'blog':
+blog
+,
+	}
+})
+
 	@
 1
 .
 1
 /usr/include
-5
-70
-blog/__init__.py
-blog/settings.py
-blog/urls.py
-blog/wsgi.py
-manage.py
+12
+369
+/var/www/blog/blog/__init__.py
+/var/www/blog/blog/settings.py
+/var/www/blog/blog/urls.py
+/var/www/blog/blog/wsgi.py
+/var/www/blog/manage.py
+/var/www/blog/webblog/__init__.py
+/var/www/blog/webblog/admin.py
+/var/www/blog/webblog/form.py
+/var/www/blog/webblog/models.py
+/var/www/blog/webblog/static/js/blog.js
+/var/www/blog/webblog/tests.py
+/var/www/blog/webblog/views.py

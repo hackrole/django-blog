@@ -5,8 +5,20 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
 ADMINS	/var/www/blog/blog/settings.py	/^ADMINS = ($/;"	v
+Blog	/var/www/blog/webblog/models.py	/^class Blog(models.Model):$/;"	c
+BlogAdmin	/var/www/blog/webblog/admin.py	/^class BlogAdmin(admin.ModelAdmin):$/;"	c
+Blog_Tag	/var/www/blog/webblog/models.py	/^class Blog_Tag(models.Model):$/;"	c
+Blog_TagAdmin	/var/www/blog/webblog/admin.py	/^class Blog_TagAdmin(admin.ModelAdmin):$/;"	c
+COMMENT_LEVEL_CHOICES	/var/www/blog/webblog/models.py	/^    COMMENT_LEVEL_CHOICES = ($/;"	v	class:Comment
+Category	/var/www/blog/webblog/models.py	/^class Category(models.Model):$/;"	c
+CategoryAdmin	/var/www/blog/webblog/admin.py	/^class CategoryAdmin(admin.ModelAdmin):$/;"	c
+Comment	/var/www/blog/webblog/models.py	/^class Comment(models.Model):$/;"	c
+CommentAdmin	/var/www/blog/webblog/admin.py	/^class CommentAdmin(admin.ModelAdmin):$/;"	c
 DATABASES	/var/www/blog/blog/settings.py	/^DATABASES = {$/;"	v
 DEBUG	/var/www/blog/blog/settings.py	/^DEBUG = True$/;"	v
+HttpResponse	/var/www/blog/webblog/admin.py	/^from django.http import HttpResponse$/;"	i
+HttpResponse	/var/www/blog/webblog/views.py	/^from django.http import HttpResponse$/;"	i
+HttpResponseRedirect	/var/www/blog/webblog/admin.py	/^from django.http import HttpResponseRedirect$/;"	i
 INSTALLED_APPS	/var/www/blog/blog/settings.py	/^INSTALLED_APPS = ($/;"	v
 LANGUAGE_CODE	/var/www/blog/blog/settings.py	/^LANGUAGE_CODE = 'en-us'$/;"	v
 LOGGING	/var/www/blog/blog/settings.py	/^LOGGING = {$/;"	v
@@ -14,6 +26,7 @@ MANAGERS	/var/www/blog/blog/settings.py	/^MANAGERS = ADMINS$/;"	v
 MEDIA_ROOT	/var/www/blog/blog/settings.py	/^MEDIA_ROOT = ''$/;"	v
 MEDIA_URL	/var/www/blog/blog/settings.py	/^MEDIA_URL = ''$/;"	v
 MIDDLEWARE_CLASSES	/var/www/blog/blog/settings.py	/^MIDDLEWARE_CLASSES = ($/;"	v
+Meta	/var/www/blog/webblog/models.py	/^    class Meta:$/;"	c	class:Blog
 ROOT_URLCONF	/var/www/blog/blog/settings.py	/^ROOT_URLCONF = 'blog.urls'$/;"	v
 SECRET_KEY	/var/www/blog/blog/settings.py	/^SECRET_KEY = 'ps*7&amp;va^vku0diya!5)^*r1)nd$ynul1s@f4w52%cg*01prv-k'$/;"	v
 SITE_ID	/var/www/blog/blog/settings.py	/^SITE_ID = 1$/;"	v
@@ -21,23 +34,115 @@ STATICFILES_DIRS	/var/www/blog/blog/settings.py	/^STATICFILES_DIRS = ($/;"	v
 STATICFILES_FINDERS	/var/www/blog/blog/settings.py	/^STATICFILES_FINDERS = ($/;"	v
 STATIC_ROOT	/var/www/blog/blog/settings.py	/^STATIC_ROOT = ''$/;"	v
 STATIC_URL	/var/www/blog/blog/settings.py	/^STATIC_URL = '\/static\/'$/;"	v
+SimpleTest	/var/www/blog/webblog/tests.py	/^class SimpleTest(TestCase):$/;"	c
 TEMPLATE_DEBUG	/var/www/blog/blog/settings.py	/^TEMPLATE_DEBUG = DEBUG$/;"	v
 TEMPLATE_DIRS	/var/www/blog/blog/settings.py	/^TEMPLATE_DIRS = ($/;"	v
 TEMPLATE_LOADERS	/var/www/blog/blog/settings.py	/^TEMPLATE_LOADERS = ($/;"	v
 TIME_ZONE	/var/www/blog/blog/settings.py	/^TIME_ZONE = 'America\/Chicago'$/;"	v
+Tag	/var/www/blog/webblog/models.py	/^class Tag(models.Model):$/;"	c
+TagAdmin	/var/www/blog/webblog/admin.py	/^class TagAdmin(admin.ModelAdmin):$/;"	c
+TestCase	/var/www/blog/webblog/tests.py	/^from django.test import TestCase$/;"	i
 USE_I18N	/var/www/blog/blog/settings.py	/^USE_I18N = True$/;"	v
 USE_L10N	/var/www/blog/blog/settings.py	/^USE_L10N = True$/;"	v
 USE_TZ	/var/www/blog/blog/settings.py	/^USE_TZ = True$/;"	v
 WSGI_APPLICATION	/var/www/blog/blog/settings.py	/^WSGI_APPLICATION = 'blog.wsgi.application'$/;"	v
+__unicode__	/var/www/blog/webblog/models.py	/^    def __unicode__(self):$/;"	m	class:Blog	file:
+__unicode__	/var/www/blog/webblog/models.py	/^    def __unicode__(self):$/;"	m	class:Blog_Tag	file:
+__unicode__	/var/www/blog/webblog/models.py	/^    def __unicode__(self):$/;"	m	class:Category	file:
+__unicode__	/var/www/blog/webblog/models.py	/^    def __unicode__(self):$/;"	m	class:Comment	file:
+__unicode__	/var/www/blog/webblog/models.py	/^    def __unicode__(self):$/;"	m	class:Tag	file:
+actions	/var/www/blog/webblog/admin.py	/^    actions = ['close_blog', 'pub_blog', 'show_blog']$/;"	v	class:BlogAdmin
+actions	/var/www/blog/webblog/admin.py	/^    actions = [up_rate]$/;"	v	class:CategoryAdmin
+admin	/var/www/blog/blog/urls.py	/^from django.contrib import admin$/;"	i
+admin	/var/www/blog/webblog/admin.py	/^from django.contrib import admin$/;"	i
 application	/var/www/blog/blog/wsgi.py	/^application = get_wsgi_application()$/;"	v
+author_email	/var/www/blog/webblog/models.py	/^    author_email = models.EmailField()$/;"	v	class:Comment
+author_name	/var/www/blog/webblog/models.py	/^    author_name = models.CharField(max_length=10)$/;"	v	class:Comment
+blog	/var/www/blog/sql/blog_create.sql	/^CREATE TABLE "blog" ($/;"	t
+blog.blog_56c2042b	/var/www/blog/sql/blog_create.sql	/^CREATE INDEX "blog_56c2042b" ON "blog" ("category_id_id");$/;"	i
+blog.blog_646331b4	/var/www/blog/sql/blog_create.sql	/^CREATE INDEX "blog_646331b4" ON "blog" ("pub_time");$/;"	i
+blog.blog_id	/var/www/blog/sql/blog_create.sql	/^    "blog_id" integer NOT NULL PRIMARY KEY,$/;"	F
+blog.category_id_id	/var/www/blog/sql/blog_create.sql	/^    "category_id_id" integer NOT NULL REFERENCES "webblog_category" ("category_id"),$/;"	F
+blog.content	/var/www/blog/sql/blog_create.sql	/^    "content" text NOT NULL,$/;"	F
+blog.desc	/var/www/blog/sql/blog_create.sql	/^    "desc" varchar(150) NOT NULL,$/;"	F
+blog.is_close	/var/www/blog/sql/blog_create.sql	/^    "is_close" smallint NOT NULL,$/;"	F
+blog.is_pub	/var/www/blog/sql/blog_create.sql	/^    "is_pub" smallint NOT NULL,$/;"	F
+blog.is_visiable	/var/www/blog/sql/blog_create.sql	/^    "is_visiable" smallint NOT NULL$/;"	F
+blog.pub_time	/var/www/blog/sql/blog_create.sql	/^    "pub_time" datetime NOT NULL,$/;"	F
+blog.title	/var/www/blog/sql/blog_create.sql	/^    "title" varchar(20) NOT NULL UNIQUE,$/;"	F
+blog.update_time	/var/www/blog/sql/blog_create.sql	/^    "update_time" datetime NOT NULL,$/;"	F
+blog_id	/var/www/blog/webblog/models.py	/^    blog_id = models.AutoField(primary_key=True)$/;"	v	class:Blog
+blog_id	/var/www/blog/webblog/models.py	/^    blog_id = models.ForeignKey(Blog)$/;"	v	class:Blog_Tag
+blog_id	/var/www/blog/webblog/models.py	/^    blog_id = models.ForeignKey(Blog, blank=True, null=True)$/;"	v	class:Comment
+category_id	/var/www/blog/webblog/models.py	/^    category_id = models.AutoField(primary_key=True)$/;"	v	class:Category
+category_id	/var/www/blog/webblog/models.py	/^    category_id = models.ForeignKey(Category)$/;"	v	class:Blog
+category_rate	/var/www/blog/webblog/models.py	/^    category_rate = models.SmallIntegerField(verbose_name="排名")$/;"	v	class:Category
+close_blog	/var/www/blog/webblog/admin.py	/^    def close_blog(self, request, queryset):$/;"	m	class:BlogAdmin
+comment_id	/var/www/blog/webblog/models.py	/^    comment_id = models.AutoField(primary_key=True)$/;"	v	class:Comment
+comment_level	/var/www/blog/webblog/models.py	/^    comment_level = models.SmallIntegerField(choices=COMMENT_LEVEL_CHOICES)$/;"	v	class:Comment
+content	/var/www/blog/webblog/models.py	/^    content = models.TextField()$/;"	v	class:Blog
+content	/var/www/blog/webblog/models.py	/^    content = models.TextField()$/;"	v	class:Comment
+create_time	/var/www/blog/webblog/models.py	/^    create_time = models.DateField(auto_now=True)$/;"	v	class:Tag
+create_time	/var/www/blog/webblog/models.py	/^    create_time = models.DateTimeField(auto_now=True)$/;"	v	class:Category
+db_table	/var/www/blog/webblog/models.py	/^        db_table = 'blog'$/;"	v	class:Blog.Meta
+desc	/var/www/blog/webblog/models.py	/^    desc = models.CharField(max_length=150)$/;"	v	class:Blog
+desc	/var/www/blog/webblog/models.py	/^    desc = models.CharField(max_length=50)$/;"	v	class:Tag
+detail	/var/www/blog/webblog/views.py	/^def detail(request, id):$/;"	f
 dir	/var/www/blog/makefile	/^dir=\/var\/www\/blog$/;"	m
 execute_from_command_line	/var/www/blog/manage.py	/^    from django.core.management import execute_from_command_line$/;"	i
+export_as_json	/var/www/blog/webblog/admin.py	/^def export_as_json(modeladmin, request, queryset):$/;"	f
 get_wsgi_application	/var/www/blog/blog/wsgi.py	/^from django.core.wsgi import get_wsgi_application$/;"	i
 include	/var/www/blog/blog/urls.py	/^from django.conf.urls import patterns, include, url$/;"	i
+index	/var/www/blog/webblog/views.py	/^def index(request):$/;"	f
+is_close	/var/www/blog/webblog/models.py	/^    is_close = models.BooleanField()$/;"	v	class:Blog
+is_close	/var/www/blog/webblog/models.py	/^    is_close = models.BooleanField()$/;"	v	class:Comment
+is_discard	/var/www/blog/webblog/models.py	/^    is_discard = models.BooleanField()$/;"	v	class:Comment
+is_pub	/var/www/blog/webblog/models.py	/^    is_pub = models.BooleanField()$/;"	v	class:Blog
+is_visiable	/var/www/blog/webblog/models.py	/^    is_visiable = models.BooleanField()$/;"	v	class:Blog
+list	/var/www/blog/webblog/views.py	/^def list(request, bid, btype):$/;"	f
+models	/var/www/blog/webblog/models.py	/^from django.db import models$/;"	i
+name	/var/www/blog/webblog/models.py	/^    name = models.CharField(max_length=20)$/;"	v	class:Category
+ordering	/var/www/blog/webblog/admin.py	/^    ordering = ['-category_rate']$/;"	v	class:CategoryAdmin
+ordering	/var/www/blog/webblog/models.py	/^        ordering = ['-pub_time']$/;"	v	class:Blog.Meta
 os	/var/www/blog/blog/wsgi.py	/^import os$/;"	i
 os	/var/www/blog/manage.py	/^import os$/;"	i
+parent_id	/var/www/blog/webblog/models.py	/^    parent_id = models.ForeignKey('self', blank=True, null=True)$/;"	v	class:Comment
 patterns	/var/www/blog/blog/urls.py	/^from django.conf.urls import patterns, include, url$/;"	i
-sed_dir	/var/www/blog/makefile	/^sed_dir=\\\/var\\\/www\\\/blog$/;"	m
+pub_blog	/var/www/blog/webblog/admin.py	/^    def pub_blog(self, request, queryset):$/;"	m	class:BlogAdmin
+pub_time	/var/www/blog/webblog/models.py	/^    pub_time = models.DateTimeField(auto_now=True,db_index=True)$/;"	v	class:Blog
+relation_id	/var/www/blog/webblog/models.py	/^    relation_id = models.AutoField(primary_key=True)$/;"	v	class:Blog_Tag
+render_to_response	/var/www/blog/webblog/views.py	/^from django.shortcuts import render_to_response$/;"	i
+serializers	/var/www/blog/webblog/admin.py	/^from django.core import serializers$/;"	i
+show_blog	/var/www/blog/webblog/admin.py	/^    def show_blog(self, request, queryset):$/;"	m	class:BlogAdmin
 sys	/var/www/blog/manage.py	/^import sys$/;"	i
+tag_id	/var/www/blog/webblog/models.py	/^    tag_id = models.AutoField(primary_key=True) $/;"	v	class:Tag
+tag_id	/var/www/blog/webblog/models.py	/^    tag_id = models.ForeignKey(Tag)$/;"	v	class:Blog_Tag
+tag_name	/var/www/blog/webblog/models.py	/^    tag_name = models.CharField(max_length=20, db_index=True,unique=True)$/;"	v	class:Tag
+tag_rate	/var/www/blog/webblog/models.py	/^    tag_rate = models.SmallIntegerField()$/;"	v	class:Tag
+test_basic_addition	/var/www/blog/webblog/tests.py	/^    def test_basic_addition(self):$/;"	m	class:SimpleTest
+title	/var/www/blog/webblog/models.py	/^    title = models.CharField(max_length=20, db_index=True, unique=True)$/;"	v	class:Blog
+up_rate	/var/www/blog/webblog/admin.py	/^def up_rate(modelAdmin, request, queryset):$/;"	f
+update_time	/var/www/blog/webblog/models.py	/^    update_time = models.DateTimeField()    $/;"	v	class:Blog
 url	/var/www/blog/blog/urls.py	/^from django.conf.urls import patterns, include, url$/;"	i
 urlpatterns	/var/www/blog/blog/urls.py	/^urlpatterns = patterns('',$/;"	v
+webblog_blog_tag	/var/www/blog/sql/blog_create.sql	/^CREATE TABLE "webblog_blog_tag" ($/;"	t
+webblog_blog_tag.Tag_id_id	/var/www/blog/sql/blog_create.sql	/^    "Tag_id_id" integer NOT NULL PRIMARY KEY REFERENCES "webblog_tag" ("tag_id")$/;"	F
+webblog_blog_tag.blog_id_id	/var/www/blog/sql/blog_create.sql	/^    "blog_id_id" integer NOT NULL PRIMARY KEY REFERENCES "blog" ("blog_id"),$/;"	F
+webblog_comment	/var/www/blog/sql/blog_create.sql	/^CREATE TABLE "webblog_comment" ($/;"	t
+webblog_comment.author_email	/var/www/blog/sql/blog_create.sql	/^    "author_email" varchar(75) NOT NULL,$/;"	F
+webblog_comment.author_name	/var/www/blog/sql/blog_create.sql	/^    "author_name" varchar(10) NOT NULL,$/;"	F
+webblog_comment.blog_id_id	/var/www/blog/sql/blog_create.sql	/^    "blog_id_id" integer NOT NULL REFERENCES "blog" ("blog_id")$/;"	F
+webblog_comment.comment_id	/var/www/blog/sql/blog_create.sql	/^    "comment_id" integer NOT NULL PRIMARY KEY,$/;"	F
+webblog_comment.comment_level	/var/www/blog/sql/blog_create.sql	/^    "comment_level" smallint NOT NULL,$/;"	F
+webblog_comment.content	/var/www/blog/sql/blog_create.sql	/^    "content" text NOT NULL,$/;"	F
+webblog_comment.is_close	/var/www/blog/sql/blog_create.sql	/^    "is_close" smallint NOT NULL,$/;"	F
+webblog_comment.is_discard	/var/www/blog/sql/blog_create.sql	/^    "is_discard" smallint NOT NULL,$/;"	F
+webblog_comment.parent_id_id	/var/www/blog/sql/blog_create.sql	/^    "parent_id_id" integer NOT NULL,$/;"	F
+webblog_comment.webblog_comment_1cf7ee57	/var/www/blog/sql/blog_create.sql	/^CREATE INDEX "webblog_comment_1cf7ee57" ON "webblog_comment" ("parent_id_id");$/;"	i
+webblog_comment.webblog_comment_301daeed	/var/www/blog/sql/blog_create.sql	/^CREATE INDEX "webblog_comment_301daeed" ON "webblog_comment" ("blog_id_id");$/;"	i
+webblog_tag	/var/www/blog/sql/blog_create.sql	/^CREATE TABLE "webblog_tag" ($/;"	t
+webblog_tag.create_time	/var/www/blog/sql/blog_create.sql	/^    "create_time" date NOT NULL,$/;"	F
+webblog_tag.desc	/var/www/blog/sql/blog_create.sql	/^    "desc" varchar(50) NOT NULL,$/;"	F
+webblog_tag.tag_id	/var/www/blog/sql/blog_create.sql	/^    "tag_id" integer NOT NULL PRIMARY KEY,$/;"	F
+webblog_tag.tag_name	/var/www/blog/sql/blog_create.sql	/^    "tag_name" varchar(20) NOT NULL UNIQUE,$/;"	F
+webblog_tag.tag_rate	/var/www/blog/sql/blog_create.sql	/^    "tag_rate" smallint NOT NULL$/;"	F
