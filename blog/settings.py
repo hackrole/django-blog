@@ -155,6 +155,13 @@ LOGGING = {
     }
 }
 
+# Email Setup
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'daipeng123456@gmail.com'
+EMAIL_HOST_PASSWORD = 'dp123456'
+EMAIL_USE_TLS = True
+
 # cache setting
 CACHES = {
     'default' : {
