@@ -37,5 +37,3 @@ def about(request):
 
 def post_comment(request):
     pass
-
-def 
