@@ -1,4 +1,4 @@
-cscope 15 /var/www/blog -q 0000000382 0000012656
+cscope 15 /var/www/blog -q 0000000427 0000015670
 	@/var/www/blog/blog/__init__.py
 
 	@/var/www/blog/blog/settings.py
@@ -721,7 +721,7 @@ admö
 documíèti⁄
 :
 
-129 #A 
+130 #A 
 ßm∂e
  
 loggög
@@ -735,7 +735,7 @@ The
 èngibÀ
 Üogging
 
-130 #≥rf‹med 
+131 #≥rf‹med 
 by
  
 this
@@ -753,7 +753,7 @@ to
 emaû
 Åo
 
-131 #thê
+132 #thê
 sôe
  
 admös
@@ -773,11 +773,11 @@ DEBUG
 FÆ£
 .
 
-132 #Sì 
+133 #Sì 
 hâp
 :
 
-133 #m‹ê
+134 #m‹ê
 dëaûs
  
 ⁄
@@ -795,17 +795,51 @@ loggög
 c⁄figuøti⁄
 .
 
-134 
+135 
 	gLOGGING
  = {
 
-136 'dißbÀ_exi°ög_loggîs': 
+137 'dißbÀ_exi°ög_loggîs': 
 FÆ£
 ,
 
-153 '¥›ag©e': 
+154 '¥›ag©e': 
 True
 ,
+
+159 #Emaû 
+Sëup
+
+
+160 
+EMAIL_HOST
+ = 'smtp.gmail.com'
+
+161 
+EMAIL_PORT
+ = 587
+
+162 
+EMAIL_HOST_USER
+ = 'daipeng123456@gmail.com'
+
+163 
+EMAIL_HOST_PASSWORD
+ = 'dp123456'
+
+164 
+EMAIL_USE_TLS
+ = 
+True
+
+
+166 #ˇchê
+£âög
+
+
+167 
+CACHES
+ = {
 
 	@/var/www/blog/blog/urls.py
 
@@ -949,13 +983,37 @@ r
 	`uæ
 (
 r
-'^blog/list/(\d+)/(\d+)$', 'views.list'),
+'^blog/cate/(\w+)$', 'views.cate'),
 
 22 
 	`uæ
 (
 r
-'^blog/detail/(?P<id>\d+)$', 'views.detail'),
+'^blog/tag/(\w+)$', 'views.tag'),
+
+23 
+	`uæ
+(
+r
+'^blog/(\d{4})/(\d{2})$', 'views.data'),
+
+24 
+	`uæ
+(
+r
+'^blog/blog/(?P<id>\d+)$', 'views.detail'),
+
+25 
+	`uæ
+(
+r
+"^blog/comment/$", 'views.post_comment'),
+
+26 
+	`uæ
+(
+r
+'^blog/about/$', 'views.about'),
 
 	@/var/www/blog/blog/wsgi.py
 
@@ -1306,6 +1364,508 @@ sys
 .
 ¨gv
 )
+
+	@/var/www/blog/relateModelTest/__init__.py
+
+	@/var/www/blog/relateModelTest/models.py
+
+1 
+‰om
+ 
+	gdj™go
+.
+db
+ 
+imp‹t
+ 
+	gmodñs
+
+
+3 #Cª©ê
+your
+ 
+modñs
+ 
+hîe
+.
+
+5 
+˛ass
+ 
+	$C©e
+(
+modñs
+.
+Modñ
+):
+
+6 
+«me
+ = 
+modñs
+.
+	$Ch¨Fõld
+(
+max_Àngth
+=20)
+
+7 
+is_show
+ = 
+modñs
+.
+	$BoﬁónFõld
+(=
+FÆ£
+)
+
+9 
+˛ass
+ 
+	$Blog
+(
+modñs
+.
+Modñ
+):
+
+10 
+tûã
+ = 
+modñs
+.
+	$Ch¨Fõld
+(
+max_Àngth
+=30)
+
+11 
+ˇã
+ = 
+modñs
+.
+	$F‹eignKey
+(
+C©e
+)
+
+13 
+˛ass
+ 
+	$Tag
+(
+modñs
+.
+Modñ
+):
+
+14 
+«me
+ = 
+modñs
+.
+	$Ch¨Fõld
+(
+max_Àngth
+=30)
+
+15 
+blog
+ = 
+modñs
+.
+	`M™yToM™yFõld
+(
+Blog
+)
+
+	@/var/www/blog/relateModelTest/tests.py
+
+2 
+This
+ 
+fûe
+ 
+dem⁄°øãs
+ 
+wrôög
+ 
+ã°s
+ 
+usög
+ 
+the
+ 
+unôã°
+ 
+	gmoduÀ
+. 
+The£
+ 
+wûl
+ 
+∑ss
+
+
+3 
+whí
+ 
+you
+ 
+	grun
+ "manage.pyÅest".
+
+5 
+Rïœ˚
+ 
+this
+ 
+wôh
+ 
+m‹e
+ 
+≠¥›rüã
+ 
+ã°s
+ 
+your
+ 
+	g≠∂iˇti⁄
+.
+
+8 
+‰om
+ 
+	gdj™go
+.
+ã°
+ 
+imp‹t
+ 
+Te°Ca£
+
+
+11 
+˛ass
+ 
+	$Sim∂eTe°
+(
+Te°Ca£
+):
+
+12 
+def
+ 
+	$ã°_basic_addôi⁄
+(
+£lf
+):
+
+14 
+Te°s
+ 
+th©
+ 1 + 1 
+Æways
+ 
+equÆs
+ 2.
+
+16 
+£lf
+.
+	`as£πEquÆ
+(1 + 1, 2)
+
+	@/var/www/blog/relateModelTest/views.py
+
+1 #Cª©ê
+your
+ 
+võws
+ 
+hîe
+.
+
+	@/var/www/blog/shell_spide.py
+
+1 #!/
+u§
+/
+bö
+/
+pyth⁄2
+.7
+
+2 #ch¨£t=
+utf
+-8
+
+4 
+imp‹t
+ 
+	guælib
+, 
+uælib2
+
+
+5 
+‰om
+ 
+	gxml
+.
+dom
+ 
+imp‹t
+ 
+möidom
+
+
+6 
+imp‹t
+ 
+ª
+
+
+8 
+def
+ 
+›í_sôem≠
+(
+uæ
+="http://www.shell909090.com/blog/sitemap.xml"):
+
+9 
+sôem≠
+ = 
+uælib
+.
+	$uæ›í
+(
+uæ
+)
+
+10  
+sôem≠
+
+
+12 
+def
+ 
+	$xml_h™dÀ
+(
+sôem≠
+):
+
+13 
+sôem≠
+ = 
+möidom
+.
+	$∑r£
+(
+sôem≠
+)
+
+14 
+uæLi°
+ = 
+sôem≠
+.
+	`gëEÀmítsByTagName
+('url')
+
+15 
+uLi°
+ = []
+
+16 
+uæ
+ 
+ö
+ 
+uæLi°
+:
+
+17 
+loc
+ = 
+uæ
+.
+	`gëEÀmítsByTagName
+('loc')[0].
+chûdNodes
+[0]
+
+18 #¥öà
+loc
+.
+	`toxml
+()
+
+19 
+loc
+.
+nodeTy≥
+ =loc.
+TEXT_NODE
+:
+
+20 
+uLi°
+.
+	$≠≥nd
+(
+loc
+.
+d©a
+)
+
+22  
+uLi°
+
+
+24 
+def
+ 
+	$ßve_blog
+(
+uæ
+):
+
+25 
+html
+ = 
+uælib
+.
+	`uæ›í
+(
+uæ
+).
+	$ªad
+()
+
+26 
+fûe
+ = 
+	`›í
+("/home/daipeng/Desktop/shell.html", 'w')
+
+27 
+tôÀ
+ = 
+ª
+.
+	`£¨ch
+('<h1 cœss="íåy-tôÀ">(.*?)</h1>', 
+html
+)
+
+28 
+¥öt
+ 
+tôÀ
+.
+	`groups
+()[0].
+	`decode
+('utf8')
+
+29 
+time
+ = 
+ª
+.
+	`£¨ch
+('<time(.*?)>(.*?)</time>', 
+html
+)
+
+30 
+¥öt
+ 
+time
+.
+	`groups
+()[1].
+	`decode
+('utf8')
+
+31 
+blog
+ = 
+ª
+.
+	`£¨ch
+('<div.*?íåy-c⁄ã¡(.*?)</div>', 
+html
+)
+
+32 
+¥öt
+ 
+blog
+.
+	`groups
+()[0].
+	`decode
+('utf8')
+
+33 
+¥öt
+ 
+uæ
+
+
+34 #¥öà>>
+fûe
+, 
+html
+
+
+37 
+__«me__
+ == "__main__":
+
+38 
+¥öt
+ "=========================\n"
+
+39 
+sôem≠
+ = 
+	$›í_sôem≠
+()
+
+40 
+uLi°
+ = 
+	$xml_h™dÀ
+(
+sôem≠
+)
+
+41 
+	$ßve_blog
+(
+uLi°
+[1])
+
+42 #¥öà
+uLi°
+
+
+43 #f‹ 
+u
+ 
+ö
+ 
+uLi°
+:
+
+44 #¥öà
+u
+
 
 	@/var/www/blog/webblog/__init__.py
 
@@ -2490,13 +3050,11 @@ HâpRe•⁄£
 14 
 def
  
-	$li°
+	$ˇã
 (
 ªque°
 , 
-bid
-, 
-bty≥
+ˇã
 ):
 
 15 
@@ -2543,7 +3101,37 @@ bid
 bty≥
 })
 
+23 
+def
+ 
+	$èg
+(
+ªque°
+, 
+èg
+):
+
 24 
+∑ss
+
+
+26 
+def
+ 
+	$d©e
+(
+ªque°
+, 
+yór
+, 
+m⁄th
+):
+
+27 
+∑ss
+
+
+29 
 def
  
 	$dëaû
@@ -2553,7 +3141,7 @@ def
 id
 ):
 
-25 
+30 
 blog
  = 
 Blog
@@ -2567,19 +3155,19 @@ blog_id
 id
 )
 
-26 
+31 
 ¥öt
  
 blog
 
 
-27 #f‹ 
+32 #f‹ 
 i
  
 blog
 .
 
-28  
+33  
 	`ªndî_to_ª•⁄£
 ('blog/dëaû.html', {'blog':
 blog
@@ -2587,18 +3175,51 @@ blog
 	}
 })
 
+35 
+def
+ 
+	$about
+(
+ªque°
+):
+
+36 
+∑ss
+
+
+38 
+def
+ 
+	$po°_commít
+(
+ªque°
+):
+
+39 
+∑ss
+
+
+41 
+def
+
+
 	@
 1
 .
 1
 /usr/include
-12
-369
+17
+558
 /var/www/blog/blog/__init__.py
 /var/www/blog/blog/settings.py
 /var/www/blog/blog/urls.py
 /var/www/blog/blog/wsgi.py
 /var/www/blog/manage.py
+/var/www/blog/relateModelTest/__init__.py
+/var/www/blog/relateModelTest/models.py
+/var/www/blog/relateModelTest/tests.py
+/var/www/blog/relateModelTest/views.py
+/var/www/blog/shell_spide.py
 /var/www/blog/webblog/__init__.py
 /var/www/blog/webblog/admin.py
 /var/www/blog/webblog/form.py

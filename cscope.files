@@ -1,3 +1,4 @@
+/var/www/blog/shell_spide.py
 /var/www/blog/manage.py
 /var/www/blog/webblog/admin.py
 /var/www/blog/webblog/views.py
@@ -6,6 +7,10 @@
 /var/www/blog/webblog/__init__.py
 /var/www/blog/webblog/form.py
 /var/www/blog/webblog/models.py
+/var/www/blog/relateModelTest/views.py
+/var/www/blog/relateModelTest/tests.py
+/var/www/blog/relateModelTest/__init__.py
+/var/www/blog/relateModelTest/models.py
 /var/www/blog/blog/urls.py
 /var/www/blog/blog/wsgi.py
 /var/www/blog/blog/settings.py

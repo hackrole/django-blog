@@ -1,6 +1,6 @@
 dir=/var/www/blog
 
-all: ctagsfile  etags filenametags cscope
+all: ctagsfile  etagsfile filenametagsnew cscope
 	echo "succus"
 
 ctagsfile:

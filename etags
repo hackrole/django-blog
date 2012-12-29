@@ -35,10 +35,25 @@ CREATE INDEX "blog_646331b4" ON "blog" ("pub_time");blog.blog_646331b448,1511
 CREATE INDEX "webblog_comment_1cf7ee57" ON "webblog_comment" ("parent_id_id");webblog_comment.webblog_comment_1cf7ee5749,1564
 CREATE INDEX "webblog_comment_301daeed" ON "webblog_comment" ("blog_id_id");webblog_comment.webblog_comment_301daeed50,1643
 
+/var/www/blog/shell_spide.py,388
+import urllib, urllib2urllib4,37
+import urllib, urllib2urllib24,37
+from xml.dom import minidomminidom5,60
+import rere6,88
+def open_sitemap(url="http://www.shell909090.com/blog/sitemap.xml"):open_sitemap8,99
+def xml_handle(sitemap):xml_handle12,222
+def save_blog(url):save_blog24,568
+    sitemap = open_sitemap()sitemap39,1104
+    uList = xml_handle(sitemap)uList40,1133
+
 /var/www/blog/makefile,26
 dir=/var/www/blogdir1,0
 
 /var/www/blog/static/index.html,0
+
+/var/www/blog/static/shell.html,0
+
+/var/www/blog/static/sh.html,0
 
 /var/www/blog/manage.py,135
 import osos2,22
@@ -65,12 +80,16 @@ class CategoryAdmin(admin.ModelAdmin):CategoryAdmin56,1969
 class CommentAdmin(admin.ModelAdmin):CommentAdmin62,2083
 class Blog_TagAdmin(admin.ModelAdmin):Blog_TagAdmin65,2131
 
-/var/www/blog/webblog/views.py,241
+/var/www/blog/webblog/views.py,393
 from django.http import HttpResponseHttpResponse4,56
 from django.shortcuts import render_to_responserender_to_response5,93
 def index(request):index7,142
-def list(request, bid, btype):list14,362
-def detail(request, id):detail24,700
+def cate(request, cate):cate14,362
+def tag(request, tag):tag23,689
+def date(request, year, month):date26,722
+def detail(request, id):detail29,768
+def about(request):about35,933
+def post_comment(request):post_comment38,963
 
 /var/www/blog/webblog/static/js/blog.js,0
 
@@ -131,6 +150,27 @@ class Comment(models.Model):Comment53,1671
     blog_id = models.ForeignKey(Blog, blank=True, null=True)blog_id66,2185
     def __unicode__(self):__unicode__68,2251
 
+/var/www/blog/relateModelTest/views.py,0
+
+/var/www/blog/relateModelTest/tests.py,156
+from django.test import TestCaseTestCase8,184
+class SimpleTest(TestCase):SimpleTest11,219
+    def test_basic_addition(self):test_basic_addition12,247
+
+/var/www/blog/relateModelTest/__init__.py,0
+
+/var/www/blog/relateModelTest/models.py,476
+from django.db import modelsmodels1,0
+class Cate(models.Model):Cate5,58
+    name = models.CharField(max_length=20)name6,84
+    is_show = models.BooleanField(default=False)is_show7,127
+class Blog(models.Model):Blog9,181
+    tilte = models.CharField(max_length=30)tilte10,207
+    cate = models.ForeignKey(Cate)cate11,251
+class Tag(models.Model):Tag13,287
+    name = models.CharField(max_length=30)name14,312
+    blog = models.ManyToManyField(Blog)blog15,355
+
 /var/www/blog/Template/blog/head.html,0
 
 /var/www/blog/Template/blog/index.html,0
@@ -155,7 +195,7 @@ import osos16,658
 from django.core.wsgi import get_wsgi_applicationget_wsgi_application23,909
 application = get_wsgi_application()application24,959
 
-/var/www/blog/blog/settings.py,1034
+/var/www/blog/blog/settings.py,1323
 DEBUG = TrueDEBUG3,37
 TEMPLATE_DEBUG = DEBUGTEMPLATE_DEBUG4,50
 ADMINS = (ADMINS6,74
@@ -180,6 +220,12 @@ ROOT_URLCONF = 'blog.urls'ROOT_URLCONF103,3761
 WSGI_APPLICATION = 'blog.wsgi.application'WSGI_APPLICATION106,3862
 TEMPLATE_DIRS = (TEMPLATE_DIRS108,3906
 INSTALLED_APPS = (INSTALLED_APPS115,4159
-LOGGING = {LOGGING134,4858
+LOGGING = {LOGGING135,4881
+EMAIL_HOST = 'smtp.gmail.com'EMAIL_HOST160,5449
+EMAIL_PORT = 587EMAIL_PORT161,5479
+EMAIL_HOST_USER = 'daipeng123456@gmail.com'EMAIL_HOST_USER162,5496
+EMAIL_HOST_PASSWORD = 'dp123456'EMAIL_HOST_PASSWORD163,5540
+EMAIL_USE_TLS = TrueEMAIL_USE_TLS164,5573
+CACHES = {CACHES167,5611
 
 /var/www/blog/blog/__init__.py,0
