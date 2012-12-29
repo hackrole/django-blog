@@ -18,6 +18,11 @@ urlpatterns = patterns('',
 
 urlpatterns += patterns('webblog',
                         url(r'^blog/$', 'views.index'),
-                        url(r'^blog/list/(\d+)/(\d+)$', 'views.list'),
-                        url(r'^blog/detail/(?P<id>\d+)$', 'views.detail'),
+                        url(r'^blog/cate/(\w+)$', 'views.cate'),
+                        url(r'^blog/tag/(\w+)$', 'views.tag'),
+                        url(r'^blog/(\d{4})/(\d{2})$', 'views.data'),
+                        url(r'^blog/blog/(?P<id>\d+)$', 'views.detail'),
+                        url(r"^blog/comment/$", 'views.post_comment'),
+                        url(r'^blog/about/$', 'views.about'),
+                     
 )
