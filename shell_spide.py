@@ -21,13 +21,27 @@ def xml_handle(sitemap):
         
     return uList
 
+def save_blog(url):
+    html = urllib.urlopen(url).read()
+    file = open("/home/daipeng/Desktop/shell.html", 'w')
+    title = re.search('<h1 class="entry-title">(.*?)</h1>', html)
+    print title.groups()[0].decode('utf8')
+    time = re.search('<time(.*?)>(.*?)</time>', html)
+    print time.groups()[1].decode('utf8')
+    blog = re.search('<div.*?entry-content(.*?)</div>', html)
+    print blog.groups()[0].decode('utf8')
+    print url
+    # print >>file, html
+    
+
 if __name__ == "__main__":
     print "=========================\n"
     sitemap = open_sitemap()
     uList = xml_handle(sitemap)
+    save_blog(uList[1])
     # print uList
-    for u in uList:
-        print u
+    # for u in uList:
+    #     print u
         
     
 
