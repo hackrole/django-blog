@@ -12,15 +12,20 @@ body {
     width:100%;
 }
 #head p{
-    margin-top:50px;
-    margin-left:80px;
+    position:relative;
+    top:50px;
+    left:80px;
     font-size:22px;
 }
 #head input{
     float:right;
-    margin-top:-27px;
-    margin-right:50px;
-    width:120px;
+    margin-top:7px;
+    margin-right:90px;
+    width:100px;
+    height:26px;
+}
+#head input:focus{
+    width:160px;
 }
 #side{
     height:50px;
