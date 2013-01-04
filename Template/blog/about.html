@@ -1,0 +1,37 @@
+{% extends "blog/base.html" %}
+{% block content %}
+<div>
+{% include "blog/about_me.html" %}
+</div>
+<div>
+  {% for i in about %}
+  <div style="border:1px solid #e3e3e3;width:70%;padding-left:3px;margin:auto;margin-top:3px;">
+    <p>
+      <span>name:</span>
+      <span>{{ i.name }}</span>
+    </p>
+    <p>
+      <span>email:</span>
+      <span>{{ i.email }} </span>
+    </p>
+    <p>
+      <span>website:</span>
+      <span>{{ i.website|default:"未知" }}</span>
+    </p>
+    <p>
+      <span>message:</span>
+      <span>{{ i.content }}</span>
+    </p>
+  </div>
+  {% endfor %}
+  
+</div>
+
+<div>
+<form action="{% url webblog.views.about %}" method="post">
+{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="提交" />
+</form>
+</div>
+{% endblock %}

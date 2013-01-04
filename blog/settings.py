@@ -5,6 +5,7 @@ TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
+    ('hackrole', 'daipeng123456@gmail.com'),
 )
 
 MANAGERS = ADMINS
@@ -59,7 +60,7 @@ MEDIA_URL = ''
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = ''
+STATIC_ROOT = '/var/www/blog/static'
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
@@ -157,6 +158,7 @@ LOGGING = {
 }
 
 # Email Setup
+DEFAULT_FROM_EMAIL = 'daipeng123456@gmail.com'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'daipeng123456@gmail.com'

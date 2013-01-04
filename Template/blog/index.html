@@ -16,7 +16,7 @@
         <li> {{ t }}</li>
          <ul>
              <li>{{ t.tag_id }}</li>        
-             <li><a href="{% url webblog.views.list t.tag_id 0 %}">{{ t.tag_name }}</a></li>
+             <li><a href="{% url webblog.views.index %}">{{ t.tag_name }}</a></li>
              <li>{{ t.desc }}</li>
              <li>{{ t.create_time }}</li>
              <li>{{ t.tag_rate }}</li>

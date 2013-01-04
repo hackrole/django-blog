@@ -1,5 +1,7 @@
 #coding=utf-8
 from django.db import models
+import re
+from django.core.exceptions import ValidationError
 
 # Create your models here.
 
@@ -68,4 +70,29 @@ class Comment(models.Model):
     def __unicode__(self):
         return 'the %s has say: %s' % (self.author_name, self.content[:10]+'..')
 
+    
+class About(models.Model):
+    name = models.CharField(max_length=10)
+    email = models.EmailField()
+    website = models.URLField(blank=True)
+    content = models.TextField()
+    
+    def __unicode__(self):
+        # return "%(name)s with email %(email)s send this: (%content)s" % {'name':self.name, 'email':self.email, 'content':self.content}    
+        return '%s with email: %s send this: %s' % (self.name, self.email, self.content)
+def validate_qq(value):
+    reqq = re.compile("[0-9]{6,10}")
+    if not reqq.match(value):
+        raise ValidationError(u'%s is not a qq contact' % value)
+        
+class Contact(models.Model):
+    name = models.CharField(max_length=10)
+    email = models.EmailField()
+    website = models.URLField(blank=True,null=True)
+    qq = models.CharField(max_length=12, blank=True, validators=[validate_qq,])    
+    content = models.TextField()
+    if_accept_email = models.BooleanField(default=False)
+    
+    def __unicode__(self):
+        return '%(name)s with email: %(email)s' % ({'name':self.name, 'email':self.email})
     

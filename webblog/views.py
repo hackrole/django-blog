@@ -2,7 +2,11 @@
 
 from webblog.models import *
 from django.http import HttpResponse
-from django.shortcuts import render_to_response
+from django.template import RequestContext
+from django.shortcuts import render_to_response, redirect
+from webblog.form import *
+from django.core.mail import send_mail
+from webblog import params
 
 def index(request):
     cate = Category.objects.all()
@@ -33,7 +37,31 @@ def detail(request, id):
     return render_to_response('blog/detail.html', {'blog':blog,})
 
 def about(request):
-    pass
+    if request.method == "POST":
+        form = AboutForm(request.POST)
+        if form.is_valid():
+            form.save()
+        return redirect('/blog/')
+    
+    form = AboutForm()
+    about = About.objects.all()
+    return render_to_response('blog/about.html', {'form':form, 'about':about}, context_instance=RequestContext(request))
+     
+def contact(request):
+    if request.method == "POST":
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            admin_email = params.contact_email_admin.admin
+            send_email('联系我们', form.cleaned_data.content, EMAIL_HOST_USER, [form.cleaned_data.email,], fail_silently=False)
+            return render_to_response('tips.html')
+    
+    form = Contact()
+    return render_to_response('blog/contact.html', {'form': form}, context_instance=RequestContext}
+
+
+            
+            
 
 def post_comment(request):
     pass
