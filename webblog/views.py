@@ -1,3 +1,4 @@
+#coding=utf8
 # Create your views here.
 
 from webblog.models import *
@@ -53,15 +54,13 @@ def contact(request):
         if form.is_valid():
             form.save()
             admin_email = params.contact_email_admin.admin
-            send_email('联系我们', form.cleaned_data.content, EMAIL_HOST_USER, [form.cleaned_data.email,], fail_silently=False)
+            send_email('联系我们', form.cleaned_data.content, EMAIL_HOST_USER, ['daipeng123456@gmail.com'], fail_silently=False)
+            if True == form.cleaned_data.if_accept_email:
+                send_email('联系我们', form.cleaned_data.content, EMAIL_HOST_USER, [form.cleaned_data.email,], fail_silently=False)
             return render_to_response('tips.html')
     
-    form = Contact()
-    return render_to_response('blog/contact.html', {'form': form}, context_instance=RequestContext}
-
-
-            
-            
+    form = ContactForm()
+    return render_to_response('blog/contact.html', {'form': form}, context_instance=RequestContext(request))
 
 def post_comment(request):
     pass

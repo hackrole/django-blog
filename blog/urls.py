@@ -2,6 +2,7 @@ from django.conf.urls import patterns, include, url
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
+from blog import settings
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -16,7 +17,7 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 )
 
-urlpatterns += staticfiles_urlpatterns()
+
 
 urlpatterns += patterns('webblog',
                         url(r'^blog/$', 'views.index'),
@@ -26,5 +27,7 @@ urlpatterns += patterns('webblog',
                         url(r'^blog/blog/(?P<id>\d+)$', 'views.detail'),
                         url(r"^blog/comment/$", 'views.post_comment'),
                         url(r'^blog/about/$', 'views.about'),
-                     
+                        url(r'^blog/contact/$', 'views.contact'),
 )
+if settings.DEBUG == True:
+    urlpatterns += staticfiles_urlpatterns()

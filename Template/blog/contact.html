@@ -1,0 +1,52 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+<div>
+  <p><h1>time for some contact with us? </h1></p>
+  <form action="" method="post" name="fm">
+    {{ form.non_field_errors }}
+    <div>
+      <p>
+        <label>姓名:</label>
+        {{ form.name }}
+        {{ form.name.errors }}
+      </p>
+    </div>
+    <div>
+      <p>
+        <label>*邮箱:</label>
+        {{ form.email }}
+        {{ form.email.errors }}
+      </p>
+    </div>
+    <div>
+      <p>
+        <label>站点：</label>
+        {{ form.website }}
+        {{ form.website.errors }}
+      </p>
+    </div>
+    <div>
+      <p>
+        <label>qq</label>
+        {{ form.qq }}
+        {{ form.qq.errors }}
+      </p>
+    </div>
+    <div>
+      <p>
+        <label>content:</label>
+        {{ form.content }}
+        {{ form.content.errors }}
+      </p>
+    </div>
+    <div>
+      <p>是否接收邮件: {{ form.if_accept_email }}</p>
+     
+    </div>
+    <div>
+      <input type="submit" value="提交" />
+    </div>
+  </form>
+</div>
+{% endblock %}
