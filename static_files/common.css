@@ -16,14 +16,7 @@ li{
     float:left;
     margin-left:12px;
 }
-/*
-test 
-*/
-div{
-    border:1px solid gray;
-    min-height:10px;
-    margin:20px;
-}
+
 #container{
     height:auto;
     min-height:80px;
@@ -67,7 +60,7 @@ div{
     width:200px;
 }
 #content{
-    min-height:700px;
+    min-height:900px;
     width:1000px;
     margin:-28px auto auto;
     padding:0px;
@@ -110,6 +103,7 @@ div{
     margin-top:0px;
     margin-bottom:0px;
     border:none;
+    overflow:visible;
 }
 #foot{
     margin:0px auto;    
@@ -138,7 +132,7 @@ div{
 }
 .desc{
     overflow:auto;
-    margin:-20px auto auto auto;
+    margin:-10px auto auto auto;
     line-height:16px;
     padding:0px;
     padding-left:30px;
@@ -191,5 +185,31 @@ ol>li{
     /* border-left:1px solid black; */
     padding-left:10px;
 }
-
-
+#comments{
+    margin-top:30px;
+    border-top:1px solid #eeeeee;
+    border-bottom:1px solid #eeeeee;
+}
+.comment{
+    background-color:#e3e3e3;
+    padding-bottom:10px;
+}
+.comment>h4{
+    padding:8px;
+}
+.comment>h4>span{
+    margin-left:10px;
+}
+.comment>p{
+    margin:10px;
+    background:white;
+    min-height:50px;
+    padding:10px;
+    text-indent:20px;
+}
+#post-comment{
+    padding-left:20px;
+}
+textarea{
+    vertical-align:top;
+}
