@@ -21,7 +21,20 @@
       <div id="main">
       {% block main %}
         <div id="content">
-        {% block content %}          
+        {% block content %}
+        
+        {% block content-title %}
+        {% include "content-title.html" %}
+        {% endblock %}
+        
+        {% block main %}
+         {% include "main.html" %}
+        {% endblock %}
+        
+        {% block sidebar %}
+        {% include "sidebar.html" %}
+        {% endblock %}
+
         {% endblock content %}
         </div>
         <div id="sidebar">
