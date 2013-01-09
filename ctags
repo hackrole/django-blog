@@ -25,6 +25,8 @@ ADMINS	/var/www/blog/blog/settings.py	/^ADMINS = ($/;"	v
 About	/var/www/blog/webblog/form.py	/^from webblog.models import About,Contact$/;"	i
 About	/var/www/blog/webblog/models.py	/^class About(models.Model):$/;"	c
 AboutForm	/var/www/blog/webblog/form.py	/^class AboutForm(forms.ModelForm):$/;"	c
+BaseCommand	/var/www/blog/webblog/management/commands/createCommand.py	/^from django.core.management.base import BaseCommand, CommandError$/;"	i
+BaseCommand	/var/www/blog/webblog/management/commands/tryTemplate.py	/^from django.core.management.base  import BaseCommand,CommandError$/;"	i
 Blog	/var/www/blog/relateModelTest/models.py	/^class Blog(models.Model):$/;"	c
 Blog	/var/www/blog/webblog/models.py	/^class Blog(models.Model):$/;"	c
 BlogAdmin	/var/www/blog/webblog/admin.py	/^class BlogAdmin(admin.ModelAdmin):$/;"	c
@@ -61,11 +63,17 @@ CalendarNamespace.monthsOfYear	/var/www/blog/static/admin/js/calendar.js	/^    m
 Cate	/var/www/blog/relateModelTest/models.py	/^class Cate(models.Model):$/;"	c
 Category	/var/www/blog/webblog/models.py	/^class Category(models.Model):$/;"	c
 CategoryAdmin	/var/www/blog/webblog/admin.py	/^class CategoryAdmin(admin.ModelAdmin):$/;"	c
+Command	/var/www/blog/webblog/management/commands/createCommand.py	/^class Command(BaseCommand):$/;"	c
+Command	/var/www/blog/webblog/management/commands/tryTemplate.py	/^class Command(BaseCommand):$/;"	c
+CommandError	/var/www/blog/webblog/management/commands/createCommand.py	/^from django.core.management.base import BaseCommand, CommandError$/;"	i
+CommandError	/var/www/blog/webblog/management/commands/tryTemplate.py	/^from django.core.management.base  import BaseCommand,CommandError$/;"	i
 Comment	/var/www/blog/webblog/models.py	/^class Comment(models.Model):$/;"	c
 CommentAdmin	/var/www/blog/webblog/admin.py	/^class CommentAdmin(admin.ModelAdmin):$/;"	c
 Contact	/var/www/blog/webblog/form.py	/^from webblog.models import About,Contact$/;"	i
+Contact	/var/www/blog/webblog/management/commands/createCommand.py	/^from webblog.models import Contact$/;"	i
 Contact	/var/www/blog/webblog/models.py	/^class Contact(models.Model):$/;"	c
 ContactForm	/var/www/blog/webblog/form.py	/^class ContactForm(forms.ModelForm):$/;"	c
+Context	/var/www/blog/webblog/management/commands/tryTemplate.py	/^from django.template import Template,Context,TemplateDoesNotExist,TemplateEncodingError,TemplateSyntaxError$/;"	i
 DATABASES	/var/www/blog/blog/settings.py	/^DATABASES = {$/;"	v
 DEBUG	/var/www/blog/blog/settings.py	/^DEBUG = True$/;"	v
 DEFAULT_FROM_EMAIL	/var/www/blog/blog/settings.py	/^DEFAULT_FROM_EMAIL = 'daipeng123456@gmail.com'$/;"	v
@@ -377,6 +385,10 @@ TURKISH_MAP.ş	/var/www/blog/static/admin/js/urlify.js	/^    'ş':'s', 'Ş':'S',
 Tag	/var/www/blog/relateModelTest/models.py	/^class Tag(models.Model):$/;"	c
 Tag	/var/www/blog/webblog/models.py	/^class Tag(models.Model):$/;"	c
 TagAdmin	/var/www/blog/webblog/admin.py	/^class TagAdmin(admin.ModelAdmin):$/;"	c
+Template	/var/www/blog/webblog/management/commands/tryTemplate.py	/^from django.template import Template,Context,TemplateDoesNotExist,TemplateEncodingError,TemplateSyntaxError$/;"	i
+TemplateDoesNotExist	/var/www/blog/webblog/management/commands/tryTemplate.py	/^from django.template import Template,Context,TemplateDoesNotExist,TemplateEncodingError,TemplateSyntaxError$/;"	i
+TemplateEncodingError	/var/www/blog/webblog/management/commands/tryTemplate.py	/^from django.template import Template,Context,TemplateDoesNotExist,TemplateEncodingError,TemplateSyntaxError$/;"	i
+TemplateSyntaxError	/var/www/blog/webblog/management/commands/tryTemplate.py	/^from django.template import Template,Context,TemplateDoesNotExist,TemplateEncodingError,TemplateSyntaxError$/;"	i
 TestCase	/var/www/blog/blogtest/tests.py	/^from django.test import TestCase$/;"	i
 TestCase	/var/www/blog/relateModelTest/tests.py	/^from django.test import TestCase$/;"	i
 TestCase	/var/www/blog/webblog/tests.py	/^from django.test import TestCase$/;"	i
@@ -425,6 +437,8 @@ alter	/var/www/blog/webblog/static/common.js	/^function alter(vars){$/;"	f
 application	/var/www/blog/blog/wsgi.py	/^application = get_wsgi_application()$/;"	v
 arg	/var/www/blog/static/admin/js/compress.py	/^            arg = arg + ".js"$/;"	v
 args	/var/www/blog/static/admin/js/compress.py	/^        args = [os.path.join(here, f) for f in [$/;"	v
+args	/var/www/blog/webblog/management/commands/createCommand.py	/^    args = ''$/;"	v	class:Command
+args	/var/www/blog/webblog/management/commands/tryTemplate.py	/^    args = ''$/;"	v	class:Command
 author_email	/var/www/blog/webblog/models.py	/^    author_email = models.EmailField()$/;"	v	class:Comment
 author_name	/var/www/blog/webblog/models.py	/^    author_name = models.CharField(max_length=10)$/;"	v	class:Comment
 b.fn.formset.defaults.addCssClass	/var/www/blog/static/admin/js/inlines.min.js	/^a.prefix,d)});return!1});a.added&&a.added(d);return!1})}return this};b.fn.formset.defaults={prefix:"form",addText:"add another",deleteText:"remove",addCssClass:"add-row",deleteCssClass:"delete-row",emptyCssClass:"empty-row",formCssClass:"dynamic-form",added:null,removed:null}})(django.jQuery);$/;"	p
@@ -522,8 +536,12 @@ function.qa	/var/www/blog/static/admin/js/jquery.min.js	/^"&")}function qa(a){re
 getAllChildren	/var/www/blog/static/admin/js/getElementsBySelector.js	/^function getAllChildren(e) {$/;"	f
 getOrder	/var/www/blog/static/admin/js/admin/ordering.js	/^function getOrder() {$/;"	f
 get_wsgi_application	/var/www/blog/blog/wsgi.py	/^from django.core.wsgi import get_wsgi_application$/;"	i
+handle	/var/www/blog/webblog/management/commands/createCommand.py	/^    def handle(self, *args, **options):$/;"	m	class:Command
+handle	/var/www/blog/webblog/management/commands/tryTemplate.py	/^    def handle(self, *args, **options):$/;"	m	class:Command
 height	/var/www/blog/static/admin/js/admin/ordering.js	/^var height = 30;$/;"	v
 help	/var/www/blog/static/admin/js/compress.py	/^                      help="path to Closure Compiler jar file")$/;"	v
+help	/var/www/blog/webblog/management/commands/createCommand.py	/^    help = ''$/;"	v	class:Command
+help	/var/www/blog/webblog/management/commands/tryTemplate.py	/^    help = "try the template in console"$/;"	v	class:Command
 here	/var/www/blog/static/admin/js/compress.py	/^here = os.path.dirname(__file__)$/;"	v
 html_unescape	/var/www/blog/static/admin/js/admin/RelatedObjectLookups.js	/^function html_unescape(text) {$/;"	f
 id_to_windowname	/var/www/blog/static/admin/js/admin/RelatedObjectLookups.js	/^function id_to_windowname(text) {$/;"	f
@@ -538,9 +556,11 @@ is_show	/var/www/blog/relateModelTest/models.py	/^    is_show = models.BooleanFi
 is_visiable	/var/www/blog/webblog/models.py	/^    is_visiable = models.BooleanField()$/;"	v	class:Blog
 j	/var/www/blog/static/admin/js/SelectBox.js	/^        var j = SelectBox.cache[id].length - 1;$/;"	v
 jQuery.fn.init	/var/www/blog/static/admin/js/jquery.js	/^jQuery.fn.init.prototype = jQuery.fn;$/;"	c
+json	/var/www/blog/webblog/management/commands/tryTemplate.py	/^import json $/;"	i
 left	/var/www/blog/static/admin/js/admin/ordering.js	/^var left = 0;$/;"	v
 lis	/var/www/blog/static/admin/js/admin/ordering.js	/^var lis;$/;"	v
 main	/var/www/blog/static/admin/js/compress.py	/^def main():$/;"	f
+make_option	/var/www/blog/webblog/management/commands/tryTemplate.py	/^from optparse import make_option$/;"	i
 minidom	/var/www/blog/shell_spide.py	/^from xml.dom import minidom$/;"	i
 mins	/var/www/blog/static/admin/js/timeparse.js	/^            var mins = parseInt(bits[2]);$/;"	v
 model	/var/www/blog/webblog/form.py	/^        model = About$/;"	v	class:AboutForm.Meta
@@ -560,6 +580,7 @@ now_link	/var/www/blog/static/admin/js/admin/DateTimeShortcuts.js	/^        var 
 oa	/var/www/blog/static/admin/js/jquery.min.js	/^e(a[0],b):w}function J(){return(new Date).getTime()}function Y(){return false}function Z(){return true}function na(a,b,d){d[0].type=a;return c.event.handle.apply(b,d)}function oa(a){var b,d=[],f=[],e=arguments,j,i,o,k,n,r;i=c.data(this,"events");if(!(a.liveFired===this||!i||!i.live||a.button&&a.type==="click")){a.liveFired=this;var u=i.live.slice(0);for(k=0;k<u.length;k++){i=u[k];i.origType.replace(O,"")===a.type?f.push(i.selector):u.splice(k--,1)}j=c(a.target).closest(f,a.currentTarget);n=0;for(r=$/;"	f
 open_sitemap	/var/www/blog/shell_spide.py	/^def open_sitemap(url="http:\/\/www.shell909090.com\/blog\/sitemap.xml"):$/;"	f
 option	/var/www/blog/static/admin/js/SelectBox.js	/^        var option;$/;"	v
+option_list	/var/www/blog/webblog/management/commands/tryTemplate.py	/^    option_list = AppCommand.option_list + ($/;"	v	class:Command
 optparse	/var/www/blog/static/admin/js/compress.py	/^import optparse$/;"	i
 ordering	/var/www/blog/webblog/admin.py	/^    ordering = ['-category_rate']$/;"	v	class:CategoryAdmin
 ordering	/var/www/blog/webblog/models.py	/^        ordering = ['-pub_time']$/;"	v	class:Blog.Meta
@@ -597,6 +618,7 @@ send_mail	/var/www/blog/webblog/views.py	/^from django.core.mail import send_mai
 serializers	/var/www/blog/webblog/admin.py	/^from django.core import serializers$/;"	i
 setOrder	/var/www/blog/static/admin/js/admin/ordering.js	/^function setOrder(id_list) {$/;"	f
 settings	/var/www/blog/blog/urls.py	/^from blog import settings$/;"	i
+settings	/var/www/blog/webblog/management/commands/tryTemplate.py	/^from django.conf import settings$/;"	i
 shortcuts	/var/www/blog/static/admin/js/admin/DateTimeShortcuts.js	/^        var shortcuts = quickElement('div', cal_box, '');$/;"	v
 shortcuts_span	/var/www/blog/static/admin/js/admin/DateTimeShortcuts.js	/^        var shortcuts_span = document.createElement('span');$/;"	v
 showAddAnotherPopup	/var/www/blog/static/admin/js/admin/RelatedObjectLookups.js	/^function showAddAnotherPopup(triggeringLink) {$/;"	f

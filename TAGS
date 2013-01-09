@@ -1,185 +1,0 @@
-
-/var/www/blog/sql/blog_create.sql,2467
-CREATE TABLE "blog" (blog9,201
-    "blog_id" integer NOT NULL PRIMARY KEY,blog.blog_id9,223
-    "category_id_id" integer NOT NULL REFERENCES "webblog_category" ("category_id"),blog.category_id_id10,267
-    "title" varchar(20) NOT NULL UNIQUE,blog.title11,352
-    "desc" varchar(150) NOT NULL,blog.desc12,393
-    "content" text NOT NULL,blog.content13,427
-    "pub_time" datetime NOT NULL,blog.pub_time14,456
-    "update_time" datetime NOT NULL,blog.update_time15,490
-    "is_pub" smallint NOT NULL,blog.is_pub16,527
-    "is_close" smallint NOT NULL,blog.is_close17,559
-    "is_visiable" smallint NOT NULLblog.is_visiable18,593
-CREATE TABLE "webblog_tag" (webblog_tag22,633
-    "tag_id" integer NOT NULL PRIMARY KEY,webblog_tag.tag_id22,662
-    "tag_name" varchar(20) NOT NULL UNIQUE,webblog_tag.tag_name23,705
-    "desc" varchar(50) NOT NULL,webblog_tag.desc24,749
-    "create_time" date NOT NULL,webblog_tag.create_time25,782
-    "tag_rate" smallint NOT NULLwebblog_tag.tag_rate26,815
-CREATE TABLE "webblog_blog_tag" (webblog_blog_tag30,852
-    "blog_id_id" integer NOT NULL PRIMARY KEY REFERENCES "blog" ("blog_id"),webblog_blog_tag.blog_id_id30,886
-    "Tag_id_id" integer NOT NULL PRIMARY KEY REFERENCES "webblog_tag" ("tag_id")webblog_blog_tag.Tag_id_id31,963
-CREATE TABLE "webblog_comment" (webblog_comment35,1048
-    "comment_id" integer NOT NULL PRIMARY KEY,webblog_comment.comment_id35,1081
-    "author_name" varchar(10) NOT NULL,webblog_comment.author_name36,1128
-    "author_email" varchar(75) NOT NULL,webblog_comment.author_email37,1168
-    "content" text NOT NULL,webblog_comment.content38,1209
-    "is_close" smallint NOT NULL,webblog_comment.is_close39,1238
-    "is_discard" smallint NOT NULL,webblog_comment.is_discard40,1272
-    "comment_level" smallint NOT NULL,webblog_comment.comment_level41,1308
-    "parent_id_id" integer NOT NULL,webblog_comment.parent_id_id42,1347
-    "blog_id_id" integer NOT NULL REFERENCES "blog" ("blog_id")webblog_comment.blog_id_id43,1384
-CREATE INDEX "blog_56c2042b" ON "blog" ("category_id_id");blog.blog_56c2042b47,1452
-CREATE INDEX "blog_646331b4" ON "blog" ("pub_time");blog.blog_646331b448,1511
-CREATE INDEX "webblog_comment_1cf7ee57" ON "webblog_comment" ("parent_id_id");webblog_comment.webblog_comment_1cf7ee5749,1564
-CREATE INDEX "webblog_comment_301daeed" ON "webblog_comment" ("blog_id_id");webblog_comment.webblog_comment_301daeed50,1643
-
-/var/www/blog/makefile,26
-dir=/var/www/blogdir1,0
-
-/var/www/blog/static/index.html,0
-
-/var/www/blog/manage.py,135
-import osos2,22
-import syssys3,32
-    from django.core.management import execute_from_command_lineexecute_from_command_line8,141
-
-/var/www/blog/webblog/admin.py,1032
-from django.contrib import adminadmin3,15
-from django.http import HttpResponseHttpResponse5,77
-from django.core import serializersserializers6,114
-from django.contrib import adminadmin7,150
-from django.http import HttpResponseRedirectHttpResponseRedirect8,183
-def export_as_json(modeladmin, request, queryset):export_as_json17,567
-class BlogAdmin(admin.ModelAdmin):BlogAdmin24,795
-    actions = ['close_blog', 'pub_blog', 'show_blog']actions26,841
-    def close_blog(self, request, queryset):close_blog28,900
-    def pub_blog(self, request, queryset):pub_blog33,1174
-    def show_blog(self, request, queryset):show_blog39,1458
-class TagAdmin(admin.ModelAdmin):TagAdmin45,1655
-def up_rate(modelAdmin, request, queryset):up_rate49,1727
-class CategoryAdmin(admin.ModelAdmin):CategoryAdmin56,1969
-    ordering = ['-category_rate']ordering58,2019
-    actions = [up_rate]actions59,2053
-class CommentAdmin(admin.ModelAdmin):CommentAdmin62,2083
-class Blog_TagAdmin(admin.ModelAdmin):Blog_TagAdmin65,2131
-
-/var/www/blog/webblog/views.py,241
-from django.http import HttpResponseHttpResponse4,56
-from django.shortcuts import render_to_responserender_to_response5,93
-def index(request):index7,142
-def list(request, bid, btype):list14,362
-def detail(request, id):detail24,700
-
-/var/www/blog/webblog/static/js/blog.js,0
-
-/var/www/blog/webblog/tests.py,156
-from django.test import TestCaseTestCase8,184
-class SimpleTest(TestCase):SimpleTest11,219
-    def test_basic_addition(self):test_basic_addition12,247
-
-/var/www/blog/webblog/__init__.py,0
-
-/var/www/blog/webblog/form.py,0
-
-/var/www/blog/webblog/models.py,2712
-from django.db import modelsmodels2,14
-class Category(models.Model):Category6,72
-    category_id = models.AutoField(primary_key=True)category_id7,102
-    name = models.CharField(max_length=20)name8,155
-    create_time = models.DateTimeField(auto_now=True)create_time9,198
-    category_rate = models.SmallIntegerField(verbose_name="排名")category_rate10,252
-    def __unicode__(self):__unicode__12,321
-class Blog(models.Model):Blog15,374
-    blog_id = models.AutoField(primary_key=True)blog_id16,400
-    category_id = models.ForeignKey(Category)category_id17,449
-    title = models.CharField(max_length=20, db_index=True, unique=True)title18,495
-    desc = models.CharField(max_length=150)desc19,567
-    content = models.TextField()content20,611
-    pub_time = models.DateTimeField(auto_now=True,db_index=True)pub_time21,644
-    update_time = models.DateTimeField()    update_time22,709
-    is_pub = models.BooleanField()is_pub23,754
-    is_close = models.BooleanField()is_close24,789
-    is_visiable = models.BooleanField()is_visiable25,826
-    def __unicode__(self):__unicode__27,871
-    class Meta:Meta30,925
-        db_table = 'blog'db_table31,941
-        ordering = ['-pub_time']ordering32,967
-class Tag(models.Model):Tag34,1001
-    tag_id = models.AutoField(primary_key=True) tag_id35,1026
-    tag_name = models.CharField(max_length=20, db_index=True,unique=True)tag_name36,1075
-    desc = models.CharField(max_length=50)desc37,1149
-    create_time = models.DateField(auto_now=True)create_time38,1192
-    tag_rate = models.SmallIntegerField()tag_rate39,1242
-    def __unicode__(self):__unicode__41,1289
-class Blog_Tag(models.Model):Blog_Tag44,1346
-    relation_id = models.AutoField(primary_key=True)relation_id45,1376
-    blog_id = models.ForeignKey(Blog)blog_id46,1429
-    tag_id = models.ForeignKey(Tag)tag_id47,1467
-    def __unicode__(self):__unicode__49,1508
-class Comment(models.Model):Comment53,1671
-    COMMENT_LEVEL_CHOICES = (COMMENT_LEVEL_CHOICES54,1700
-    comment_id = models.AutoField(primary_key=True)comment_id58,1794
-    author_name = models.CharField(max_length=10)author_name59,1846
-    author_email = models.EmailField()author_email60,1896
-    content = models.TextField()content61,1935
-    is_close = models.BooleanField()is_close62,1968
-    is_discard = models.BooleanField()is_discard63,2005
-    comment_level = models.SmallIntegerField(choices=COMMENT_LEVEL_CHOICES)comment_level64,2044
-    parent_id = models.ForeignKey('self', blank=True, null=True)parent_id65,2120
-    blog_id = models.ForeignKey(Blog, blank=True, null=True)blog_id66,2185
-    def __unicode__(self):__unicode__68,2251
-
-/var/www/blog/Template/blog/head.html,0
-
-/var/www/blog/Template/blog/index.html,0
-
-/var/www/blog/Template/blog/base.html,0
-
-/var/www/blog/Template/blog/detail.html,0
-
-/var/www/blog/Template/blog/foot.html,0
-
-/var/www/blog/Template/blog/list.html,0
-
-/var/www/blog/blog/urls.py,279
-from django.conf.urls import patterns, include, urlpatterns1,0
-from django.conf.urls import patterns, include, urlinclude1,0
-from django.conf.urls import patterns, include, urlurl1,0
-from django.contrib import adminadmin4,105
-urlpatterns = patterns('',urlpatterns7,160
-
-/var/www/blog/blog/wsgi.py,154
-import osos16,658
-from django.core.wsgi import get_wsgi_applicationget_wsgi_application23,909
-application = get_wsgi_application()application24,959
-
-/var/www/blog/blog/settings.py,1034
-DEBUG = TrueDEBUG3,37
-TEMPLATE_DEBUG = DEBUGTEMPLATE_DEBUG4,50
-ADMINS = (ADMINS6,74
-MANAGERS = ADMINSMANAGERS10,135
-DATABASES = {DATABASES12,154
-TIME_ZONE = 'America/Chicago'TIME_ZONE30,1140
-LANGUAGE_CODE = 'en-us'LANGUAGE_CODE34,1300
-SITE_ID = 1SITE_ID36,1325
-USE_I18N = TrueUSE_I18N40,1458
-USE_L10N = TrueUSE_L10N44,1590
-USE_TZ = TrueUSE_TZ47,1681
-MEDIA_ROOT = ''MEDIA_ROOT51,1827
-MEDIA_URL = ''MEDIA_URL56,2010
-STATIC_ROOT = ''STATIC_ROOT62,2282
-STATIC_URL = '/static/'STATIC_URL66,2378
-STATICFILES_DIRS = (STATICFILES_DIRS69,2442
-STATICFILES_FINDERS = (STATICFILES_FINDERS77,2739
-SECRET_KEY = 'ps*7&amp;va^vku0diya!5)^*r1)nd$ynul1s@f4w52%cg*01prv-k'SECRET_KEY84,3005
-TEMPLATE_LOADERS = (TEMPLATE_LOADERS87,3152
-MIDDLEWARE_CLASSES = (MIDDLEWARE_CLASSES93,3324
-ROOT_URLCONF = 'blog.urls'ROOT_URLCONF103,3761
-WSGI_APPLICATION = 'blog.wsgi.application'WSGI_APPLICATION106,3862
-TEMPLATE_DIRS = (TEMPLATE_DIRS108,3906
-INSTALLED_APPS = (INSTALLED_APPS115,4159
-LOGGING = {LOGGING134,4858
-
-/var/www/blog/blog/__init__.py,0

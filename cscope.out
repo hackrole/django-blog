@@ -1,4 +1,4 @@
-cscope 15 /var/www/blog -q 0000001717 0000290858
+cscope 15 /var/www/blog -q 0000001730 0000292587
 	@/var/www/blog/blog/__init__.py
 
 	@/var/www/blog/blog/settings.py
@@ -49595,6 +49595,336 @@ widg‘s
 	}
 }
 
+	@/var/www/blog/webblog/management/__init__.py
+
+	@/var/www/blog/webblog/management/commands/__init__.py
+
+	@/var/www/blog/webblog/management/commands/_private.py
+
+	@/var/www/blog/webblog/management/commands/createCommand.py
+
+1 #!/
+u¤
+/
+bš
+/
+pythÚ2
+.7
+
+2 #ch¬£t=
+utf
+-8
+
+4 
+äom
+ 
+	gdjªgo
+.
+	gcÜe
+.
+	gmªagem’t
+.
+ba£
+ 
+impÜt
+ 
+	gBa£Commªd
+, 
+CommªdE¼Ü
+
+
+5 
+äom
+ 
+	gwebblog
+.
+mod–s
+ 
+impÜt
+ 
+CÚù
+
+
+7 
+şass
+ 
+	$Commªd
+(
+Ba£Commªd
+):
+
+8 
+¬gs
+ = ''
+
+9 
+h–p
+ = ''
+
+11 
+def
+ 
+	$hªdË
+(
+£lf
+, *
+¬gs
+, **
+İtiÚs
+):
+
+	@/var/www/blog/webblog/management/commands/tryTemplate.py
+
+1 #!/
+u¤
+/
+bš
+/
+pythÚ2
+.7
+
+2 #ch¬£t=
+utf
+-8
+
+4 
+äom
+ 
+İ¬£
+ 
+impÜt
+ 
+make_İtiÚ
+
+
+5 
+äom
+ 
+	gdjªgo
+.
+cÚf
+ 
+impÜt
+ 
+£‰šgs
+
+
+6 
+äom
+ 
+	gdjªgo
+.
+	gcÜe
+.
+	gmªagem’t
+.
+ba£
+ 
+impÜt
+ 
+	gBa£Commªd
+,
+CommªdE¼Ü
+
+
+7 
+äom
+ 
+	gdjªgo
+.
+‹m¶©e
+ 
+impÜt
+ 
+	gTem¶©e
+,
+	gCÚ‹xt
+,
+	gTem¶©eDÛsNÙExi¡
+,
+	gTem¶©eEncodšgE¼Ü
+,
+Tem¶©eSyÁaxE¼Ü
+
+
+8 
+impÜt
+ 
+jsÚ
+
+
+10 
+şass
+ 
+	$Commªd
+(
+Ba£Commªd
+):
+
+11 
+¬gs
+ = ''
+
+12 
+h–p
+ = "tryheemplate in console"
+
+13 
+İtiÚ_li¡
+ = 
+AµCommªd
+.option_list + (
+
+14 
+	`make_İtiÚ
+('--‹mp', 
+aùiÚ
+='¡Üe', 
+de¡
+='‹m°fe', 
+h–p
+='end‡emp fileory'
+
+16 
+	`make_İtiÚ
+('--cÚ‹xt', 
+aùiÚ
+='¡Üe', 
+de¡
+='cÚ‹xˆd©a', ='', 
+h–p
+='enter‡ json style context forheemplate'
+
+20 
+def
+ 
+	$hªdË
+(
+£lf
+, *
+¬gs
+, **
+İtiÚs
+):
+
+21 
+Œy
+:
+
+22 
+s
+ = 
+	`İ’
+(
+£lf
+.
+‹mp
+).
+	$»ad
+()
+
+23 
+t
+ = 
+	$Tem¶©e
+(
+s
+)
+
+24 
+d©a
+ = 
+jsÚ
+.
+	$»ad
+(
+£lf
+.
+cÚ‹xt
+)
+
+25 
+c
+ = 
+	$CÚ‹xt
+(
+d©a
+)
+
+26 
+ouut
+ = 
+t
+.
+	$»nd”
+(
+c
+)
+
+27 
+´št
+ 
+ouut
+
+
+28 
+exû±
+ 
+IOE¼Ü
+ 
+as
+ 
+e
+:
+
+29 
+¿i£
+ 
+	`CommªdE¼Ü
+('‹m°% nÙƒxi¡s' % 
+£lf
+.
+‹mp
+)
+
+30 
+exû±
+ 
+Tem¶©eDÛsNÙExi¡
+,
+Tem¶©eEncodšgE¼Ü
+,
+Tem¶©eSyÁaxE¼Ü
+ 
+as
+ 
+e
+:
+
+31 
+´št
+ 
+e
+.
+mes§ges
+
+
+32 
+¿i£
+ 
+	`CommªdE¼Ü
+('template hasƒrror')
+
+33 
+fš®ly
+:
+
+34 
+s
+.
+	`şo£
+()
+
 	@/var/www/blog/webblog/models.py
 
 1 #codšg=
@@ -50924,8 +51254,8 @@ def
 .
 1
 /usr/include
-47
-1822
+52
+2091
 /var/www/blog/blog/__init__.py
 /var/www/blog/blog/settings.py
 /var/www/blog/blog/urls.py
@@ -50967,6 +51297,11 @@ def
 /var/www/blog/webblog/__init__.py
 /var/www/blog/webblog/admin.py
 /var/www/blog/webblog/form.py
+/var/www/blog/webblog/management/__init__.py
+/var/www/blog/webblog/management/commands/__init__.py
+/var/www/blog/webblog/management/commands/_private.py
+/var/www/blog/webblog/management/commands/createCommand.py
+/var/www/blog/webblog/management/commands/tryTemplate.py
 /var/www/blog/webblog/models.py
 /var/www/blog/webblog/params.py
 /var/www/blog/webblog/static/common.js

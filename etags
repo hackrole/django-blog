@@ -35,6 +35,16 @@ CREATE INDEX "blog_646331b4" ON "blog" ("pub_time");blog.blog_646331b448,1511
 CREATE INDEX "webblog_comment_1cf7ee57" ON "webblog_comment" ("parent_id_id");webblog_comment.webblog_comment_1cf7ee5749,1564
 CREATE INDEX "webblog_comment_301daeed" ON "webblog_comment" ("blog_id_id");webblog_comment.webblog_comment_301daeed50,1643
 
+/var/www/blog/static_files/index.html,0
+
+/var/www/blog/static_files/detail.html,0
+
+/var/www/blog/static_files/about.html,0
+
+/var/www/blog/static_files/contact.html,0
+
+/var/www/blog/static_files/source.html,0
+
 /var/www/blog/shell_spide.py,388
 import urllib, urllib2urllib4,37
 import urllib, urllib2urllib24,37
@@ -48,6 +58,8 @@ def save_blog(url):save_blog24,568
 
 /var/www/blog/makefile,26
 dir=/var/www/blogdir1,0
+
+/var/www/blog/static/index.html,0
 
 /var/www/blog/static/admin/js/actions.js,984
 		checker = function(checked) {checker6,178
@@ -601,6 +613,38 @@ def about(request):about40,1092
 def contact(request):contact51,1457
 def post_comment(request):post_comment65,2182
 
+/var/www/blog/webblog/management/__init__.py,0
+
+/var/www/blog/webblog/management/commands/__init__.py,0
+
+/var/www/blog/webblog/management/commands/_private.py,0
+
+/var/www/blog/webblog/management/commands/createCommand.py,362
+from django.core.management.base import BaseCommand, CommandErrorBaseCommand4,37
+from django.core.management.base import BaseCommand, CommandErrorCommandError4,37
+from webblog.models import ContactContact5,103
+class Command(BaseCommand):Command7,139
+    args = ''args8,167
+    help = ''help9,181
+    def handle(self, *args, **options):handle11,196
+
+/var/www/blog/webblog/management/commands/tryTemplate.py,1180
+from optparse import make_optionmake_option4,37
+from django.conf import settingssettings5,70
+from django.core.management.base  import BaseCommand,CommandErrorBaseCommand6,103
+from django.core.management.base  import BaseCommand,CommandErrorCommandError6,103
+from django.template import Template,Context,TemplateDoesNotExist,TemplateEncodingError,TemplateSyntaxErrorTemplate7,169
+from django.template import Template,Context,TemplateDoesNotExist,TemplateEncodingError,TemplateSyntaxErrorContext7,169
+from django.template import Template,Context,TemplateDoesNotExist,TemplateEncodingError,TemplateSyntaxErrorTemplateDoesNotExist7,169
+from django.template import Template,Context,TemplateDoesNotExist,TemplateEncodingError,TemplateSyntaxErrorTemplateEncodingError7,169
+from django.template import Template,Context,TemplateDoesNotExist,TemplateEncodingError,TemplateSyntaxErrorTemplateSyntaxError7,169
+import json json8,277
+class Command(BaseCommand):Command10,291
+    args = ''args11,319
+    help = "try the template in console"help12,333
+    option_list = AppCommand.option_list + (option_list13,374
+    def handle(self, *args, **options):handle20,703
+
 /var/www/blog/webblog/static/common.js,32
 function alter(vars){alter1,0
 
@@ -711,6 +755,16 @@ class Blog(models.Model):Blog9,181
 class Tag(models.Model):Tag13,287
     name = models.CharField(max_length=30)name14,312
     blog = models.ManyToManyField(Blog)blog15,355
+
+/var/www/blog/Template/webblog/head.html,0
+
+/var/www/blog/Template/webblog/base.html,0
+
+/var/www/blog/Template/webblog/sidebar.html,0
+
+/var/www/blog/Template/webblog/foot.html,0
+
+/var/www/blog/Template/webblog/common-base.html,0
 
 /var/www/blog/Template/blog/head.html,0
 

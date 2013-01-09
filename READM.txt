@@ -1,3 +1,0 @@
-this is my first djagno project. It is a blog system.
-
-** todo 

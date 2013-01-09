@@ -27,6 +27,11 @@
 /var/www/blog/webblog/admin.py
 /var/www/blog/webblog/params.py
 /var/www/blog/webblog/views.py
+/var/www/blog/webblog/management/__init__.py
+/var/www/blog/webblog/management/commands/__init__.py
+/var/www/blog/webblog/management/commands/_private.py
+/var/www/blog/webblog/management/commands/createCommand.py
+/var/www/blog/webblog/management/commands/tryTemplate.py
 /var/www/blog/webblog/static/common.js
 /var/www/blog/webblog/static/js/blog.js
 /var/www/blog/webblog/tests.py
