@@ -219,3 +219,8 @@ ol>li{
 textarea{
     vertical-align:top;
 }
+.contact-history{
+    background-color:#e3e3e3;
+    padding:4px;
+    margin:3px;
+}
