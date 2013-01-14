@@ -7,22 +7,59 @@ from django.template import RequestContext
 from django.shortcuts import render_to_response, redirect
 from webblog.form import *
 from django.core.mail import send_mail
+from django.core.paginator import Paginator
+from django.http import Http404
 
-def index(request):
-    cate = Category.objects.all()
+cate_count = Category.objects.count()
+cate = Category.objects.all()[0:10]
+context = {
+    'cate_count':cate_count,
+    'cate':cate,
+    }
+
+def index(request, page=1):
+    global context
+    cate_count = Category.objects.count()
+    cate = Category.objects.all()[0:10]
+    tags_count = Tag.objects.count()
     tags = Tag.objects.all()
+    hotComment_count = Comment.objects.count()
+    hotComment = Comment.objects.filter(is_close=False,is_discard=False).order_by("comment_level")[0:10]
     
-    return render_to_response('webblog/index.html',{'cate':cate, 'tag':tags})
-    # return HttpResponse('hello world, everybody')
-    
-def cate(request, cate):
-    if btype == 1:
-        data = Blog.objects.filter('category_id_id = %s' % bid)
-    else:
-        data = Blog_Tag.objects.filter(tag_id=bid)
-    # data = [{'id':1, 'name':'emacs'}, {'id':2, 'name':'vim'}]
+    hotBlog = Comment.objects.raw("select count(blog_id) ad comment_count from webblog_comment where blog_id is not null and is_close!=FALSE and is_discard!=FALSE group by blog_id order by comment_count limit 10")
 
-    return render_to_response('blog/list.html', {'data': data, 'bid': bid, 'btype': btype})
+    blogs = Blog.objects.filter(is_pub=True).order_by("-pub_time")
+    p = Paginator(blogs, 3)
+    try:
+        blogs = p.page(page)
+    except PageNotAnInteger:
+        blogs = p.page(1)
+    except EmptyPage:
+        blogs = p.page(p.num_pages)
+
+    for blog in blogs:
+        blog.comment_count = len(Comment.objects.filter(blog_id=blog.blog_id))
+
+    context['tags_count'] = tags_count
+    context['tags'] = tags
+    context['blogs'] = blogs
+    return render_to_response('webblog/index.html',context, context_instance=RequestContext(request))
+    
+def cate(request, cate, page=1):
+    global context
+    if cate is None:
+        raise Http404
+    blogs = Blog.objects.filter(category_id__category_id=cate)
+    p = Paginator(blogs, 3)
+    try:
+        blogs = p.page(page)
+    except PageNotAnInteger:
+        blogs = p.page(1)
+    except EmptyPage:
+        blogs = p.page(p.num_pages)
+    context['blogs'] = blogs
+      
+    return render_to_response('webblog/index.html', context, context_instance=RequestContext(request))
 
 def tag(request, tag):
     pass
@@ -32,9 +69,10 @@ def date(request, year, month):
     
 def detail(request, id):
     blog = Blog.objects.get(blog_id=id)
-    print blog
-    # for i blog.
-    return render_to_response('blog/detail.html', {'blog':blog,})
+    comments = Comment.objects.filter(blog_id=id).order_by('comment_level')
+    commentForm = CommentForm()
+    
+    return render_to_response('webblog/detail.html', {'blog':blog,'comments':comments, 'form':commentForm})
 
 def about(request):
     if request.method == "POST":
@@ -61,5 +99,9 @@ def contact(request):
     form = ContactForm()
     return render_to_response('blog/contact.html', {'form': form}, context_instance=RequestContext(request))
 
-def post_comment(request):
-    pass
+def post_comment(request, id):
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        blog = Blog.objects.get(blog_id=id)
+        # if form.is_valid:
+        #     form.

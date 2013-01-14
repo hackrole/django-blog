@@ -1,5 +1,5 @@
 from django import forms
-from webblog.models import About,Contact
+from webblog.models import About,Contact,Comment
 from django.forms import Textarea
 
 class AboutForm(forms.ModelForm):
@@ -16,4 +16,8 @@ class ContactForm(forms.ModelForm):
             'content': Textarea(attrs={'cols': 50, 'rows': 6}),
             }
         
-    
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ("author_name", "author_email", "content")
+        

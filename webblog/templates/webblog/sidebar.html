@@ -1,21 +1,28 @@
 <div id="cate">
     <h4>文章分类</h4>
     <ol>
-        <li>emacs</li>
-        <li>vim</li>
-        <li>django</li>
-        <li>python</li>
-        <li>ruby</li>
+      {% for c in cate %}
+      <li>
+        <a href="/blog/cate/{{ c.category_id }}">{{ c.name }}</a>
+      </li>
+      {% endfor %}
     </ol>
+    {% if cate_count > 10 %}
+    <p><a href="">更多分类</a></p>
+    {% endif %}
+
 </div>
 <div id="cate">
     <h4>Tag分类</h4>
     <ol>
-        <li>emacs</li>
-        <li>vim</li>
-        <li>django</li>
-        <li>python</li>
-        <li>ruby</li>
+      {% for t in tags %}
+      <li>
+        <a href="">{{ t.tag_name }}</a>
+      </li>
+      {% endfor %}
+      {% if tags_count > 10 %}
+      <p><a href="">更多标签</a></p>
+      {% endif %}
     </ol>
 </div>
 <div id="cate">

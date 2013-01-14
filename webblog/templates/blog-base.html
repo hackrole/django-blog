@@ -18,3 +18,15 @@
 {% block sidebar %}
 {% include "webblog/sidebar.html" %}
 {% endblock %}
+
+{% block foot %}
+{% include "foot.html" %}
+{% if debug %}
+        <div style="background-color:#e3e3e3;">
+          {% for sql in sql_queries %}
+          <p>{{ sql.sql }}</p>
+          <p>time:{{ sql.time }}</p>
+          {% endfor %}
+        </div>
+{% endif %}
+{% endblock %}

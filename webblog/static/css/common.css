@@ -114,11 +114,15 @@ li{
     background-color:white;
 }
 
-.blog{
+.blog,.pagination{
     width:100%;
     margin:5px 0px auto 10px;
     padding:0px;
     border:none;
+}
+.pagination{
+    text-align:right;
+    margin-top:30px;
 }
 .title{
     text-align:left;

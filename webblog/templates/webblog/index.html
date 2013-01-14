@@ -1,49 +1,34 @@
 {%  extends "blog-base.html" %}
 
 {% block main_content %}
+{% for blog in blogs %}
 <div class="blog">
     <div class="title">
-        <h3>emacs高级</h3>
+        <h3><a href="/blog/id/{{ blog.blog_id }}">{{ blog.title }}</a></h3>
     </div>
     <div class="desc">
         <ul>
-            <li class="date">2012-12-08</li>
-            <li>hackrole</li>
+            <li class="date">{{ blog.pub_time|default:"未知" }}</li>
+            <li>{{ blog.author|default:"未知" }}</li>
         </ul>
-        <p>14条评论</p>
+        <p>{{ blog.comment_count }}条评论</p>
     </div>
     <div class="post">
-        “使用 Emacs 的微博”（weibo.emacs)是一个在 Emacs 上使用的微博客户端。它使用 Elisp 语言编写，提供了察看时间线，察看微博及评论，察看图片，发表和转发微博，发表评论和回复的功能。它基于 Emacs，可以在 Windows, Linux 和 Mac 上使用。“使用 Emacs 的微博”（weibo.emacs)是一个在 Emacs 上使用的微博客户端。它使用 Elisp 语言编写，提供了察看时间线，察看微博及评论，察看图片，发表和转发微博，发表评论和回复的功能。它基于 Emacs，可以在 Windows, Linux 和 Mac 上使用。“使用 Emacs 的微博”（weibo.emacs)是一个在 Emacs 上使用的微博客户端。它使用 Elisp 语言编写，提供了察看时间线，察看微博及评论，察看图片，发表和转发微博，发表评论和回复的功能。它基于 Emacs，可以在 Windows, Linux 和 Mac 上使用。
+      {{ blog.content }}
     </div>
 </div>
-<div class="blog">
-    <div class="title">
-        <h3>emacs高级</h3>
-    </div>
-    <div class="desc">
-        <ul>
-            <li class="date">2012-12-08</li>
-            <li>hackrole</li>
-        </ul>
-        <p>14条评论</p>
-    </div>
-    <div class="post">
-        “使用 Emacs 的微博”（weibo.emacs)是一个在 Emacs 上使用的微博客户端。它使用 Elisp 语言编写，提供了察看时间线，察看微博及评论，察看图片，发表和转发微博，发表评论和回复的功能。它基于 Emacs，可以在 Windows, Linux 和 Mac 上使用。“使用 Emacs 的微博”（weibo.emacs)是一个在 Emacs 上使用的微博客户端。它使用 Elisp 语言编写，提供了察看时间线，察看微博及评论，察看图片，发表和转发微博，发表评论和回复的功能。它基于 Emacs，可以在 Windows, Linux 和 Mac 上使用。“使用 Emacs 的微博”（weibo.emacs)是一个在 Emacs 上使用的微博客户端。它使用 Elisp 语言编写，提供了察看时间线，察看微博及评论，察看图片，发表和转发微博，发表评论和回复的功能。它基于 Emacs，可以在 Windows, Linux 和 Mac 上使用。
-    </div>
-</div>
-<div class="blog">
-    <div class="title">
-        <h3>emacs高级</h3>
-    </div>
-    <div class="desc">
-        <ul>
-            <li class="date">2012-12-08</li>
-            <li>hackrole</li>
-        </ul>
-        <p>14条评论</p>
-    </div>
-    <div class="post">
-        “使用 Emacs 的微博”（weibo.emacs)是一个在 Emacs 上使用的微博客户端。它使用 Elisp 语言编写，提供了察看时间线，察看微博及评论，察看图片，发表和转发微博，发表评论和回复的功能。它基于 Emacs，可以在 Windows, Linux 和 Mac 上使用。“使用 Emacs 的微博”（weibo.emacs)是一个在 Emacs 上使用的微博客户端。它使用 Elisp 语言编写，提供了察看时间线，察看微博及评论，察看图片，发表和转发微博，发表评论和回复的功能。它基于 Emacs，可以在 Windows, Linux 和 Mac 上使用。“使用 Emacs 的微博”（weibo.emacs)是一个在 Emacs 上使用的微博客户端。它使用 Elisp 语言编写，提供了察看时间线，察看微博及评论，察看图片，发表和转发微博，发表评论和回复的功能。它基于 Emacs，可以在 Windows, Linux 和 Mac 上使用。
-    </div>
+{% endfor %}
+<div class="pagination">
+  <span class="step-links">
+    {% if blogs.has_previous %}
+    <a href="/blog/{{ blogs.previous_page_number }}">上一页</a>
+    {% endif %}
+    <span>
+      Page: {{ blogs.number }} of {{ blogs.paginator.num_pages }}
+    </span>
+    {% if blogs.has_next %}
+    <a href="/blog/{{ blogs.next_page_number }}">下一页</a>
+    {% endif %}
+  </span>
 </div>
 {% endblock %}

@@ -1,0 +1,40 @@
+{% extends "blog-base.html" %}
+
+{% block main_content %}
+<div class="blog">
+  <div class="title-detail">
+    <h3>{{ blog.title }}</h3>
+  </div>
+  <div class="desc">
+    <ul>
+      <li class="date">{{ blog.pub_time|time|default:"未知" }}</li>
+      <li>{{ blog.author }}</li>
+    </ul>
+    <p>{{ comments|length }}条评论</p>
+  </div>
+  <div class="post">
+    {{ blog.content }}
+  </div>
+</div>
+<div id="comments">
+  <ol>
+    {% for comment  in comments %}
+    <li class="comment">
+      <h4>
+        <span>{{ comment.author_name|default:"不详" }}</span>
+        <span>发表与{{ comment.pub_time|default:"不详" }}</span>
+      </h4>
+      <p>{{ comment.content }}</p>
+    </li>  
+    {% endfor %}
+  </ol>
+</div>
+<div id="post-comment">
+  <form method="post" action="">
+    {{ form.as_p }}
+    <p>
+      <input type="submit" value="提交" />
+    </p>
+  </form>
+</div>
+{% endblock %}
