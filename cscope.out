@@ -1,4 +1,4 @@
-cscope 15 /var/www/blog -q 0000001730 0000292587
+cscope 15 /var/www/blog               0000292933
 	@/var/www/blog/blog/__init__.py
 
 	@/var/www/blog/blog/settings.py
@@ -23,25 +23,29 @@ TEMPLATE_DEBUG
 DEBUG
 
 
-6 
-ADMINS
+5 
+INTERNAL_IPS
  = (
 
-11 
+9 
+	gADMINS
+ = (
+
+14 
 	gMANAGERS
  = 
 ADMINS
 
 
-13 
+16 
 DATABASES
  = {
 
-15 'ENGINE': 'djªgo.db.back’ds.sql™e3', #Add 'po¡g»sql_psycİg2', 'mysql', 'sql™e3' 
+18 'ENGINE': 'djªgo.db.back’ds.sql™e3', #Add 'po¡g»sql_psycİg2', 'mysql', 'sql™e3' 
 Ü
  'oracle'.
 
-16 'NAME': '/v¬/www/blog/sql/maš.db', #O¸
+19 'NAME': '/v¬/www/blog/sql/maš.db', #O¸
 ·th
  
 to
@@ -55,7 +59,7 @@ usšg
 sql™e3
 .
 
-17 'USER': '', #NÙ 
+20 'USER': '', #NÙ 
 u£d
  
 w™h
@@ -63,7 +67,7 @@ w™h
 sql™e3
 .
 
-18 'PASSWORD': '', #NÙ 
+21 'PASSWORD': '', #NÙ 
 u£d
  
 w™h
@@ -71,7 +75,7 @@ w™h
 sql™e3
 .
 
-19 'HOST': '', #S‘ 
+22 'HOST': '', #S‘ 
 to
  
 em±y
@@ -89,7 +93,7 @@ w™h
 sql™e3
 .
 
-20 'PORT': '', #S‘ 
+23 'PORT': '', #S‘ 
 to
  
 em±y
@@ -105,7 +109,7 @@ w™h
 sql™e3
 .
 
-24 #LoÿÈ
+27 #LoÿÈ
 time
  
 zÚe
@@ -125,7 +129,7 @@ found
 h”e
 :
 
-26 #®though 
+29 #®though 
 nÙ
  
 ®l
@@ -145,7 +149,7 @@ avaabË
 sy¡ems
 .
 
-27 #OÀ
+30 #OÀ
 Unix
  
 sy¡ems
@@ -173,7 +177,7 @@ the
 §me
 
 
-28 #timezÚ
+31 #timezÚ
 as
  
 the
@@ -183,7 +187,7 @@ the
 sy¡em
 .
 
-29 #Ià
+32 #Ià
 ruÂšg
  
 š
@@ -213,17 +217,17 @@ as
 your
 
 
-30 #sy¡em 
+33 #sy¡em 
 time
  
 zÚe
 .
 
-31 
+34 
 	gTIME_ZONE
  = 'America/Chicago'
 
-33 #Lªguag
+36 #Lªguag
 code
  
 this
@@ -243,15 +247,15 @@ found
 h”e
 :
 
-35 
+38 
 LANGUAGE_CODE
  = 'en-us'
 
-37 
+40 
 SITE_ID
  = 1
 
-39 #Ià
+42 #Ià
 you
  
 £t
@@ -279,7 +283,7 @@ as
 nÙ
 
 
-40 #tØ
+43 #tØ
 lßd
  
 the
@@ -289,13 +293,13 @@ the
 machš”y
 .
 
-41 
+44 
 	gUSE_I18N
  = 
 True
 
 
-43 #Ià
+46 #Ià
 you
  
 £t
@@ -321,7 +325,7 @@ numb”s
 ªd
 
 
-44 #ÿËnd¬ 
+47 #ÿËnd¬ 
 accÜdšg
  
 to
@@ -333,13 +337,17 @@ cu¼’t
 loÿË
 .
 
-45 
+48 
 	gUSE_L10N
  = 
 True
 
 
-47 #Ià
+49 
+TIME_FORMAT
+="Y-m-d H:i:"
+
+50 #Ià
 you
  
 £t
@@ -365,13 +373,13 @@ aw¬e
 d©‘imes
 .
 
-48 
+51 
 	gUSE_TZ
  = 
 True
 
 
-50 #AbsŞu‹ 
+53 #AbsŞu‹ 
 fesy¡em
  
 ·th
@@ -395,11 +403,11 @@ u¶ßded
 fes
 .
 
-52 
+55 
 MEDIA_ROOT
- = ''
+ = '/tmp/uploads/'
 
-54 #URL 
+57 #URL 
 th©
  
 hªdËs
@@ -425,15 +433,15 @@ u£
 a
 
 
-55 #Œašg 
+58 #Œašg 
 ¦ash
 .
 
-57 
+60 
 	gMEDIA_URL
- = ''
+ = '/media/'
 
-59 #AbsŞu‹ 
+62 #AbsŞu‹ 
 ·th
  
 to
@@ -451,25 +459,25 @@ be
 cŞËùed
 o.
 
-61 #š 
+64 #š 
 ­ps
 ' "static/" subdirectories‡nd in STATICFILES_DIRS.
 
-63 
+66 
 STATIC_ROOT
  = '/tmp/static/'
 
-65 #URL 
+68 #URL 
 ´efix
  
 fes
 .
 
-67 
+70 
 STATIC_URL
  = '/static/'
 
-69 #Add™iÚ® 
+72 #Add™iÚ® 
 loÿtiÚs
  
 of
@@ -477,11 +485,11 @@ of
 fes
 
 
-70 
+73 
 STATICFILES_DIRS
  = (
 
-71 #Puˆ
+74 #Puˆ
 ¡ršgs
  
 h”e
@@ -491,7 +499,7 @@ like
 Ü
  "C:/www/django/static".
 
-72 #Alway 
+75 #Alway 
 u£
  
 fÜw¬d
@@ -505,7 +513,7 @@ ev’
 Wšdows
 .
 
-78 #Li¡ 
+80 #Li¡ 
 of
  
 fšd”
@@ -527,15 +535,15 @@ fes
 š
 
 
-79 #v¬iou 
+81 #v¬iou 
 loÿtiÚs
 .
 
-80 
+82 
 	gSTATICFILES_FINDERS
  = (
 
-83 #'
+85 #'
 djªgo
 .
 cÚŒib
@@ -547,7 +555,7 @@ fšd”s
 DeçuÉStÜageFšd”
 ',
 
-86 #Mak
+88 #Mak
 this
  
 unique
@@ -557,11 +565,11 @@ unique
 dÚ
 't share it with‡nybody.
 
-87 
+89 
 	gSECRET_KEY
  = 'ps*7&amp;va^vku0diya!5)^*r1)nd$ynul1s@f4w52%cg*01prv-k'
 
-89 #Li¡ 
+91 #Li¡ 
 of
  
 ÿÎabËs
@@ -585,11 +593,11 @@ v¬ious
 sourûs
 .
 
-90 
+92 
 TEMPLATE_LOADERS
  = (
 
-93 #'
+95 #'
 djªgo
 .
 ‹m¶©e
@@ -601,11 +609,11 @@ eggs
 Lßd”
 ',
 
-96 
+98 
 	gMIDDLEWARE_CLASSES
  = (
 
-102 #Uncomm’ˆ
+105 #Uncomm’ˆ
 the
  
 Ãxt
@@ -619,7 +627,7 @@ sim¶e
 ´ÙeùiÚ
 :
 
-103 #'
+106 #'
 djªgo
 .
 middËw¬e
@@ -629,11 +637,11 @@ middËw¬e
 XF¿meO±iÚsMiddËw¬e
 ',
 
-106 
+109 
 	gROOT_URLCONF
  = 'blog.urls'
 
-108 #PythÚ 
+111 #PythÚ 
 dÙ‹d
  
 ·th
@@ -653,15 +661,15 @@ by
 Djªgo
 's„unserver.
 
-109 
+112 
 WSGI_APPLICATION
  = 'blog.wsgi.application'
 
-111 
+114 
 TEMPLATE_DIRS
  = (
 
-113 #Puˆ
+116 #Puˆ
 ¡ršgs
  
 h”e
@@ -671,7 +679,7 @@ like
 Ü
  "C:/www/django/templates".
 
-114 #Alway 
+117 #Alway 
 u£
  
 fÜw¬d
@@ -685,11 +693,11 @@ ev’
 Wšdows
 .
 
-118 
+121 
 	gINSTALLED_APPS
  = (
 
-125 #Uncomm’ˆ
+128 #Uncomm’ˆ
 the
  
 Ãxt
@@ -703,7 +711,7 @@ to
 admš
 :
 
-127 ## 
+130 ## 
 Uncomm’t
  
 the
@@ -721,7 +729,87 @@ admš
 docum’tiÚ
 :
 
-134 #A 
+134 #Li¡ 
+of
+ 
+´oûssÜs
+ 
+u£d
+ 
+by
+ 
+Reque¡CÚ‹xt
+ 
+to
+ 
+pİuÏ‹
+ 
+the
+ 
+cÚ‹xt
+.
+
+135 #Each 
+Úe
+ 
+should
+ 
+be
+ 
+a
+ 
+ÿÎabË
+ 
+th©
+ 
+kes
+ 
+the
+ 
+»que¡
+ 
+objeù
+ 
+as
+ 
+™s
+
+
+136 #Úly 
+·¿m‘”
+ 
+ªd
+ 
+»tuºs
+ 
+a
+ 
+diùiÚ¬y
+ 
+to
+ 
+add
+Ø
+the
+ 
+cÚ‹xt
+.
+
+137 
+	gTEMPLATE_CONTEXT_PROCESSORS
+ = (
+
+144 #'
+djªgo
+.
+cÜe
+.
+cÚ‹xt_´oûssÜs
+.
+»que¡
+',
+
+148 #A 
 §m¶e
  
 loggšg
@@ -735,7 +823,7 @@ The
 ngibË
 †ogging
 
-135 #³rfÜmed 
+149 #³rfÜmed 
 by
  
 this
@@ -753,7 +841,7 @@ to
 ema
 o
 
-136 #th
+150 #th
 s™e
  
 admšs
@@ -773,11 +861,11 @@ DEBUG
 F®£
 .
 
-137 #S“ 
+151 #S“ 
 h‰p
 :
 
-138 #mÜ
+152 #mÜ
 d‘as
  
 Ú
@@ -795,53 +883,53 @@ loggšg
 cÚfigu¿tiÚ
 .
 
-139 
+153 
 	gLOGGING
  = {
 
-141 'di§bË_exi¡šg_logg”s': 
+155 'di§bË_exi¡šg_logg”s': 
 F®£
 ,
 
-158 '´İag©e': 
+172 '´İag©e': 
 True
 ,
 
-163 #Ema 
+177 #Ema 
 S‘up
 
 
-164 
+178 
 DEFAULT_FROM_EMAIL
  = 'daipeng123456@gmail.com'
 
-165 
+179 
 EMAIL_HOST
  = 'smtp.gmail.com'
 
-166 
+180 
 EMAIL_PORT
  = 587
 
-167 
+181 
 EMAIL_HOST_USER
  = 'daipeng123456@gmail.com'
 
-168 
+182 
 EMAIL_HOST_PASSWORD
  = 'dp123456'
 
-169 
+183 
 EMAIL_USE_TLS
  = 
 True
 
 
-171 #ÿch
+185 #ÿch
 £‰šg
 
 
-172 
+186 
 CACHES
  = {
 
@@ -1007,49 +1095,57 @@ u¾·‰”ns
 	`u¾
 (
 r
-'^blog/$', 'views.index'),
+'^blog/(?P<page>\d+)/$', 'views.index'),
 
 24 
 	`u¾
 (
 r
-'^blog/cate/(\w+)$', 'views.cate'),
+'^blog/$', 'views.index'),
 
 25 
 	`u¾
 (
 r
-'^blog/tag/(\w+)$', 'views.tag'),
+'^blog/cate/(\d+)/(?P<page>\d+)/$', 'views.cate'),
 
-26 #u¾(
+26 
+	`u¾
+(
 r
-'^blog/(\d{4})/(\d{2})$', 'views.data'),
+'^blog/cate/(\d+)/$', 'views.cate'),
 
 27 
 	`u¾
 (
 r
-'^blog/blog/(?P<id>\d+)$', 'views.detail'),
+'^blog/tag/(\d+)$', 'views.tag'),
 
 28 
 	`u¾
 (
 r
-"^blog/comment/$", 'views.post_comment'),
+'^blog/id/(?P<id>\d+)$', 'views.detail'),
 
 29 
 	`u¾
 (
 r
-'^blog/about/$', 'views.about'),
+"^blog/comment/$", 'views.post_comment'),
 
 30 
 	`u¾
 (
 r
+'^blog/about/$', 'views.about'),
+
+31 
+	`u¾
+(
+r
 '^blog/contact/$', 'views.contact'),
 
-32 
+33 
 £‰šgs
 .
 DEBUG
@@ -1057,7 +1153,7 @@ DEBUG
 True
 :
 
-33 
+34 
 u¾·‰”ns
  +ğ
 	`¡©icfes_u¾·‰”ns
@@ -1355,138 +1451,6 @@ H–loWÜldAµliÿtiÚ
 ­¶iÿtiÚ
 )
 
-	@/var/www/blog/blogtest/__init__.py
-
-	@/var/www/blog/blogtest/models.py
-
-1 
-äom
- 
-	gdjªgo
-.
-db
- 
-impÜt
- 
-	gmod–s
-
-
-3 #C»©
-your
- 
-mod–s
- 
-h”e
-.
-
-	@/var/www/blog/blogtest/tests.py
-
-2 
-This
- 
-fe
- 
-demÚ¡¿‹s
- 
-wr™šg
- 
-‹¡s
- 
-usšg
- 
-the
- 
-un™‹¡
- 
-	gmoduË
-. 
-The£
- 
-wl
- 
-·ss
-
-
-3 
-wh’
- 
-you
- 
-	grun
- "manage.pyest".
-
-5 
-R•Ïû
- 
-this
- 
-w™h
- 
-mÜe
- 
-­´İrŸ‹
- 
-‹¡s
- 
-your
- 
-	g­¶iÿtiÚ
-.
-
-8 
-äom
- 
-	gdjªgo
-.
-‹¡
- 
-impÜt
- 
-Te¡Ca£
-
-
-11 
-şass
- 
-	$Sim¶eTe¡
-(
-Te¡Ca£
-):
-
-12 
-def
- 
-	$‹¡_basic_add™iÚ
-(
-£lf
-):
-
-14 
-Te¡s
- 
-th©
- 1 + 1 
-®ways
- 
-equ®s
- 2.
-
-16 
-£lf
-.
-	`as£¹Equ®
-(1 + 1, 2)
-
-	@/var/www/blog/blogtest/views.py
-
-1 #C»©
-your
- 
-v›ws
- 
-h”e
-.
-
 	@/var/www/blog/manage.py
 
 1 #!/
@@ -1544,228 +1508,6 @@ sys
 .
 ¬gv
 )
-
-	@/var/www/blog/relateModelTest/__init__.py
-
-	@/var/www/blog/relateModelTest/models.py
-
-1 
-äom
- 
-	gdjªgo
-.
-db
- 
-impÜt
- 
-	gmod–s
-
-
-3 #C»©
-your
- 
-mod–s
- 
-h”e
-.
-
-5 
-şass
- 
-	$C©e
-(
-mod–s
-.
-Mod–
-):
-
-6 
-Çme
- = 
-mod–s
-.
-	$Ch¬F›ld
-(
-max_Ëngth
-=20)
-
-7 
-is_show
- = 
-mod–s
-.
-	$BoŞ—nF›ld
-(=
-F®£
-)
-
-9 
-şass
- 
-	$Blog
-(
-mod–s
-.
-Mod–
-):
-
-10 
-t‹
- = 
-mod–s
-.
-	$Ch¬F›ld
-(
-max_Ëngth
-=30)
-
-11 
-ÿ‹
- = 
-mod–s
-.
-	$FÜeignKey
-(
-C©e
-)
-
-13 
-şass
- 
-	$Tag
-(
-mod–s
-.
-Mod–
-):
-
-14 
-Çme
- = 
-mod–s
-.
-	$Ch¬F›ld
-(
-max_Ëngth
-=30)
-
-15 
-blog
- = 
-mod–s
-.
-	`MªyToMªyF›ld
-(
-Blog
-)
-
-	@/var/www/blog/relateModelTest/tests.py
-
-2 
-This
- 
-fe
- 
-demÚ¡¿‹s
- 
-wr™šg
- 
-‹¡s
- 
-usšg
- 
-the
- 
-un™‹¡
- 
-	gmoduË
-. 
-The£
- 
-wl
- 
-·ss
-
-
-3 
-wh’
- 
-you
- 
-	grun
- "manage.pyest".
-
-5 
-R•Ïû
- 
-this
- 
-w™h
- 
-mÜe
- 
-­´İrŸ‹
- 
-‹¡s
- 
-your
- 
-	g­¶iÿtiÚ
-.
-
-8 
-äom
- 
-	gdjªgo
-.
-‹¡
- 
-impÜt
- 
-Te¡Ca£
-
-
-11 
-şass
- 
-	$Sim¶eTe¡
-(
-Te¡Ca£
-):
-
-12 
-def
- 
-	$‹¡_basic_add™iÚ
-(
-£lf
-):
-
-14 
-Te¡s
- 
-th©
- 1 + 1 
-®ways
- 
-equ®s
- 2.
-
-16 
-£lf
-.
-	`as£¹Equ®
-(1 + 1, 2)
-
-	@/var/www/blog/relateModelTest/views.py
-
-1 #C»©
-your
- 
-v›ws
- 
-h”e
-.
 
 	@/var/www/blog/shell_spide.py
 
@@ -48971,40 +48713,6 @@ num_ch¬s
 
 	@/var/www/blog/static/common.js
 
-1 
-funùiÚ
- 
-	$®‹r
-(
-v¬s
-){
-
-2 if(
-	`ty³of
-(
-v¬s
-) == "Obejct"){
-
-3 
-	`®‹r
-(
-v¬
-);
-
-4 
-	`®‹r
-("object");
-
-6 
-	`®‹r
-(
-v¬s
-);
-
-8 
-	}
-}
-
 	@/var/www/blog/static/js/blog.js
 
 	@/var/www/blog/webblog/__init__.py
@@ -49516,7 +49224,9 @@ impÜt
  
 	gAbout
 ,
-CÚù
+	gCÚù
+,
+Comm’t
 
 
 3 
@@ -49594,6 +49304,32 @@ widg‘s
 17 
 	}
 }
+
+19 
+şass
+ 
+	$Comm’tFÜm
+(
+fÜms
+.
+Mod–FÜm
+):
+
+20 
+şass
+ 
+M‘a
+:
+
+21 
+mod–
+ = 
+Comm’t
+
+
+22 
+f›lds
+ = ("author_name", "author_email", "content")
 
 	@/var/www/blog/webblog/management/__init__.py
 
@@ -49772,7 +49508,7 @@ h–p
 13 
 İtiÚ_li¡
  = 
-AµCommªd
+Ba£Commªd
 .option_list + (
 
 14 
@@ -49781,9 +49517,9 @@ AµCommªd
 aùiÚ
 ='¡Üe', 
 de¡
-='‹m°fe', 
+='‹mp_fe', 
 h–p
-='end‡emp fileory'
+='enter‡emp fileory'
 
 16 
 	`make_İtiÚ
@@ -49791,7 +49527,7 @@ h–p
 aùiÚ
 ='¡Üe', 
 de¡
-='cÚ‹xˆd©a', ='', 
+='cÚ‹xt_d©a', ='', 
 h–p
 ='enter‡ json style context forheemplate'
 
@@ -49887,9 +49623,7 @@ e
 ‹mp
 )
 
-30 
-exû±
- 
+30 #exû± 
 Tem¶©eDÛsNÙExi¡
 ,
 Tem¶©eEncodšgE¼Ü
@@ -49901,17 +49635,13 @@ as
 e
 :
 
-31 
-´št
- 
+31 #´šˆ
 e
 .
 mes§ges
 
 
-32 
-¿i£
- 
+32 #¿i£ 
 	`CommªdE¼Ü
 ('template hasƒrror')
 
@@ -50661,12 +50391,6 @@ def
 ema
 })
 
-	@/var/www/blog/webblog/params.py
-
-1 
-	gcÚù_ema_admš
- = {'admin':'daipeng123456@gmail.com'}
-
 	@/var/www/blog/webblog/static/common.js
 
 1 
@@ -50892,32 +50616,112 @@ impÜt
 10 
 äom
  
-webblog
+	gdjªgo
+.
+	gcÜe
+.
+·gš©Ü
  
 impÜt
  
-·¿ms
+Pagš©Ü
 
 
-12 
-def
+11 
+äom
  
-	$šdex
-(
-»que¡
-):
+	gdjªgo
+.
+h‰p
+ 
+impÜt
+ 
+H‰p404
+
 
 13 
+	gÿ‹_couÁ
+ = 
+C©egÜy
+.
+objeùs
+.
+	$couÁ
+()
+
+14 
 ÿ‹
  = 
 C©egÜy
 .
 objeùs
 .
-	$®l
+	`®l
+()[0:10]
+
+15 
+cÚ‹xt
+ = {
+
+16 'ÿ‹_couÁ':
+ÿ‹_couÁ
+,
+
+17 'ÿ‹':
+ÿ‹
+,
+
+18 
+	}
+}
+
+20 
+def
+ 
+	$šdex
+(
+»que¡
+, 
+·ge
+=1):
+
+21 
+glob®
+ 
+cÚ‹xt
+
+
+22 
+ÿ‹_couÁ
+ = 
+C©egÜy
+.
+objeùs
+.
+	$couÁ
 ()
 
-14 
+23 
+ÿ‹
+ = 
+C©egÜy
+.
+objeùs
+.
+	`®l
+()[0:10]
+
+24 
+gs_couÁ
+ = 
+Tag
+.
+objeùs
+.
+	$couÁ
+()
+
+25 
 gs
  = 
 Tag
@@ -50927,19 +50731,171 @@ objeùs
 	$®l
 ()
 
-16  
-	`»nd”_to_»¥Ú£
-('blog/šdex.html',{'ÿ‹':
-ÿ‹
-, 'g':
+26 
+hÙComm’t_couÁ
+ = 
+Comm’t
+.
+objeùs
+.
+	$couÁ
+()
+
+27 
+hÙComm’t
+ = 
+Comm’t
+.
+objeùs
+.
+	`f‹r
+(
+is_şo£
+=
+F®£
+,
+is_disÿrd
+=F®£).
+	`Üd”_by
+("comment_level")[0:10]
+
+29 
+hÙBlog
+ = 
+Comm’t
+.
+objeùs
+.
+	`¿w
+("select count(blog_id)‡d comment_count from webblog_comment where blog_id is‚ot‚ull‡nd is_close!=FALSE‡nd is_discard!=FALSE group by blog_id order by comment_count†imit 10")
+
+31 
+blogs
+ = 
+Blog
+.
+objeùs
+.
+	`f‹r
+(
+is_pub
+=
+True
+).
+	`Üd”_by
+("-pub_time")
+
+32 
+p
+ = 
+	$Pagš©Ü
+(
+blogs
+, 3)
+
+33 
+Œy
+:
+
+34 
+blogs
+ = 
+p
+.
+	$·ge
+(
+·ge
+)
+
+35 
+exû±
+ 
+PageNÙAnIÁeg”
+:
+
+36 
+blogs
+ = 
+p
+.
+	$·ge
+(1)
+
+37 
+exû±
+ 
+Em±yPage
+:
+
+38 
+blogs
+ = 
+p
+.
+	$·ge
+(
+p
+.
+num_·ges
+)
+
+40 
+blog
+ 
+š
+ 
+blogs
+:
+
+41 
+blog
+.
+comm’t_couÁ
+ = 
+	`Ën
+(
+Comm’t
+.
+objeùs
+.
+	$f‹r
+(
+blog_id
+=
+blog
+.blog_id))
+
+43 
+cÚ‹xt
+['gs_couÁ'] = 
+gs_couÁ
+
+
+44 
+cÚ‹xt
+['gs'] = 
 gs
-})
 
-17 #»tuº 
-H‰pRe¥Ú£
-('hello world,ƒverybody')
 
-19 
+45 
+cÚ‹xt
+['blogs'] = 
+blogs
+
+
+46  
+	`»nd”_to_»¥Ú£
+('webblog/šdex.html',
+cÚ‹xt
+, 
+cÚ‹xt_š¡ªû
+=
+	$Reque¡CÚ‹xt
+(
+»que¡
+))
+
+48 
 def
  
 	$ÿ‹
@@ -50947,53 +50903,117 @@ def
 »que¡
 , 
 ÿ‹
-):
+, 
+·ge
+=1):
 
-20 
-bty³
- == 1:
+49 
+glob®
+ 
+cÚ‹xt
 
-21 
-d©a
+
+50 
+ÿ‹
+ 
+is
+ 
+NÚe
+:
+
+51 
+¿i£
+ 
+H‰p404
+
+
+52 
+blogs
  = 
 Blog
 .
 objeùs
 .
-	`f‹r
-('ÿ‹gÜy_id_id = %s' % 
-bid
-)
-
-23 
-d©a
- = 
-Blog_Tag
-.
-objeùs
-.
 	$f‹r
 (
-g_id
+ÿ‹gÜy_id__ÿ‹gÜy_id
 =
-bid
+ÿ‹
 )
 
-24 #d©¨ğ[{'id':1, 'Çme':'emacs'
-	}
-}, {'id':2, 'name':'vim'}]
+53 
+p
+ = 
+	$Pagš©Ü
+(
+blogs
+, 3)
 
-26  
-»nd”_to_»¥Ú£
-('blog/li¡.html', {'d©a': 
-d©a
-, 'bid': 
-bid
-, 'bty³': 
-bty³
-})
+54 
+Œy
+:
 
-28 
+55 
+blogs
+ = 
+p
+.
+	$·ge
+(
+·ge
+)
+
+56 
+exû±
+ 
+PageNÙAnIÁeg”
+:
+
+57 
+blogs
+ = 
+p
+.
+	$·ge
+(1)
+
+58 
+exû±
+ 
+Em±yPage
+:
+
+59 
+blogs
+ = 
+p
+.
+	$·ge
+(
+p
+.
+num_·ges
+)
+
+60 
+cÚ‹xt
+['blogs'] = 
+blogs
+
+
+62  
+	`»nd”_to_»¥Ú£
+('webblog/šdex.html', 
+cÚ‹xt
+, 
+cÚ‹xt_š¡ªû
+=
+	$Reque¡CÚ‹xt
+(
+»que¡
+))
+
+64 
 def
  
 	$g
@@ -51003,11 +51023,11 @@ def
 g
 ):
 
-29 
+65 
 ·ss
 
 
-31 
+67 
 def
  
 	$d©e
@@ -51019,11 +51039,11 @@ y—r
 mÚth
 ):
 
-32 
+68 
 ·ss
 
 
-34 
+70 
 def
  
 	$d‘a
@@ -51033,7 +51053,7 @@ def
 id
 ):
 
-35 
+71 
 blog
  = 
 Blog
@@ -51047,27 +51067,39 @@ blog_id
 id
 )
 
-36 
-´št
- 
-blog
-
-
-37 #fÜ 
-i
- 
-blog
+72 
+comm’ts
+ = 
+Comm’t
 .
+objeùs
+.
+	`f‹r
+(
+blog_id
+=
+id
+).
+	`Üd”_by
+('comment_level')
 
-38  
+73 
+comm’tFÜm
+ = 
+	$Comm’tFÜm
+()
+
+75  
 	`»nd”_to_»¥Ú£
-('blog/d‘a.html', {'blog':
+('webblog/d‘a.html', {'blog':
 blog
-,
-	}
+,'comm’ts':
+comm’ts
+, 'fÜm':
+comm’tFÜm
 })
 
-40 
+77 
 def
  
 	$about
@@ -51075,13 +51107,13 @@ def
 »que¡
 ):
 
-41 
+78 
 »que¡
 .
 m‘hod
  == "POST":
 
-42 
+79 
 fÜm
  = 
 	$AboutFÜm
@@ -51091,29 +51123,29 @@ fÜm
 POST
 )
 
-43 
+80 
 fÜm
 .
 	$is_v®id
 ():
 
-44 
+81 
 fÜm
 .
 	$§ve
 ()
 
-45  
+82  
 	`»dœeù
 ('/blog/')
 
-47 
+84 
 fÜm
  = 
 	$AboutFÜm
 ()
 
-48 
+85 
 about
  = 
 About
@@ -51123,7 +51155,7 @@ objeùs
 	$®l
 ()
 
-49  
+86  
 	`»nd”_to_»¥Ú£
 ('blog/about.html', {'fÜm':
 fÜm
@@ -51131,7 +51163,7 @@ fÜm
 about
 }, cÚ‹xt_š¡ªû=Reque¡CÚ‹xtÔeque¡))
 
-51 
+88 
 def
  
 	$cÚù
@@ -51139,13 +51171,13 @@ def
 »que¡
 ):
 
-52 
+89 
 »que¡
 .
 m‘hod
  == "POST":
 
-53 
+90 
 fÜm
  = 
 	$CÚùFÜm
@@ -51155,19 +51187,19 @@ fÜm
 POST
 )
 
-54 
+91 
 fÜm
 .
 	$is_v®id
 ():
 
-55 
+92 
 fÜm
 .
 	$§ve
 ()
 
-56 
+93 
 admš_ema
  = 
 ·¿ms
@@ -51177,7 +51209,7 @@ cÚù_ema_admš
 admš
 
 
-57 
+94 
 	`£nd_ema
 ('è”ç³»æˆ‘ä»¬', 
 fÜm
@@ -51193,7 +51225,7 @@ EMAIL_HOST_USER
 F®£
 )
 
-58 
+95 
 True
  =ğ
 fÜm
@@ -51203,7 +51235,7 @@ fÜm
 if_acû±_ema
 :
 
-59 
+96 
 	`£nd_ema
 ('è”ç³»æˆ‘ä»¬', 
 fÜm
@@ -51221,54 +51253,80 @@ ema
 F®£
 )
 
-60  
+97  
 	`»nd”_to_»¥Ú£
 ('tips.html')
 
-62 
+99 
 fÜm
  = 
 	$CÚùFÜm
 ()
 
-63  
+100  
 	`»nd”_to_»¥Ú£
 ('blog/cÚù.html', {'fÜm': 
 fÜm
 }, cÚ‹xt_š¡ªû=Reque¡CÚ‹xtÔeque¡))
 
-65 
+102 
 def
  
 	$po¡_comm’t
 (
 »que¡
+, 
+id
 ):
 
-66 
-·ss
+103 
+»que¡
+.
+m‘hod
+ == 'POST':
 
+104 
+fÜm
+ = 
+	$Comm’tFÜm
+(
+»que¡
+.
+POST
+)
+
+105 
+blog
+ = 
+Blog
+.
+objeùs
+.
+	$g‘
+(
+blog_id
+=
+id
+)
+
+106 #ià
+fÜm
+.
+is_v®id
+:
 
 	@
 1
 .
 1
 /usr/include
-52
-2091
+43
+1767
 /var/www/blog/blog/__init__.py
 /var/www/blog/blog/settings.py
 /var/www/blog/blog/urls.py
 /var/www/blog/blog/wsgi.py
-/var/www/blog/blogtest/__init__.py
-/var/www/blog/blogtest/models.py
-/var/www/blog/blogtest/tests.py
-/var/www/blog/blogtest/views.py
 /var/www/blog/manage.py
-/var/www/blog/relateModelTest/__init__.py
-/var/www/blog/relateModelTest/models.py
-/var/www/blog/relateModelTest/tests.py
-/var/www/blog/relateModelTest/views.py
 /var/www/blog/shell_spide.py
 /var/www/blog/static/admin/js/SelectBox.js
 /var/www/blog/static/admin/js/SelectFilter2.js
@@ -51303,7 +51361,6 @@ def
 /var/www/blog/webblog/management/commands/createCommand.py
 /var/www/blog/webblog/management/commands/tryTemplate.py
 /var/www/blog/webblog/models.py
-/var/www/blog/webblog/params.py
 /var/www/blog/webblog/static/common.js
 /var/www/blog/webblog/static/js/blog.js
 /var/www/blog/webblog/tests.py

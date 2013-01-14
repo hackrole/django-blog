@@ -9,6 +9,7 @@ from webblog.form import *
 from django.core.mail import send_mail
 from django.core.paginator import Paginator
 from django.http import Http404
+from django.template.response import TemplateResponse
 
 cate_count = Category.objects.count()
 cate = Category.objects.all()[0:10]
@@ -43,6 +44,7 @@ def index(request, page=1):
     context['tags_count'] = tags_count
     context['tags'] = tags
     context['blogs'] = blogs
+    return TemplateResponse(request, 'webblog/index.html', context)
     return render_to_response('webblog/index.html',context, context_instance=RequestContext(request))
     
 def cate(request, cate, page=1):
