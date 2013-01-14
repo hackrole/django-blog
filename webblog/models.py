@@ -14,6 +14,10 @@ class Category(models.Model):
     def __unicode__(self):
         return self.name
 
+    class Meta:
+        #db_table = 'Category'
+        ordering = ['category_rate']
+
 class Blog(models.Model):
     blog_id = models.AutoField(primary_key=True)
     category_id = models.ForeignKey(Category)
@@ -43,6 +47,10 @@ class Tag(models.Model):
     def __unicode__(self):
         return self.tag_name
 
+    class Meta:
+        #db_table = 'tag'
+        ordering = ['tag-rate']
+
 class Blog_Tag(models.Model):
     relation_id = models.AutoField(primary_key=True)
     blog_id = models.ForeignKey(Blog)
@@ -69,6 +77,9 @@ class Comment(models.Model):
     
     def __unicode__(self):
         return 'the %s has say: %s' % (self.author_name, self.content[:10]+'..')
+
+    class Meta:
+        ordering = ['comment_level']
 
     
 class About(models.Model):
