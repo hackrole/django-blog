@@ -7,13 +7,12 @@ from django.template import RequestContext
 from django.shortcuts import render_to_response, redirect
 from webblog.form import *
 from django.core.mail import send_mail
-from webblog import params
 
 def index(request):
     cate = Category.objects.all()
     tags = Tag.objects.all()
     
-    return render_to_response('blog/index.html',{'cate':cate, 'tag':tags})
+    return render_to_response('webblog/index.html',{'cate':cate, 'tag':tags})
     # return HttpResponse('hello world, everybody')
     
 def cate(request, cate):

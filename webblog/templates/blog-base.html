@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+        <div id="content-title">
+        {% block content_title %}
+        {% include "webblog/content_title.html" %}
+        {% endblock %}
+        </div>
+
+        <div id="main">
+        {% block main_content %}
+        <!-- this block trend tobe overwrite -->
+        {% endblock %}
+        </div>
+{%  endblock %}
+
+{% block sidebar %}
+{% include "webblog/sidebar.html" %}
+{% endblock %}
