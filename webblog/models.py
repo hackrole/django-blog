@@ -49,7 +49,7 @@ class Tag(models.Model):
 
     class Meta:
         #db_table = 'tag'
-        ordering = ['tag-rate']
+        ordering = ['tag_rate']
 
 class Blog_Tag(models.Model):
     relation_id = models.AutoField(primary_key=True)

@@ -5,6 +5,7 @@ from django.http import HttpResponse
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from webblog.models import *
+from django.db.models import Count
 
 class WebblogMiddleware(object):
     """
@@ -20,7 +21,7 @@ class WebblogMiddleware(object):
         cate['count'] = Category.objects.count()
         cate['cates'] = Category.objects.all()[0:6]
         hotcomment = Comment.objects.filter(is_close=False)[0:5]
-        mostcomment = Comment.objects.aggregate(blog_count=Count(blog_id), distinct=True).order_by('-blog_count')[0:6]
+        mostcomment = Comment.objects.aggregate(blog_count=Count(blog_id), distinct=True)[0:6]
         
         response.context_data['tags'] = tags
         response.context_data['cate'] = cate
