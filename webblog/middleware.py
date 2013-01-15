@@ -13,14 +13,13 @@ class WebblogMiddleware(object):
     
     def process_template_response(self, request, response):
         # print response.context_data
-        tags = {}
-        tags['count'] = Tag.objects.count()
-        tags['tags'] = Tag.objects.all()[0:6]
-        cate = {}
-        cate['count'] = Category.objects.count()
-        cate['cates'] = Category.objects.all()[0:6]
+        tags = Tag.objects.all()
+        cate = Category.objects.all()
         hotcomment = Comment.objects.filter(is_close=False)[0:5]
-        mostcomment = Comment.objects.aggregate(blog_count=Count(blog_id), distinct=True).order_by('-blog_count')[0:6]
+
+        mostcomment = Blog.objects.raw(
+            'select blog_id,count(c.comment_id) as count from blog as b left join webblog_comment as c on b.blog_id=c.blog_id_id group by blog_id order by blog_id limit 10'
+            )
         
         response.context_data['tags'] = tags
         response.context_data['cate'] = cate
