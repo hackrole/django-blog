@@ -4,7 +4,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-from webblog.models import Tag
+from webblog.models import *
 
 class WebblogMiddleware(object):
     """
@@ -12,11 +12,21 @@ class WebblogMiddleware(object):
     """
     
     def process_template_response(self, request, response):
-        print response.context_data
-        tags = Tag.objects.all()
-        response.context_data['tags_new'] = tags
-        for i in response.context_data:
-            print i
+        # print response.context_data
+        tags = {}
+        tags['count'] = Tag.objects.count()
+        tags['tags'] = Tag.objects.all()[0:6]
+        cate = {}
+        cate['count'] = Category.objects.count()
+        cate['cates'] = Category.objects.all()[0:6]
+        hotcomment = Comment.objects.filter(is_close=False)[0:5]
+        mostcomment = Comment.objects.aggregate(blog_count=Count(blog_id), distinct=True).order_by('-blog_count')[0:6]
+        
+        response.context_data['tags'] = tags
+        response.context_data['cate'] = cate
+        response.context_data['hotcom'] = hotcomment
+        response.context_data['mostcom'] = mostcomment
+
         return response
         return render_to_response(response.template_name, response.context_data, context_instance=RequestContext(request))
     
