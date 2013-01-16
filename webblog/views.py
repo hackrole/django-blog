@@ -13,7 +13,7 @@ from django.template.response import TemplateResponse
 
 
 def index(request, page=1):
-    blogs = Blog.objects.filter(is_cloesd=False).order_by("-pub_time")
+    blogs = Blog.objects.order_by("-pub_time")
     p = Paginator(blogs, 3)
     try:
         blogs = p.page(page)
@@ -22,8 +22,8 @@ def index(request, page=1):
     except EmptyPage:
         blogs = p.page(p.num_pages)
 
-    for blog in blogs:
-        blog.comment_count = len(Comment.objects.filter(blog_id=blog.blog_id))
+    # for blog in blogs:
+    #     blog.comment_count = len(Comment.objects.filter(blog_id=blog.blog_id))
 
     return TemplateResponse(request, 'webblog/index.html', {'blogs':blogs})
     return render_to_response('webblog/index.html',context, context_instance=RequestContext(request))
@@ -68,7 +68,7 @@ def detail(request, id):
     
     return render_to_response('webblog/detail.html', {'blog':blog,'comments':comments, 'form':commentForm})
 
-def about(request):
+def about(request, page=1):
     if request.method == "POST":
         form = AboutForm(request.POST)
         if form.is_valid():
@@ -76,8 +76,15 @@ def about(request):
         return redirect('/blog/')
     
     form = AboutForm()
-    about = About.objects.all()
-    return render_to_response('blog/about.html', {'form':form, 'about':about}, context_instance=RequestContext(request))
+    abouts = About.objects.all()
+    p = Paginator(abouts, 6)
+    try:
+        abouts = p.page(page)
+    except PageNotAnInteger:
+        abouts = p.page(1)
+    except EmptyPage:
+        abouts = p.page(p.num_pages)
+    return render_to_response('webblog/about.html', {'form':form, 'abouts':abouts}, context_instance=RequestContext(request))
      
 def contact(request):
     if request.method == "POST":
@@ -91,7 +98,7 @@ def contact(request):
             return render_to_response('tips.html')
     
     form = ContactForm()
-    return render_to_response('blog/contact.html', {'form': form}, context_instance=RequestContext(request))
+    return render_to_response('webblog/contact.html', {'form': form}, context_instance=RequestContext(request))
 
 def post_comment(request, id):
     if request.is_ajax() and request.method == 'POST':

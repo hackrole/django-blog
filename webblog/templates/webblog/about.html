@@ -1,0 +1,81 @@
+{% extends "blog-base.html" %}
+
+{% block main_content %}
+<div>
+   <h2 style="text-align:center;margin-top:20px;">联系我们</h2>
+   <ul>
+     {% for about in abouts %}
+     <li style="float:none;"> 
+       <div class="contact-history">
+         <p>name:{{ about.name }}</p>
+         <p>email:{{ about.email }}</p>
+         <p>website:{{ about.website|default:'' }}</p>
+         <p>内容:{{ about.content }}</p>
+       </div>
+     </li>
+     {% endfor %}
+   </ul>
+ </div>
+ <div style="margin-top:30px;margin-bottom:30px;text-align:center">
+   <h2>加入我们，方便交流</h2>
+ </div>
+<form method="post" action="">
+  <table>
+    <tr>
+      <th>
+        <label for="id_name">Name:</label>
+      </th>
+      <td>
+        <input id="id_name" type="text" name="name"
+               maxlength="10"/>
+    </tr>
+    <tr>
+      <th>
+        <label for="id_email">Email:</label>
+      </th>
+      <td>
+        <input id="id_email" type="text" name="email"/>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <label for="id_website">Website:</label>
+      </th>
+      <td><input id="id_website" type="text" name="website" maxlength="200" />
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <label for="id_qq">Qq:</label>
+      </th>
+      <td>
+        <input id="id_qq" type="text" name="qq" maxlength="12"/>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <label for="id_content">Content:</label>
+      </th>
+      <td>
+        <textarea id="id_content" rows="6" cols="50"
+                  name="content"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <label for="id_if_accept_email">If accept
+          email:</label>
+      </th>
+      <td>
+        <input type="checkbox" name="if_accept_email"
+               id="id_if_accept_email"/>
+      </td>
+    </tr>
+    <tr>
+      <th>&nbsp;</th>
+      <td><input type="submit" value="提交"/></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}
+

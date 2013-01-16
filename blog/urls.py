@@ -27,6 +27,7 @@ urlpatterns += patterns('webblog',
                         url(r'^blog/tag/(\d+)$', 'views.tag'),
                         url(r'^blog/id/(?P<id>\d+)$', 'views.detail'),
                         url(r"^blog/comment/$", 'views.post_comment'),
+                        url(r'^blog/about/(\d+)$', 'views.about'),
                         url(r'^blog/about/$', 'views.about'),
                         url(r'^blog/contact/$', 'views.contact'),
 )
