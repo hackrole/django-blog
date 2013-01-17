@@ -6,6 +6,9 @@ from django.core.exceptions import ValidationError
 # Create your models here.
 
 class Category(models.Model):
+    """
+    分类信息表
+    """
     category_id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=20)
     desc = models.CharField(max_length=100,blank=True)
@@ -16,17 +19,17 @@ class Category(models.Model):
         return self.name
 
     class Meta:
-        #db_table = 'Category'
         ordering = ['-category_pv']
 
 class Blog(models.Model):
+    """
+    博客主表
+    """
     blog_id = models.AutoField(primary_key=True)
     category = models.ForeignKey(Category,db_column="category_id")
     title = models.CharField(max_length=20, db_index=True, unique=True)
-    desc = models.CharField(max_length=150, blank=True)
     content = models.TextField()
     pub_time = models.DateTimeField(auto_now=True,db_index=True)
-    update_time = models.DateTimeField()
     blog_pv = models.IntegerField(default=0)
     is_closed = models.BooleanField(default=False)
     
@@ -38,6 +41,9 @@ class Blog(models.Model):
         ordering = ['-pub_time','-blog_pv']
 
 class Tag(models.Model):
+    """
+    标签表
+    """
     tag_id = models.AutoField(primary_key=True) 
     blog = models.ManyToManyField(Blog)
     tag_name = models.CharField(max_length=20, db_index=True,unique=True)
@@ -54,6 +60,9 @@ class Tag(models.Model):
 
 
 class Comment(models.Model):
+    """
+    评论表
+    """
     COMMENT_LEVEL_CHOICES = (
         (0, '一级评论'),
         (1, '二级评论'),
@@ -80,7 +89,6 @@ class About(models.Model):
     content = models.TextField()
     
     def __unicode__(self):
-        # return "%(name)s with email %(email)s send this: (%content)s" % {'name':self.name, 'email':self.email, 'content':self.content}    
         return '%s with email: %s send this: %s' % (self.name, self.email, self.content)
 
 def validate_qq(value):
