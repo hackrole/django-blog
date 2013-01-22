@@ -170,11 +170,26 @@ LOGGING = {
         }
     },
     'loggers': {
-        'django.request': {
+        'blog': {
             'handlers': ['mail_admins'],
             'level': 'ERROR',
             'propagate': True,
         },
+        'about':{
+            'handlers': [],
+            'propagate': True,
+            'level':'INFO',
+            },
+        'contact':{
+            'handlers': [],
+            'level': 'DEBUG',
+            'filters': []
+            },
+        'blog.comment':{
+            'handlers': [],
+            'propagate': False,
+            'level': 'DEBUG',
+            },
     }
 }
 

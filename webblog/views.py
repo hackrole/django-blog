@@ -7,7 +7,7 @@ from django.template import RequestContext
 from django.shortcuts import render_to_response, redirect
 from webblog.form import *
 from django.core.mail import send_mail
-from django.core.paginator import Paginator
+from django.core.paginator import Paginator,PageNotAnInteger,EmptyPage
 from django.http import Http404
 from django.template.response import TemplateResponse
 from django.views.decorators.cache import cache_page
