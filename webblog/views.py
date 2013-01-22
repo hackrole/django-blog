@@ -10,8 +10,9 @@ from django.core.mail import send_mail
 from django.core.paginator import Paginator
 from django.http import Http404
 from django.template.response import TemplateResponse
+from django.views.decorators.cache import cache_page
 
-
+@cache_page(3600, cache="default")
 def index(request, page=1):
     blogs = Blog.objects.order_by("-pub_time")
     p = Paginator(blogs, 3)
@@ -27,7 +28,8 @@ def index(request, page=1):
 
     # return TemplateResponse(request, 'webblog/index.html', {'blogs':blogs})
     return render_to_response('webblog/index.html', {'blogs':blogs}, context_instance=RequestContext(request))
-    
+
+@cache_page(3600, cache="default", key_prefix="cate")    
 def cate(request, cate, page=1):
     if cate is None:
         raise Http404
@@ -43,6 +45,7 @@ def cate(request, cate, page=1):
     # return TemplateResponse(request, 'webblog/index.html', {'blogs':blogs})
     return render_to_response('webblog/index.html', {'blogs':blogs,}, context_instance=RequestContext(request))
 
+@cache_page(3600, cache="default", key_prefix="tag")    
 def tag(request, tid, page=1):
     if tid is None:
         raise Http404
@@ -58,9 +61,7 @@ def tag(request, tid, page=1):
         blogs = p.page(p.num_pages)
     return TemplateResponse(request, 'webblog/index.html', {'blogs':blogs})
 
-def date(request, year, month):
-    pass
-    
+@cache_page(3600, cache="filecache", key_prefix="blog")    
 def detail(request, id):
     if request.method == "POST":
         commentForm = CommentForm(request.POST)
@@ -75,6 +76,7 @@ def detail(request, id):
     
     return render_to_response('webblog/detail.html', {'blog':blog,'comments':comments, 'form':commentForm}, context_instance=RequestContext(request))
 
+@cache_page(3600, cache="filecache")
 def about(request, page=1):
     if request.method == "POST":
         form = AboutForm(request.POST)
@@ -92,7 +94,8 @@ def about(request, page=1):
     except EmptyPage:
         abouts = p.page(p.num_pages)
     return render_to_response('webblog/about.html', {'form':form, 'abouts':abouts}, context_instance=RequestContext(request))
-     
+
+@cache_page(3600, cache="filecache")  
 def contact(request):
     if request.method == "POST":
         form = ContactForm(request.POST)
@@ -113,6 +116,7 @@ def post_comment(request, id):
         form = CommentForm(request.POST)
         if form.is_valid:
             form.save()
+
 
 def source(request):
     pass

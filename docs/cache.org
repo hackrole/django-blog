@@ -1,0 +1,23 @@
+membercache基本配置和使用
+
+* 安装
+若是只是测试或本地开发的话，可以直接aptitude安装，如果是生产环境的话，
+建议自己编译。过程有什么好说的，自己网上搜吧。需要注意的是需要安装
+libevent库支持。还有memcache不能以root启动，需要配置一个用户共其使用。
+如果是apitude安装，就不需要这个了。
+
+* 基本的使用
+** 启动memcache
+测试：
+memcached -u xxxx -p 12000 -vv -P /var/run/mem.pid
+telnet localhost 12000
+stats
+使用(可以使用sock和tcp两种方式，这里只提供tcp方式):
+memcached -u xxx -p 12000 -d -P /var/run/mem.pid
+
+** django使用
+基本的使用和配置，官方文档都有。自己查吧。这里将下怎么测试api调用
+python manage.py shell
+from django.core.cache import cache
+cache.set('test', 'hello world', 60)
+cache.get('test')

@@ -17,5 +17,11 @@ filenametagsnew:
 	echo -e "!_TAG_FILE_SORTED\t2\t2/2=foldcase/" > filenametags
 	find ${dir} -not -regex '.*\.\(png\|gif\|jpg\)' -type f -printf "%f\t%p\t0\n" | sort -f >> filenametags
 
+startmemcache-dev:
+	memcached -vv -u daipeng -p 12000 -P /var/run/mem.pid
+
+endmemcache-dev:
+	kill `cate /var/run/mem.pid` 
+
 clean:
 	rm -rf ctags etags cscope* filenametags

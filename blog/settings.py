@@ -97,11 +97,13 @@ TEMPLATE_LOADERS = (
 
 MIDDLEWARE_CLASSES = (
     'webblog.middleware.WebblogMiddleware',
+    # 'django.middleware.cache.UpdateCacheMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    # 'django.middleware.cache.FetchFromCacheMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
@@ -187,11 +189,20 @@ EMAIL_USE_TLS = True
 # cache setting
 CACHES = {
     'default' : {
-        'BACKEND' : 'django.core.cache.backends.memcached.MemcachedCache',
-        'LOCATION' : [ '127.0.0.1:12000',],
+        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+        'LOCATION': [ '127.0.0.1:12000',],
+        'TIMEOUT': 3600,
+        'OPTIONS': {
+            'MAX_ENTRIES': 1000,
+            'KEY_PREFIX' : 'djblog',
+            'VERSION' : '',
+            }
         },
     'filecache' : {
-        'BACKEND' : 'django.core.cache.backends.filebased.FileBasedCache',
-        'LOCATION' : '/tmp/cache/test',
+        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+        'LOCATION': '/tmp/cache/test',
         },
+    'test' :{
+        'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
+        }
 }

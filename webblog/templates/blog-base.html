@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load staticfiles %}
+{% load cache %}
 
 {% block content %}
         <div id="content-title">
@@ -16,7 +17,9 @@
 {%  endblock %}
 
 {% block sidebar %}
+{% cache 3600 sidebar %}
 {% include "webblog/sidebar.html" %}
+{% endcache %}
 {% endblock %}
 
 {% block foot %}

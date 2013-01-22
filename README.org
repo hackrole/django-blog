@@ -31,5 +31,6 @@ up_pv,pub_blog,close_blog等后台action
 2）实现缓存，准备使用membercache或filecache缓存
 3）实现一部分日志功能
 4）实现文件上传功能，用于管理少量技术文档，可能需要auth方面支持
-
+5) nginx集成，用于保存pv信息
+6）Sphinx集成，用于建立搜索功能
 
