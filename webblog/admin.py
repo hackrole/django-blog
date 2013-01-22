@@ -46,12 +46,12 @@ class TagAdmin(admin.ModelAdmin):
     pass
     # action = ['']
         
-def up_rate(modelAdmin, request, queryset):
-    # queryset.update(category_rate=1)
+def up_pv(modelAdmin, request, queryset):
+    # queryset.update(category_pv=1)
     for cate in queryset:
-        cate.category_rate = cate.category_rate + 1
+        cate.category_pv = cate.category_pv + 1
         cate.save()
-up_rate.short_description = "update the category rate by 1"
+up_rate.short_description = "update the category pv by 1"
 
 class CategoryAdmin(admin.ModelAdmin):
     # pass

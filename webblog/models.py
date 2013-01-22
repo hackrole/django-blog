@@ -2,6 +2,7 @@
 from django.db import models
 import re
 from django.core.exceptions import ValidationError
+from django.contrib.sitemaps import Sitemap
 
 # Create your models here.
 
@@ -107,3 +108,12 @@ class Contact(models.Model):
     def __unicode__(self):
         return '%(name)s with email: %(email)s' % ({'name':self.name, 'email':self.email})
     
+class BlogSitemap(Sitemap):
+    changefreq = "never"
+    priority = 0.5
+
+    def items(self):
+        return Blog.objects.filter(is_closed=False)
+    
+    def lastmode(self, obj):
+        return obj.pub_time

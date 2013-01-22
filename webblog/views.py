@@ -22,11 +22,11 @@ def index(request, page=1):
     except EmptyPage:
         blogs = p.page(p.num_pages)
 
-    # for blog in blogs:
-    #     blog.comment_count = len(Comment.objects.filter(blog_id=blog.blog_id))
+    for blog in blogs:
+        blog.comment_count = len(Comment.objects.filter(blog_id=blog.blog_id))
 
-    return TemplateResponse(request, 'webblog/index.html', {'blogs':blogs})
-    return render_to_response('webblog/index.html',context, context_instance=RequestContext(request))
+    # return TemplateResponse(request, 'webblog/index.html', {'blogs':blogs})
+    return render_to_response('webblog/index.html', {'blogs':blogs}, context_instance=RequestContext(request))
     
 def cate(request, cate, page=1):
     if cate is None:
@@ -40,14 +40,14 @@ def cate(request, cate, page=1):
         blogs = p.page(1)
     except EmptyPage:
         blogs = p.page(p.num_pages)
-    return TemplateResponse(request, 'webblog/index.html', {'blogs':blogs})
-    return render_to_response('webblog/index.html', context, context_instance=RequestContext(request))
+    # return TemplateResponse(request, 'webblog/index.html', {'blogs':blogs})
+    return render_to_response('webblog/index.html', {'blogs':blogs,}, context_instance=RequestContext(request))
 
 def tag(request, tid, page=1):
-    if tag is None:
+    if tid is None:
         raise Http404
 
-    tag = Tag.objects.get(id=tid)
+    tag = Tag.objects.get(tag_id=tid)
     blogs = tag.blog.filter(is_closed=False)
     p = Paginator(blogs, 3)
     try:
@@ -62,22 +62,29 @@ def date(request, year, month):
     pass
     
 def detail(request, id):
-    blog = Blog.objects.get(id=id)
+    if request.method == "POST":
+        commentForm = CommentForm(request.POST)
+        if commentForm.is_valid():
+            comment = commentForm.save(commit=False)
+            comment.blog = Blog.objects.get(blog_id=id)
+            comment.save()
+            return redirect("/blog/")
+    blog = Blog.objects.get(blog_id=id)
     comments = Comment.objects.filter(blog=blog)
     commentForm = CommentForm()
     
-    return render_to_response('webblog/detail.html', {'blog':blog,'comments':comments, 'form':commentForm})
+    return render_to_response('webblog/detail.html', {'blog':blog,'comments':comments, 'form':commentForm}, context_instance=RequestContext(request))
 
 def about(request, page=1):
     if request.method == "POST":
         form = AboutForm(request.POST)
         if form.is_valid():
             form.save()
-        return redirect('/blog/')
+        return redirect('/blog/about/')
     
     form = AboutForm()
     abouts = About.objects.all()
-    p = Paginator(abouts, 6)
+    p = Paginator(abouts, 10)
     try:
         abouts = p.page(page)
     except PageNotAnInteger:
@@ -91,11 +98,12 @@ def contact(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-            admin_email = params.contact_email_admin.admin
-            send_email('联系我们', form.cleaned_data.content, EMAIL_HOST_USER, ['daipeng123456@gmail.com'], fail_silently=False)
-            if True == form.cleaned_data.if_accept_email:
-                send_email('联系我们', form.cleaned_data.content, EMAIL_HOST_USER, [form.cleaned_data.email,], fail_silently=False)
             return render_to_response('tips.html')
+            admin_email = "daipeng123456@gmail.com"
+            send_mail('联系我们', form.cleaned_data['content'], "daipeng123456@gmail.com", ['daipeng123456@gmail.com'], fail_silently=False)
+            if True == form.cleaned_data['if_accept_email']:
+                send_mail('联系我们', form.cleaned_data['content'], "daipeng123456@gmail.com", [form.cleaned_data['email'],], fail_silently=False)
+
     
     form = ContactForm()
     return render_to_response('webblog/contact.html', {'form': form}, context_instance=RequestContext(request))
@@ -105,3 +113,6 @@ def post_comment(request, id):
         form = CommentForm(request.POST)
         if form.is_valid:
             form.save()
+
+def source(request):
+    pass

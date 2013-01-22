@@ -7,13 +7,12 @@
   </div>
   <div class="desc">
     <ul>
-      <li class="date">{{ blog.pub_time|time|default:"未知" }}</li>
-      <li>{{ blog.author }}</li>
+      <li class="date">{{ blog.pub_time|default:"未知" }}</li>
     </ul>
     <p>{{ comments|length }}条评论</p>
   </div>
   <div class="post">
-    {{ blog.content }}
+    {{ blog.content|safe }}
   </div>
 </div>
 <div id="comments">
@@ -22,15 +21,17 @@
     <li class="comment">
       <h4>
         <span>{{ comment.author_name|default:"不详" }}</span>
-        <span>发表与{{ comment.pub_time|default:"不详" }}</span>
+        <span>邮箱{{ comment.author_email|default:"" }}</span>
+        <span>发表：{{ comment.comment_id }}</span>
       </h4>
-      <p>{{ comment.content }}</p>
+      <p>{{ comment.content|safe }}</p>
     </li>  
     {% endfor %}
   </ol>
 </div>
 <div id="post-comment">
-  <form method="post" action="">
+  <form method="post" action="/blog/id/{{ blog.blog_id }}">
+    {% csrf_token %}
     {{ form.as_p }}
     <p>
       <input type="submit" value="提交" />

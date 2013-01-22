@@ -3,6 +3,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 from blog import settings
+from webblog.models import BlogSitemap
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -30,6 +31,8 @@ urlpatterns += patterns('webblog',
                         url(r'^blog/about/(\d+)$', 'views.about'),
                         url(r'^blog/about/$', 'views.about'),
                         url(r'^blog/contact/$', 'views.contact'),
+                        url(r'^blog/source/$', 'views.source'),
+                        url(r'^blog/sitemap\.xml/$', 'django.contrib.sitemaps.views.sitemap', {'sitempas':BlogSitemap}),
 )
 if settings.DEBUG == True:
     urlpatterns += staticfiles_urlpatterns()

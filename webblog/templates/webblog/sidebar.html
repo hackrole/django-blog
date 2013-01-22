@@ -17,7 +17,7 @@
     <ol>
       {% for t in tags %}
       <li>
-        <a href="">{{ t.tag_name }}</a>
+        <a href="/blog/tag/{{ t.tag_id }}">{{ t.tag_name }}</a>
       </li>
       {% endfor %}
       {% if tags_count > 10 %}
@@ -25,33 +25,34 @@
       {% endif %}
     </ol>
 </div>
+{% comment %}
 <div id="cate">
     <h4>热门评论</h4>
     <ol>
-        <li>emacs</li>
-        <li>vim</li>
-        <li>django</li>
-        <li>python</li>
-        <li>ruby</li>
+      {% for c in hotcomment %}
+      <li><a href="/blog/blog/{{ c.blog.blog_id }}">
+          {{ c.content|safe|default:"空的评论" }}
+      </a></li>
+      {% endfor %}
     </ol>
 </div>
 <div id="cate">
     <h4>评论最多</h4>
     <ol>
-        <li>emacs</li>
-        <li>vim</li>
-        <li>django</li>
-        <li>python</li>
-        <li>ruby</li>
+      {% for c in mostcomment %}
+      <li><a href="/blog/blog/{{ c.blog.blog_id }}">
+          {{ c.content|safe|default:"空的评论" }}
+      </a></li>
+      {% endfor %}
     </ol>
 </div>
+{% endcomment %}   
 <div id="cate">
     <h4>近期更新</h4>
     <ol>
-        <li>emacs</li>
-        <li>vim</li>
-        <li>django</li>
-        <li>python</li>
-        <li>ruby</li>
+      {% for r in recentBlog %}
+      <li><a href="/blog/id/{{ r.blog_id }}">
+          {{ r.title }}
+      {% endfor %}
     </ol>
 </div>

@@ -2,7 +2,7 @@
 
 {% block main_content %}
 <div>
-   <h2 style="text-align:center;margin-top:20px;">联系我们</h2>
+   <h2 style="text-align:center;margin-top:20px;">关于我们</h2>
    <ul>
      {% for about in abouts %}
      <li style="float:none;"> 
@@ -20,6 +20,7 @@
    <h2>加入我们，方便交流</h2>
  </div>
 <form method="post" action="">
+  {% csrf_token %}
   <table>
     <tr>
       <th>

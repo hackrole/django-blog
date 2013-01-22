@@ -14,7 +14,7 @@
         <p>{{ blog.comment_count }}条评论</p>
     </div>
     <div class="post">
-      {{ blog.content }}
+      {{ blog.content|safe }}
     </div>
 </div>
 {% endfor %}
