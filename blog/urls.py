@@ -4,6 +4,9 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.contrib import admin
 from blog import settings
 from webblog.models import BlogSitemap
+from django.contrib.sitemaps import views as sitemaps_views
+from django.views.decorators.cache import cache_page
+
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -18,7 +21,13 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 )
 
-
+urlpatterns += patterns('',
+                        url(
+        r'^blog/sitemap\.xml/$', 
+        cache_page(86400)(sitemaps_views.sitemap),#'django.contrib.sitemaps.views.sitemap', 
+        {'sitemaps':{'blog':BlogSitemap}}
+        ),
+)
 
 urlpatterns += patterns('webblog',
                         url(r'^blog/(?P<page>\d+)/$', 'views.index'),
@@ -32,7 +41,7 @@ urlpatterns += patterns('webblog',
                         url(r'^blog/about/$', 'views.about'),
                         url(r'^blog/contact/$', 'views.contact'),
                         url(r'^blog/source/$', 'views.source'),
-                        url(r'^blog/sitemap\.xml/$', 'django.contrib.sitemaps.views.sitemap', {'sitempas':BlogSitemap}),
+                        
 )
 if settings.DEBUG == True:
     urlpatterns += staticfiles_urlpatterns()

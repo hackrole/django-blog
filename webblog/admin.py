@@ -51,12 +51,12 @@ def up_pv(modelAdmin, request, queryset):
     for cate in queryset:
         cate.category_pv = cate.category_pv + 1
         cate.save()
-up_rate.short_description = "update the category pv by 1"
+up_pv.short_description = "update the category pv by 1"
 
 class CategoryAdmin(admin.ModelAdmin):
     # pass
     ordering = ['-category_pv']
-    actions = [up_rate]
+    actions = [up_pv]
     
 
 class CommentAdmin(admin.ModelAdmin):

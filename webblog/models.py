@@ -117,3 +117,6 @@ class BlogSitemap(Sitemap):
     
     def lastmode(self, obj):
         return obj.pub_time
+    
+    def location(self, obj):
+        return "/blog/id/%s" % (obj.blog_id, )
