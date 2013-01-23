@@ -1,4 +1,4 @@
-cscope 15 /var/www/blog               0000292933
+cscope 15 /var/www/blog               0000297703
 	@/var/www/blog/blog/__init__.py
 
 	@/var/www/blog/blog/settings.py
@@ -613,7 +613,27 @@ Lßd”
 	gMIDDLEWARE_CLASSES
  = (
 
-105 #Uncomm’ˆ
+100 #'
+djªgo
+.
+middËw¬e
+.
+ÿche
+.
+Upd©eCacheMiddËw¬e
+',
+
+106 #'
+djªgo
+.
+middËw¬e
+.
+ÿche
+.
+F‘chFromCacheMiddËw¬e
+',
+
+107 #Uncomm’ˆ
 the
  
 Ãxt
@@ -627,7 +647,7 @@ sim¶e
 ´ÙeùiÚ
 :
 
-106 #'
+108 #'
 djªgo
 .
 middËw¬e
@@ -637,11 +657,11 @@ middËw¬e
 XF¿meO±iÚsMiddËw¬e
 ',
 
-109 
+111 
 	gROOT_URLCONF
  = 'blog.urls'
 
-111 #PythÚ 
+113 #PythÚ 
 dÙ‹d
  
 ·th
@@ -661,15 +681,15 @@ by
 Djªgo
 's„unserver.
 
-112 
+114 
 WSGI_APPLICATION
  = 'blog.wsgi.application'
 
-114 
+116 
 TEMPLATE_DIRS
  = (
 
-116 #Puˆ
+118 #Puˆ
 ¡ršgs
  
 h”e
@@ -679,7 +699,7 @@ like
 Ü
  "C:/www/django/templates".
 
-117 #Alway 
+119 #Alway 
 u£
  
 fÜw¬d
@@ -693,11 +713,19 @@ ev’
 Wšdows
 .
 
-121 
+123 
 	gINSTALLED_APPS
  = (
 
-128 #Uncomm’ˆ
+130 #'
+djªgo
+.
+cÚŒib
+.
+s™em­s
+',
+
+131 #Uncomm’ˆ
 the
  
 Ãxt
@@ -711,7 +739,7 @@ to
 admš
 :
 
-130 ## 
+133 ## 
 Uncomm’t
  
 the
@@ -729,7 +757,7 @@ admš
 docum’tiÚ
 :
 
-134 #Li¡ 
+137 #Li¡ 
 of
  
 ´oûssÜs
@@ -749,7 +777,7 @@ the
 cÚ‹xt
 .
 
-135 #Each 
+138 #Each 
 Úe
  
 should
@@ -775,7 +803,7 @@ as
 ™s
 
 
-136 #Úly 
+139 #Úly 
 ·¿m‘”
  
 ªd
@@ -795,11 +823,11 @@ the
 cÚ‹xt
 .
 
-137 
+140 
 	gTEMPLATE_CONTEXT_PROCESSORS
  = (
 
-144 #'
+147 #'
 djªgo
 .
 cÜe
@@ -809,7 +837,7 @@ cÚ‹xt_´oûssÜs
 »que¡
 ',
 
-148 #A 
+152 #A 
 §m¶e
  
 loggšg
@@ -823,7 +851,7 @@ The
 ngibË
 †ogging
 
-149 #³rfÜmed 
+153 #³rfÜmed 
 by
  
 this
@@ -841,7 +869,7 @@ to
 ema
 o
 
-150 #th
+154 #th
 s™e
  
 admšs
@@ -861,11 +889,11 @@ DEBUG
 F®£
 .
 
-151 #S“ 
+155 #S“ 
 h‰p
 :
 
-152 #mÜ
+156 #mÜ
 d‘as
  
 Ú
@@ -883,53 +911,61 @@ loggšg
 cÚfigu¿tiÚ
 .
 
-153 
+157 
 	gLOGGING
  = {
 
-155 'di§bË_exi¡šg_logg”s': 
+159 'di§bË_exi¡šg_logg”s': 
 F®£
 ,
 
-172 '´İag©e': 
+176 '´İag©e': 
 True
 ,
 
-177 #Ema 
+180 '´İag©e': 
+True
+,
+
+190 '´İag©e': 
+F®£
+,
+
+196 #Ema 
 S‘up
 
 
-178 
+197 
 DEFAULT_FROM_EMAIL
  = 'daipeng123456@gmail.com'
 
-179 
+198 
 EMAIL_HOST
  = 'smtp.gmail.com'
 
-180 
+199 
 EMAIL_PORT
  = 587
 
-181 
+200 
 EMAIL_HOST_USER
  = 'daipeng123456@gmail.com'
 
-182 
+201 
 EMAIL_HOST_PASSWORD
  = 'dp123456'
 
-183 
+202 
 EMAIL_USE_TLS
  = 
 True
 
 
-185 #ÿch
+204 #ÿch
 £‰šg
 
 
-186 
+205 
 CACHES
  = {
 
@@ -1008,30 +1044,76 @@ impÜt
 
 
 6 
+äom
+ 
+	gwebblog
+.
+mod–s
+ 
+impÜt
+ 
+BlogS™em­
+
+
+7 
+äom
+ 
+	gdjªgo
+.
+	gcÚŒib
+.
+s™em­s
+ 
+impÜt
+ 
+v›ws
+ 
+as
+ 
+s™em­s_v›ws
+
+
+8 
+äom
+ 
+	gdjªgo
+.
+	gv›ws
+.
+	gdecÜ©Üs
+.
+ÿche
+ 
+impÜt
+ 
+ÿche_·ge
+
+
+10 
 	gadmš
 .
 	$autodiscov”
 ()
 
-8 
+12 
 u¾·‰”ns
  = 
 	`·‰”ns
 ('',
 
-10 #u¾(
+14 #u¾(
 r
 '^$', 'blog.v›ws.home', 
 Çme
 ='home'),
 
-11 #u¾(
+15 #u¾(
 r
 '^blog/', 
 	`šşude
 ('blog.foo.urls')),
 
-13 #Uncomm’ˆ
+17 #Uncomm’ˆ
 the
  
 admš
@@ -1049,7 +1131,7 @@ to
 docum’tiÚ
 :
 
-14 
+18 
 	`u¾
 (
 r
@@ -1057,7 +1139,7 @@ r
 	`šşude
 ('django.contrib.admindocs.urls')),
 
-16 #Uncomm’ˆ
+20 #Uncomm’ˆ
 the
  
 Ãxt
@@ -1071,7 +1153,7 @@ to
 admš
 :
 
-17 
+21 
 	`u¾
 (
 r
@@ -1085,78 +1167,126 @@ s™e
 u¾s
 )),
 
-22 
+24 
 u¾·‰”ns
  +ğ
 	`·‰”ns
-('webblog',
-
-23 
-	`u¾
-(
-r
-'^blog/(?P<page>\d+)/$', 'views.index'),
-
-24 
-	`u¾
-(
-r
-'^blog/$', 'views.index'),
+('',
 
 25 
 	`u¾
 (
+
+26 
+r
+'^blog/sitemap\.xml/$',
+
+27 
+	$ÿche_·ge
+(86400)(
+s™em­s_v›ws
+.
+s™em­
+),#'
+djªgo
+.
+cÚŒib
+.
+s™em­s
+.
+v›ws
+.sitemap',
+
+28 {'s™em­s':{'blog':
+BlogS™em­
+}
+	}
+}
+
+32 
+	gu¾·‰”ns
+ +ğ
+·‰”ns
+('webblog',
+
+33 
+u¾
+(
+r
+'^blog/(?P<page>\d+)/$', 'views.index'),
+
+34 
+u¾
+(
+r
+'^blog/$', 'views.index'),
+
+35 
+u¾
+(
 r
 '^blog/cate/(\d+)/(?P<page>\d+)/$', 'views.cate'),
 
-26 
-	`u¾
+36 
+u¾
 (
 r
 '^blog/cate/(\d+)/$', 'views.cate'),
 
-27 
-	`u¾
+37 
+u¾
 (
 r
 '^blog/tag/(\d+)$', 'views.tag'),
 
-28 
-	`u¾
+38 
+u¾
 (
 r
 '^blog/id/(?P<id>\d+)$', 'views.detail'),
 
-29 
-	`u¾
+39 
+u¾
 (
 r
 "^blog/comment/$", 'views.post_comment'),
 
-30 
-	`u¾
+40 
+u¾
+(
+r
+'^blog/about/(\d+)$', 'views.about'),
+
+41 
+u¾
 (
 r
 '^blog/about/$', 'views.about'),
 
-31 
-	`u¾
+42 
+u¾
 (
 r
 '^blog/contact/$', 'views.contact'),
 
-33 
-£‰šgs
+43 
+u¾
+(
+r
+'^blog/source/$', 'views.source'),
+
+46 
+	g£‰šgs
 .
-DEBUG
+	gDEBUG
  =ğ
 True
 :
 
-34 
+47 
 u¾·‰”ns
  +ğ
-	`¡©icfes_u¾·‰”ns
+¡©icfes_u¾·‰”ns
 ()
 
 	@/var/www/blog/blog/wsgi.py
@@ -1450,6 +1580,10 @@ H–loWÜldAµliÿtiÚ
 (
 ­¶iÿtiÚ
 )
+
+	@/var/www/blog/helps/__init__.py
+
+	@/var/www/blog/helps/pagHelp.py
 
 	@/var/www/blog/manage.py
 
@@ -49062,7 +49196,7 @@ Mod–Admš
 49 
 def
  
-	$up_¿‹
+	$up_pv
 (
 mod–Admš
 , 
@@ -49074,7 +49208,7 @@ qu”y£t
 50 #qu”y£t.
 	`upd©e
 (
-ÿ‹gÜy_¿‹
+ÿ‹gÜy_pv
 =1)
 
 51 
@@ -49088,8 +49222,8 @@ qu”y£t
 52 
 ÿ‹
 .
-ÿ‹gÜy_¿‹
- = cate.category_rate + 1
+ÿ‹gÜy_pv
+ = cate.category_pv + 1
 
 53 
 ÿ‹
@@ -49098,10 +49232,10 @@ qu”y£t
 ()
 
 54 
-up_¿‹
+up_pv
 .
 shÜt_desütiÚ
- = "updatehe category„ate by 1"
+ = "updatehe category…v by 1"
 
 56 
 şass
@@ -49115,12 +49249,12 @@ Mod–Admš
 
 58 
 Üd”šg
- = ['-category_rate']
+ = ['-category_pv']
 
 59 
 aùiÚs
  = [
-up_¿‹
+up_pv
 ]
 
 62 
@@ -49137,21 +49271,7 @@ Mod–Admš
 ·ss
 
 
-65 
-şass
- 
-	$Blog_TagAdmš
-(
-admš
-.
-Mod–Admš
-):
-
 66 
-·ss
-
-
-68 
 admš
 .
 s™e
@@ -49161,7 +49281,7 @@ Blog
 BlogAdmš
 )
 
-69 
+67 
 admš
 .
 s™e
@@ -49171,7 +49291,7 @@ C©egÜy
 C©egÜyAdmš
 )
 
-70 
+68 
 admš
 .
 s™e
@@ -49181,7 +49301,7 @@ Tag
 TagAdmš
 )
 
-71 
+69 
 admš
 .
 s™e
@@ -49191,15 +49311,125 @@ Comm’t
 Comm’tAdmš
 )
 
-72 
-admš
+	@/var/www/blog/webblog/context_processors.py
+
+1 
+äom
+ 
+	gwebblog
 .
-s™e
-.(
-Blog_Tag
-, 
-Blog_TagAdmš
-)
+mod–s
+ 
+impÜt
+ 
+	gTag
+,
+	gC©egÜy
+,
+	gComm’t
+,
+Blog
+
+
+2 
+def
+ 
+	$sideb¬
+(
+»que¡
+):
+
+4 
+add
+ 
+the
+ 
+sideb¬
+ 
+d©a
+ 
+to
+h
+‹m¶©e
+
+
+6 
+gs
+ = 
+Tag
+.
+objeùs
+.
+	$®l
+()
+
+7 
+ÿ‹
+ = 
+C©egÜy
+.
+objeùs
+.
+	$®l
+()
+
+8 
+hÙcomm’t
+ = 
+Comm’t
+.
+objeùs
+.
+	`f‹r
+(
+is_şo£
+=
+F®£
+)[0:5]
+
+10 
+mo¡comm’t
+ = 
+Blog
+.
+objeùs
+.
+	`¿w
+(
+
+13 
+»ûÁBlog
+ = 
+Blog
+.
+objeùs
+.
+	`Üd”_by
+('-pub_time')[0:5]
+
+16 'gs': 
+gs
+,
+
+17 'ÿ‹': 
+ÿ‹
+,
+
+18 'hÙcomm’t': 
+hÙcomm’t
+,
+
+19 'mo¡comm’t': 
+mo¡comm’t
+,
+
+20 '»ûÁBlog': 
+»ûÁBlog
+,
+
+21 
+	}
+}
 
 	@/var/www/blog/webblog/form.py
 
@@ -49337,78 +49567,6 @@ f›lds
 
 	@/var/www/blog/webblog/management/commands/_private.py
 
-	@/var/www/blog/webblog/management/commands/createCommand.py
-
-1 #!/
-u¤
-/
-bš
-/
-pythÚ2
-.7
-
-2 #ch¬£t=
-utf
--8
-
-4 
-äom
- 
-	gdjªgo
-.
-	gcÜe
-.
-	gmªagem’t
-.
-ba£
- 
-impÜt
- 
-	gBa£Commªd
-, 
-CommªdE¼Ü
-
-
-5 
-äom
- 
-	gwebblog
-.
-mod–s
- 
-impÜt
- 
-CÚù
-
-
-7 
-şass
- 
-	$Commªd
-(
-Ba£Commªd
-):
-
-8 
-¬gs
- = ''
-
-9 
-h–p
- = ''
-
-11 
-def
- 
-	$hªdË
-(
-£lf
-, *
-¬gs
-, **
-İtiÚs
-):
-
 	@/var/www/blog/webblog/management/commands/tryTemplate.py
 
 1 #!/
@@ -49480,7 +49638,9 @@ impÜt
 ,
 	gTem¶©eEncodšgE¼Ü
 ,
-Tem¶©eSyÁaxE¼Ü
+	gTem¶©eSyÁaxE¼Ü
+, 
+lßd”
 
 
 8 
@@ -49489,7 +49649,13 @@ impÜt
 jsÚ
 
 
-10 
+9 
+impÜt
+ 
+codecs
+
+
+11 
 şass
  
 	$Commªd
@@ -49497,41 +49663,51 @@ jsÚ
 Ba£Commªd
 ):
 
-11 
+12 
 ¬gs
  = ''
 
-12 
+13 
 h–p
  = "tryheemplate in console"
 
-13 
+14 
 İtiÚ_li¡
  = 
 Ba£Commªd
 .option_list + (
 
-14 
+15 
 	`make_İtiÚ
 ('--‹mp', 
 aùiÚ
 ='¡Üe', 
 de¡
-='‹mp_fe', 
+='tfe', 
 h–p
 ='enter‡emp fileory'
 
-16 
+17 
 	`make_İtiÚ
 ('--cÚ‹xt', 
 aùiÚ
 ='¡Üe', 
 de¡
-='cÚ‹xt_d©a', ='', 
+='cÚ‹xt', ='', 
 h–p
 ='enter‡ json style context forheemplate'
 
-20 
+19 
+	`make_İtiÚ
+('--wr™e-fe', 
+aùiÚ
+='¡Üe', 
+de¡
+='pfe', ='', 
+h–p
+='enter‡ file…ath'
+
+23 
 def
  
 	$hªdË
@@ -49543,43 +49719,63 @@ def
 İtiÚs
 ):
 
-21 
+24 #´šˆ
+¬gs
+
+
+25 #´šˆ
+İtiÚs
+
+
+27 
 Œy
 :
 
-22 
-s
- = 
-	`İ’
-(
-£lf
-.
-‹mp
-).
-	$»ad
-()
-
-23 
+28 
 t
  = 
-	$Tem¶©e
+lßd”
+.
+	`g‘_‹m¶©e
 (
-s
-)
+İtiÚs
+['tfile'])
 
-24 
+29 
+exû±
+ 
+Tem¶©eDÛsNÙExi¡
+:
+
+30 
+´št
+ "template %s‚otƒxist"
+
+32 
 d©a
  = 
 jsÚ
 .
-	$»ad
+	`lßds
 (
-£lf
-.
-cÚ‹xt
-)
+İtiÚs
+['context'])
 
-25 
+33 
+nÙ
+ 
+	$isš¡ªû
+(
+d©a
+, 
+diù
+):
+
+34 
+´št
+ "context option should be‡ dict†ike json"
+
+36 
 c
  = 
 	$CÚ‹xt
@@ -49587,7 +49783,7 @@ c
 d©a
 )
 
-26 
+37 
 ouut
  = 
 t
@@ -49597,25 +49793,51 @@ t
 c
 )
 
-27 
+38 
+nÙ
+ 
+İtiÚs
+['pfile']:
+
+39 
 ´št
  
 ouut
 
 
-28 
-exû±
- 
-IOE¼Ü
- 
-as
- 
-e
-:
+41 
+p
+ = 
+	$unicode
+(
+ouut
+)
 
-29 
-¿i£
- 
+42 
+å
+ = 
+codecs
+.
+	`İ’
+(
+İtiÚs
+['pfile'], 'wb', 'utf-8')
+
+43 
+å
+.
+	$wr™e
+(
+p
+)
+
+44 
+å
+.
+	$şo£
+()
+
+45 #¿i£ 
 	`CommªdE¼Ü
 ('‹m°% nÙƒxi¡s' % 
 £lf
@@ -49623,7 +49845,7 @@ e
 ‹mp
 )
 
-30 #exû± 
+46 #exû± 
 Tem¶©eDÛsNÙExi¡
 ,
 Tem¶©eEncodšgE¼Ü
@@ -49635,25 +49857,265 @@ as
 e
 :
 
-31 #´šˆ
+47 #´šˆ
 e
 .
 mes§ges
 
 
-32 #¿i£ 
+48 #¿i£ 
 	`CommªdE¼Ü
 ('template hasƒrror')
 
-33 
-fš®ly
-:
+	@/var/www/blog/webblog/middleware.py
 
-34 
-s
+1 #!/
+u¤
+/
+bš
+/
+pythÚ2
+.7
+
+2 #codšg=
+utf
+-8
+
+4 
+äom
+ 
+	gdjªgo
 .
-	`şo£
+h‰p
+ 
+impÜt
+ 
+H‰pRe¥Ú£
+
+
+5 
+äom
+ 
+	gdjªgo
+.
+shÜtcuts
+ 
+impÜt
+ 
+»nd”_to_»¥Ú£
+
+
+6 
+äom
+ 
+	gdjªgo
+.
+‹m¶©e
+ 
+impÜt
+ 
+Reque¡CÚ‹xt
+
+
+7 
+äom
+ 
+	gwebblog
+.
+mod–s
+ 
+impÜt
+ *
+
+8 
+äom
+ 
+	gdjªgo
+.
+	gdb
+.
+mod–s
+ 
+impÜt
+ 
+CouÁ
+
+
+10 
+şass
+ 
+	$WebblogMiddËw¬e
+(
+objeù
+):
+
+12 
+add
+ 
+some
+ 
+commÚ
+ 
+v¬ŸbË
+ 
+to
+ 
+the
+ 
+»¥Ú£
+
+
+15 
+def
+ 
+	$´oûss_‹m¶©e_»¥Ú£
+(
+£lf
+, 
+»que¡
+, 
+»¥Ú£
+):
+
+16 #´šˆ
+»¥Ú£
+.
+cÚ‹xt_d©a
+
+
+17 
+gs
+ = 
+Tag
+.
+objeùs
+.
+	$®l
 ()
+
+18 
+ÿ‹
+ = 
+C©egÜy
+.
+objeùs
+.
+	$®l
+()
+
+19 
+hÙcomm’t
+ = 
+Comm’t
+.
+objeùs
+.
+	`f‹r
+(
+is_şo£
+=
+F®£
+)[0:5]
+
+21 
+mo¡comm’t
+ = 
+Blog
+.
+objeùs
+.
+	`¿w
+(
+
+25 
+»¥Ú£
+.
+cÚ‹xt_d©a
+['gs'] = 
+gs
+
+
+26 
+»¥Ú£
+.
+cÚ‹xt_d©a
+['ÿ‹'] = 
+ÿ‹
+
+
+27 
+»¥Ú£
+.
+cÚ‹xt_d©a
+['hÙcom'] = 
+hÙcomm’t
+
+
+28 
+»¥Ú£
+.
+cÚ‹xt_d©a
+['mo¡com'] = 
+mo¡comm’t
+
+
+30  
+»¥Ú£
+
+
+31  
+	`»nd”_to_»¥Ú£
+(
+»¥Ú£
+.
+‹m¶©e_Çme
+,„e¥Ú£.
+cÚ‹xt_d©a
+, 
+cÚ‹xt_š¡ªû
+=
+	$Reque¡CÚ‹xt
+(
+»que¡
+))
+
+33 
+def
+ 
+	$´oûss_»¥Ú£
+(
+£lf
+, 
+»que¡
+, 
+»pÚ£
+):
+
+34 #»tuº 
+	`H‰pRe¥Ú£
+('Hi world')
+
+35  
+»pÚ£
+
+
+37 
+def
+ 
+	$´oûss_»que¡
+(
+£lf
+, 
+»que¡
+):
+
+38 #»tuº 
+	`H‰pRe¥Ú£
+('hi hello')
+
+39  
+NÚe
+
 
 	@/var/www/blog/webblog/models.py
 
@@ -49690,10 +50152,24 @@ exû±iÚs
  
 impÜt
  
-	gV®id©iÚE¼Ü
+V®id©iÚE¼Ü
 
 
-6 #C»©
+5 
+äom
+ 
+	gdjªgo
+.
+	gcÚŒib
+.
+s™em­s
+ 
+impÜt
+ 
+	gS™em­
+
+
+7 #C»©
 your
  
 mod–s
@@ -49701,7 +50177,7 @@ mod–s
 h”e
 .
 
-8 
+9 
 şass
  
 	$C©egÜy
@@ -49711,7 +50187,7 @@ mod–s
 Mod–
 ):
 
-9 
+13 
 ÿ‹gÜy_id
  = 
 mod–s
@@ -49723,7 +50199,7 @@ mod–s
 True
 )
 
-10 
+14 
 Çme
  = 
 mod–s
@@ -49733,7 +50209,21 @@ mod–s
 max_Ëngth
 =20)
 
-11 
+15 
+desc
+ = 
+mod–s
+.
+	$Ch¬F›ld
+(
+max_Ëngth
+=100,
+bÏnk
+=
+True
+)
+
+16 
 ü—‹_time
  = 
 mod–s
@@ -49745,17 +50235,17 @@ auto_now
 True
 )
 
-12 
-ÿ‹gÜy_¿‹
+17 
+ÿ‹gÜy_pv
  = 
 mod–s
 .
-	`Sm®lIÁeg”F›ld
-(
+	`IÁeg”F›ld
+(=0, 
 v”bo£_Çme
-="æ’å")
+="ç‚¹å‡»æ¬¡æ•°")
 
-14 
+19 
 def
  
 	$__unicode__
@@ -49763,13 +50253,23 @@ def
 £lf
 ):
 
-15  
+20  
 £lf
 .
 Çme
 
 
-17 
+22 
+şass
+ 
+M‘a
+:
+
+23 
+Üd”šg
+ = ['-category_pv']
+
+25 
 şass
  
 	$Blog
@@ -49779,7 +50279,7 @@ mod–s
 Mod–
 ):
 
-18 
+29 
 blog_id
  = 
 mod–s
@@ -49791,17 +50291,19 @@ mod–s
 True
 )
 
-19 
-ÿ‹gÜy_id
+30 
+ÿ‹gÜy
  = 
 mod–s
 .
-	$FÜeignKey
+	`FÜeignKey
 (
 C©egÜy
-)
+,
+db_cŞumn
+="category_id")
 
-20 
+31 
 t™Ë
  = 
 mod–s
@@ -49817,17 +50319,7 @@ True
 unique
 =True)
 
-21 
-desc
- = 
-mod–s
-.
-	$Ch¬F›ld
-(
-max_Ëngth
-=150)
-
-22 
+32 
 cÚ‹Á
  = 
 mod–s
@@ -49835,7 +50327,7 @@ mod–s
 	$TextF›ld
 ()
 
-23 
+33 
 pub_time
  = 
 mod–s
@@ -49849,39 +50341,25 @@ True
 db_šdex
 =True)
 
-24 
-upd©e_time
+34 
+blog_pv
  = 
 mod–s
 .
-	$D©eTimeF›ld
-()
+	$IÁeg”F›ld
+(=0)
 
-25 
-is_pub
- = 
-mod–s
-.
-	$BoŞ—nF›ld
-()
-
-26 
-is_şo£
+35 
+is_şo£d
  = 
 mod–s
 .
 	$BoŞ—nF›ld
-()
+(=
+F®£
+)
 
-27 
-is_visŸbË
- = 
-mod–s
-.
-	$BoŞ—nF›ld
-()
-
-29 
+37 
 def
  
 	$__unicode__
@@ -49889,27 +50367,27 @@ def
 £lf
 ):
 
-30  
+38  
 £lf
 .
 t™Ë
 
 
-32 
+40 
 şass
  
 M‘a
 :
 
-33 
+41 
 db_bË
  = 'blog'
 
-34 
+42 
 Üd”šg
- = ['-pub_time']
+ = ['-pub_time','-blog_pv']
 
-36 
+44 
 şass
  
 	$Tag
@@ -49919,7 +50397,7 @@ mod–s
 Mod–
 ):
 
-37 
+48 
 g_id
  = 
 mod–s
@@ -49931,7 +50409,17 @@ mod–s
 True
 )
 
-38 
+49 
+blog
+ = 
+mod–s
+.
+	$MªyToMªyF›ld
+(
+Blog
+)
+
+50 
 g_Çme
  = 
 mod–s
@@ -49947,7 +50435,7 @@ True
 unique
 =True)
 
-39 
+51 
 desc
  = 
 mod–s
@@ -49957,7 +50445,7 @@ mod–s
 max_Ëngth
 =50)
 
-40 
+52 
 ü—‹_time
  = 
 mod–s
@@ -49969,15 +50457,17 @@ auto_now
 True
 )
 
-41 
-g_¿‹
+53 
+g_pv
  = 
 mod–s
 .
-	$Sm®lIÁeg”F›ld
-()
+	`IÁeg”F›ld
+(=0, 
+v”bo£_Çme
+="ç‚¹å‡»é‡")
 
-43 
+55 
 def
  
 	$__unicode__
@@ -49985,79 +50475,23 @@ def
 £lf
 ):
 
-44  
+56  
 £lf
 .
 g_Çme
 
 
-46 
+58 
 şass
  
-	$Blog_Tag
-(
-mod–s
-.
-Mod–
-):
+M‘a
+:
 
-47 
-»ÏtiÚ_id
- = 
-mod–s
-.
-	$AutoF›ld
-(
-´im¬y_key
-=
-True
-)
+60 
+Üd”šg
+ = ['-tag_pv',"-create_time"]
 
-48 
-blog_id
- = 
-mod–s
-.
-	$FÜeignKey
-(
-Blog
-)
-
-49 
-g_id
- = 
-mod–s
-.
-	$FÜeignKey
-(
-Tag
-)
-
-51 
-def
- 
-	$__unicode__
-(
-£lf
-):
-
-52 
-s
- = "th%d„–©thblog %d‡ndhTag %d" % (
-£lf
-.
-»ÏtiÚ_id
-, s–f.
-blog_id
-.blog_id, s–f.
-g_id
-.tag_id)
-
-53  
-s
-
-
-55 
+63 
 şass
  
 	$Comm’t
@@ -50067,11 +50501,11 @@ mod–s
 Mod–
 ):
 
-56 
+67 
 COMMENT_LEVEL_CHOICES
  = (
 
-60 
+71 
 comm’t_id
  = 
 mod–s
@@ -50083,7 +50517,7 @@ mod–s
 True
 )
 
-61 
+72 
 authÜ_Çme
  = 
 mod–s
@@ -50093,7 +50527,7 @@ mod–s
 max_Ëngth
 =10)
 
-62 
+73 
 authÜ_ema
  = 
 mod–s
@@ -50101,7 +50535,7 @@ mod–s
 	$EmaF›ld
 ()
 
-63 
+74 
 cÚ‹Á
  = 
 mod–s
@@ -50109,65 +50543,37 @@ mod–s
 	$TextF›ld
 ()
 
-64 
+75 
 is_şo£
  = 
 mod–s
 .
 	$BoŞ—nF›ld
-()
-
-65 
-is_disÿrd
- = 
-mod–s
-.
-	$BoŞ—nF›ld
-()
-
-66 
-comm’t_Ëv–
- = 
-mod–s
-.
-	$Sm®lIÁeg”F›ld
-(
-choiûs
-=
-COMMENT_LEVEL_CHOICES
+(=
+F®£
 )
 
-67 
-·»Á_id
- = 
-mod–s
-.
-	`FÜeignKey
-('£lf', 
-bÏnk
-=
-True
-, 
-nuÎ
-=True)
-
-68 
-blog_id
+76 
+blog
  = 
 mod–s
 .
 	$FÜeignKey
 (
 Blog
-, 
-bÏnk
-=
-True
-, 
-nuÎ
-=True)
+)
 
-70 
+77 
+comm’t_up
+ = 
+mod–s
+.
+	`IÁeg”F›ld
+(=0,
+v”bo£_Çme
+="åŠ åˆ†æ¬¡æ•°")
+
+79 
 def
  
 	$__unicode__
@@ -50175,7 +50581,7 @@ def
 £lf
 ):
 
-71  'th% ha §y: %s' % (
+80  'th% ha §y: %s' % (
 £lf
 .
 authÜ_Çme
@@ -50183,7 +50589,17 @@ authÜ_Çme
 cÚ‹Á
 [:10]+'..')
 
-74 
+82 
+şass
+ 
+M‘a
+:
+
+83 
+Üd”šg
+ = ['-comment_up']
+
+86 
 şass
  
 	$About
@@ -50193,7 +50609,7 @@ mod–s
 Mod–
 ):
 
-75 
+87 
 Çme
  = 
 mod–s
@@ -50203,7 +50619,7 @@ mod–s
 max_Ëngth
 =10)
 
-76 
+88 
 ema
  = 
 mod–s
@@ -50211,7 +50627,7 @@ mod–s
 	$EmaF›ld
 ()
 
-77 
+89 
 webs™e
  = 
 mod–s
@@ -50223,7 +50639,7 @@ bÏnk
 True
 )
 
-78 
+90 
 cÚ‹Á
  = 
 mod–s
@@ -50231,7 +50647,7 @@ mod–s
 	$TextF›ld
 ()
 
-80 
+92 
 def
  
 	$__unicode__
@@ -50239,29 +50655,17 @@ def
 £lf
 ):
 
-81 #»tuº "%Òame) w™hƒma %Óma) £ndhis: (%cÚ‹Á)s" % {'Çme':
+93  '% w™hƒma: % £ndhis: %s' % (
 £lf
 .
 Çme
-, 'ema':£lf.
-ema
-, 'cÚ‹Á':£lf.
-cÚ‹Á
-}
-
-82  '% w™hƒma: % £ndhis: %s' % (
-£lf
-.
-Çme
-, 
-	g£lf
-.
-	gema
 , s–f.
-	gcÚ‹Á
+ema
+, s–f.
+cÚ‹Á
 )
 
-83 
+95 
 def
  
 	$v®id©e_qq
@@ -50269,7 +50673,7 @@ def
 v®ue
 ):
 
-84 
+96 
 »qq
  = 
 »
@@ -50277,7 +50681,7 @@ v®ue
 	`compe
 ("[0-9]{6,10}")
 
-85 
+97 
 nÙ
  
 »qq
@@ -50287,7 +50691,7 @@ nÙ
 v®ue
 ):
 
-86 
+98 
 ¿i£
  
 	`V®id©iÚE¼Ü
@@ -50297,7 +50701,7 @@ u
 v®ue
 )
 
-88 
+100 
 şass
  
 	$CÚù
@@ -50307,7 +50711,7 @@ mod–s
 Mod–
 ):
 
-89 
+101 
 Çme
  = 
 mod–s
@@ -50317,7 +50721,7 @@ mod–s
 max_Ëngth
 =10)
 
-90 
+102 
 ema
  = 
 mod–s
@@ -50325,7 +50729,7 @@ mod–s
 	$EmaF›ld
 ()
 
-91 
+103 
 webs™e
  = 
 mod–s
@@ -50339,7 +50743,7 @@ True
 nuÎ
 =True)
 
-92 
+104 
 qq
  = 
 mod–s
@@ -50357,15 +50761,7 @@ v®id©Üs
 v®id©e_qq
 ,])
 
-93 
-cÚ‹Á
- = 
-mod–s
-.
-	$TextF›ld
-()
-
-94 
+105 
 if_acû±_ema
  = 
 mod–s
@@ -50375,7 +50771,15 @@ mod–s
 F®£
 )
 
-96 
+106 
+cÚ‹Á
+ = 
+mod–s
+.
+	$TextF›ld
+()
+
+108 
 def
  
 	$__unicode__
@@ -50383,13 +50787,81 @@ def
 £lf
 ):
 
-97  '%Òame) w™hƒma: %Óma)s' % ({'Çme':
+109  '%Òame) w™hƒma: %Óma)s' % ({'Çme':
 £lf
 .
 Çme
 , 'ema':£lf.
 ema
 })
+
+111 
+şass
+ 
+	$BlogS™em­
+(
+S™em­
+):
+
+112 
+chªgeäeq
+ = "never"
+
+113 
+´iÜ™y
+ = 0.5
+
+115 
+def
+ 
+	$™ems
+(
+£lf
+):
+
+116  
+Blog
+.
+objeùs
+.
+	$f‹r
+(
+is_şo£d
+=
+F®£
+)
+
+118 
+def
+ 
+	$Ï¡mode
+(
+£lf
+, 
+obj
+):
+
+119  
+obj
+.
+pub_time
+
+
+121 
+def
+ 
+	$loÿtiÚ
+(
+£lf
+, 
+obj
+):
+
+122  "/blog/id/%s" % (
+obj
+.
+blog_id
+, )
 
 	@/var/www/blog/webblog/static/common.js
 
@@ -50495,23 +50967,73 @@ impÜt
 Te¡Ca£
 
 
+9 
+äom
+ 
+	gwebblog
+.
+‹¡s_bak
+ 
+impÜt
+ 
+ş›Á
+
+
+10 
+äom
+ 
+	gdjªgo
+.
+uts
+ 
+impÜt
+ 
+un™‹¡
+
+
 11 
+äom
+ 
+	gwebblog
+.
+mod–s
+ 
+impÜt
+ 
+Blog
+
+
+12 
+äom
+ 
+	gdjªgo
+.
+	g‹¡
+.
+ş›Á
+ 
+impÜt
+ 
+Cl›Á
+
+
+14 
 şass
  
-	$Sim¶eTe¡
+	$SimTe¡
 (
 Te¡Ca£
 ):
 
-12 
+15 
 def
  
-	$‹¡_basic_add™iÚ
+	$‹¡_add™iÚ
 (
 £lf
 ):
 
-14 
+17 
 Te¡s
  
 th©
@@ -50521,11 +51043,375 @@ th©
 equ®s
  2.
 
-16 
+19 
 £lf
 .
 	`as£¹Equ®
 (1 + 1, 2)
+
+21 #şas 
+	`Fœ¡Te¡
+(
+Te¡Ca£
+):
+
+22 #deà
+	`‹¡_blog
+(
+£lf
+):
+
+23 #äom 
+webblog
+.
+mod–s
+ 
+impÜt
+ 
+Blog
+
+
+24 #b = 
+Blog
+.
+objeùs
+.
+	`®l
+()
+
+25 #£lf.
+	`as£¹Equ®
+(
+	`Ën
+(
+b
+), 20)
+
+26 
+şass
+ 
+	$BlogTe¡
+(
+Te¡Ca£
+):
+
+29 
+def
+ 
+	$£tUp
+(
+£lf
+):
+
+30 
+·ss
+
+
+32 
+def
+ 
+	$‹¬Down
+(
+£lf
+):
+
+33 
+·ss
+
+
+35 
+def
+ 
+	$‹¡_blogIndex
+(
+£lf
+):
+
+36 
+c
+ = 
+	$Cl›Á
+()
+
+38 
+»pÚ£
+ = 
+c
+.
+	`g‘
+("/blog/-1")
+
+39 
+£lf
+.
+	$as£¹Equ®
+(
+»pÚ£
+.
+¡©us_code
+, 404)
+
+40 
+»pÚ£
+ = 
+c
+.
+	`g‘
+("/blog/")
+
+41 
+£lf
+.
+	$as£¹Equ®
+(
+»pÚ£
+.
+¡©us_code
+, 200)
+
+43 
+def
+ 
+	$su™e
+():
+
+44 
+su™e
+ = 
+un™‹¡
+.
+	$Te¡Su™e
+()
+
+45 
+su™e
+.
+	`addTe¡
+(
+ş›Á
+.
+	`AboutTe¡Ca£
+('test_data_not_empty'))
+
+46 
+su™e
+.
+	`addTe¡
+(
+	`SimTe¡
+('test_addition'))
+
+47 
+su™e
+.
+	`addTe¡
+(
+	`BlogTe¡
+('test_blogIndex'))
+
+48  
+su™e
+
+
+	@/var/www/blog/webblog/tests_bak/__init__.py
+
+	@/var/www/blog/webblog/tests_bak/client.py
+
+1 
+äom
+ 
+	gdjªgo
+.
+	g‹¡
+.
+ş›Á
+ 
+impÜt
+ 
+Cl›Á
+
+
+2 
+äom
+ 
+	gdjªgo
+.
+uts
+ 
+impÜt
+ 
+un™‹¡
+
+
+3 
+äom
+ 
+	gwebblog
+.
+mod–s
+ 
+impÜt
+ *
+
+4 
+äom
+ 
+	gwebblog
+.
+fÜm
+ 
+impÜt
+ *
+
+6 
+şass
+ 
+	$AboutTe¡Ca£
+(
+un™‹¡
+.
+Te¡Ca£
+):
+
+8 
+‹¡
+ 
+about
+
+
+10 
+fixtu»s
+ = ['',]
+
+12 #muÉi_db = 
+True
+
+
+14 
+def
+ 
+	$£tUp
+(
+£lf
+):
+
+15 
+·ss
+
+
+17 
+def
+ 
+	$‹¬Down
+(
+£lf
+):
+
+18 
+·ss
+
+
+20 
+def
+ 
+	$‹¡_d©a_nÙ_em±y
+(
+£lf
+):
+
+22 
+‹¡
+ 
+about
+ 
+d©aba£
+ 
+is
+ 
+nÙ
+ 
+em±y
+
+
+24 
+about
+ = 
+About
+.
+objeùs
+.
+	$®l
+()
+
+25 
+£lf
+.
+	`as£¹NÙEqu®
+(
+	`Ën
+(
+about
+), 2)
+
+27 
+def
+ 
+	$‹¡_about_po¡
+(
+£lf
+):
+
+28 
+c
+ = 
+	$Cl›Á
+()
+
+29 
+»¥Ú£
+ = 
+c
+.
+	`po¡
+('/blog/about/', {
+
+34 
+	}
+})
+
+35 
+	g£lf
+.
+	$as£¹Equ®
+(
+»¥Ú£
+.
+¡©us_code
+, 200)
+
+37 
+´št
+ 
+»¥Ú£
+.
+‹m¶©es
+
+
+40 
+def
+ 
+	$su™e
+():
+
+41 
+·ss
+
+
+42 #su™ğ
+un™‹¡
+.
+	`Te¡Su™e
+()
 
 	@/var/www/blog/webblog/views.py
 
@@ -50624,7 +51510,11 @@ impÜt
  
 impÜt
  
-Pagš©Ü
+	gPagš©Ü
+,
+	gPageNÙAnIÁeg”
+,
+Em±yPage
 
 
 11 
@@ -50639,43 +51529,43 @@ impÜt
 H‰p404
 
 
+12 
+äom
+ 
+	gdjªgo
+.
+	g‹m¶©e
+.
+»¥Ú£
+ 
+impÜt
+ 
+Tem¶©eRe¥Ú£
+
+
 13 
-	gÿ‹_couÁ
- = 
-C©egÜy
+äom
+ 
+	gdjªgo
 .
-objeùs
+	gv›ws
 .
-	$couÁ
-()
-
-14 
-ÿ‹
- = 
-C©egÜy
+	gdecÜ©Üs
 .
-objeùs
-.
-	`®l
-()[0:10]
+ÿche
+ 
+impÜt
+ 
+	gÿche_·ge
 
-15 
-cÚ‹xt
- = {
 
-16 'ÿ‹_couÁ':
-ÿ‹_couÁ
-,
+15 @
+ÿche_·ge
+(3600, 
+ÿche
+="default")
 
-17 'ÿ‹':
-ÿ‹
-,
-
-18 
-	}
-}
-
-20 
+16 
 def
  
 	$šdex
@@ -50685,107 +51575,17 @@ def
 ·ge
 =1):
 
-21 
-glob®
- 
-cÚ‹xt
-
-
-22 
-ÿ‹_couÁ
- = 
-C©egÜy
-.
-objeùs
-.
-	$couÁ
-()
-
-23 
-ÿ‹
- = 
-C©egÜy
-.
-objeùs
-.
-	`®l
-()[0:10]
-
-24 
-gs_couÁ
- = 
-Tag
-.
-objeùs
-.
-	$couÁ
-()
-
-25 
-gs
- = 
-Tag
-.
-objeùs
-.
-	$®l
-()
-
-26 
-hÙComm’t_couÁ
- = 
-Comm’t
-.
-objeùs
-.
-	$couÁ
-()
-
-27 
-hÙComm’t
- = 
-Comm’t
-.
-objeùs
-.
-	`f‹r
-(
-is_şo£
-=
-F®£
-,
-is_disÿrd
-=F®£).
-	`Üd”_by
-("comment_level")[0:10]
-
-29 
-hÙBlog
- = 
-Comm’t
-.
-objeùs
-.
-	`¿w
-("select count(blog_id)‡d comment_count from webblog_comment where blog_id is‚ot‚ull‡nd is_close!=FALSE‡nd is_discard!=FALSE group by blog_id order by comment_count†imit 10")
-
-31 
+17 
 blogs
  = 
 Blog
 .
 objeùs
 .
-	`f‹r
-(
-is_pub
-=
-True
-).
 	`Üd”_by
 ("-pub_time")
 
-32 
+18 
 p
  = 
 	$Pagš©Ü
@@ -50793,11 +51593,11 @@ p
 blogs
 , 3)
 
-33 
+19 
 Œy
 :
 
-34 
+20 
 blogs
  = 
 p
@@ -50807,13 +51607,13 @@ p
 ·ge
 )
 
-35 
+21 
 exû±
  
 PageNÙAnIÁeg”
 :
 
-36 
+22 
 blogs
  = 
 p
@@ -50821,13 +51621,13 @@ p
 	$·ge
 (1)
 
-37 
+23 
 exû±
  
 Em±yPage
 :
 
-38 
+24 
 blogs
  = 
 p
@@ -50839,7 +51639,7 @@ p
 num_·ges
 )
 
-40 
+26 
 blog
  
 š
@@ -50847,7 +51647,7 @@ blog
 blogs
 :
 
-41 
+27 
 blog
 .
 comm’t_couÁ
@@ -50865,37 +51665,35 @@ blog_id
 blog
 .blog_id))
 
-43 
-cÚ‹xt
-['gs_couÁ'] = 
-gs_couÁ
-
-
-44 
-cÚ‹xt
-['gs'] = 
-gs
-
-
-45 
-cÚ‹xt
-['blogs'] = 
+29 #»tuº 
+	`Tem¶©eRe¥Ú£
+(
+»que¡
+, 'webblog/šdex.html', {'blogs':
 blogs
+})
 
-
-46  
-	`»nd”_to_»¥Ú£
-('webblog/šdex.html',
-cÚ‹xt
-, 
+30  
+»nd”_to_»¥Ú£
+('webblog/šdex.html', {'blogs':
+blogs
+}, 
 cÚ‹xt_š¡ªû
 =
-	$Reque¡CÚ‹xt
+Reque¡CÚ‹xt
 (
 »que¡
 ))
 
-48 
+32 @
+ÿche_·ge
+(3600, 
+ÿche
+="deçuÉ", 
+key_´efix
+="cate")
+
+33 
 def
  
 	$ÿ‹
@@ -50907,14 +51705,136 @@ def
 ·ge
 =1):
 
-49 
-glob®
+34 
+ÿ‹
  
-cÚ‹xt
+is
+ 
+NÚe
+:
 
+35 
+¿i£
+ 
+H‰p404
+
+
+37 
+blogs
+ = 
+Blog
+.
+objeùs
+.
+	`f‹r
+(
+ÿ‹gÜy
+=
+C©egÜy
+.objeùs.
+	$g‘
+(
+ÿ‹gÜy_id
+=
+ÿ‹
+))
+
+38 
+p
+ = 
+	$Pagš©Ü
+(
+blogs
+, 3)
+
+39 
+Œy
+:
+
+40 
+blogs
+ = 
+p
+.
+	$·ge
+(
+·ge
+)
+
+41 
+exû±
+ 
+PageNÙAnIÁeg”
+:
+
+42 
+blogs
+ = 
+p
+.
+	$·ge
+(1)
+
+43 
+exû±
+ 
+Em±yPage
+:
+
+44 
+blogs
+ = 
+p
+.
+	$·ge
+(
+p
+.
+num_·ges
+)
+
+45 #»tuº 
+	`Tem¶©eRe¥Ú£
+(
+»que¡
+, 'webblog/šdex.html', {'blogs':
+blogs
+})
+
+46  
+»nd”_to_»¥Ú£
+('webblog/šdex.html', {'blogs':
+blogs
+,}, 
+cÚ‹xt_š¡ªû
+=
+Reque¡CÚ‹xt
+(
+»que¡
+))
+
+48 @
+ÿche_·ge
+(3600, 
+ÿche
+="deçuÉ", 
+key_´efix
+="tag")
+
+49 
+def
+ 
+	$g
+(
+»que¡
+, 
+tid
+, 
+·ge
+=1):
 
 50 
-ÿ‹
+tid
  
 is
  
@@ -50927,21 +51847,35 @@ NÚe
 H‰p404
 
 
-52 
-blogs
+53 
+g
  = 
-Blog
+Tag
 .
 objeùs
 .
-	$f‹r
+	$g‘
 (
-ÿ‹gÜy_id__ÿ‹gÜy_id
+g_id
 =
-ÿ‹
+tid
 )
 
-53 
+54 
+blogs
+ = 
+g
+.
+blog
+.
+	$f‹r
+(
+is_şo£d
+=
+F®£
+)
+
+55 
 p
  = 
 	$Pagš©Ü
@@ -50949,11 +51883,11 @@ p
 blogs
 , 3)
 
-54 
+56 
 Œy
 :
 
-55 
+57 
 blogs
  = 
 p
@@ -50963,13 +51897,13 @@ p
 ·ge
 )
 
-56 
+58 
 exû±
  
 PageNÙAnIÁeg”
 :
 
-57 
+59 
 blogs
  = 
 p
@@ -50977,13 +51911,13 @@ p
 	$·ge
 (1)
 
-58 
+60 
 exû±
  
 Em±yPage
 :
 
-59 
+61 
 blogs
  = 
 p
@@ -50995,55 +51929,23 @@ p
 num_·ges
 )
 
-60 
-cÚ‹xt
-['blogs'] = 
-blogs
-
-
 62  
-	`»nd”_to_»¥Ú£
-('webblog/šdex.html', 
-cÚ‹xt
-, 
-cÚ‹xt_š¡ªû
-=
-	$Reque¡CÚ‹xt
+	`Tem¶©eRe¥Ú£
 (
 »que¡
-))
+, 'webblog/šdex.html', {'blogs':
+blogs
+})
 
-64 
-def
- 
-	$g
-(
-»que¡
-, 
-g
-):
+64 @
+ÿche_·ge
+(3600, 
+ÿche
+="feÿche", 
+key_´efix
+="blog")
 
 65 
-·ss
-
-
-67 
-def
- 
-	$d©e
-(
-»que¡
-, 
-y—r
-, 
-mÚth
-):
-
-68 
-·ss
-
-
-70 
 def
  
 	$d‘a
@@ -51053,7 +51955,43 @@ def
 id
 ):
 
-71 
+66 
+»que¡
+.
+m‘hod
+ == "POST":
+
+67 
+comm’tFÜm
+ = 
+	$Comm’tFÜm
+(
+»que¡
+.
+POST
+)
+
+68 
+comm’tFÜm
+.
+	$is_v®id
+():
+
+69 
+comm’t
+ = 
+comm’tFÜm
+.
+	$§ve
+(
+comm™
+=
+F®£
+)
+
+70 
+comm’t
+.
 blog
  = 
 Blog
@@ -51067,29 +52005,49 @@ blog_id
 id
 )
 
-72 
+71 
+comm’t
+.
+	$§ve
+()
+
+72  
+	`»dœeù
+("/blog/")
+
+73 
+blog
+ = 
+Blog
+.
+objeùs
+.
+	$g‘
+(
+blog_id
+=
+id
+)
+
+74 
 comm’ts
  = 
 Comm’t
 .
 objeùs
 .
-	`f‹r
+	$f‹r
 (
-blog_id
-=
-id
-).
-	`Üd”_by
-('comment_level')
+blog
+=blog)
 
-73 
+75 
 comm’tFÜm
  = 
 	$Comm’tFÜm
 ()
 
-75  
+77  
 	`»nd”_to_»¥Ú£
 ('webblog/d‘a.html', {'blog':
 blog
@@ -51097,23 +52055,31 @@ blog
 comm’ts
 , 'fÜm':
 comm’tFÜm
-})
+}, cÚ‹xt_š¡ªû=Reque¡CÚ‹xtÔeque¡))
 
-77 
+79 @
+ÿche_·ge
+(3600, 
+ÿche
+="filecache")
+
+80 
 def
  
 	$about
 (
 »que¡
-):
+, 
+·ge
+=1):
 
-78 
+81 
 »que¡
 .
 m‘hod
  == "POST":
 
-79 
+82 
 fÜm
  = 
 	$AboutFÜm
@@ -51123,30 +52089,30 @@ fÜm
 POST
 )
 
-80 
+83 
 fÜm
 .
 	$is_v®id
 ():
 
-81 
+84 
 fÜm
 .
 	$§ve
 ()
 
-82  
+85  
 	`»dœeù
-('/blog/')
+('/blog/about/')
 
-84 
+87 
 fÜm
  = 
 	$AboutFÜm
 ()
 
-85 
-about
+88 
+abouts
  = 
 About
 .
@@ -51155,15 +52121,75 @@ objeùs
 	$®l
 ()
 
-86  
+89 
+p
+ = 
+	$Pagš©Ü
+(
+abouts
+, 10)
+
+90 
+Œy
+:
+
+91 
+abouts
+ = 
+p
+.
+	$·ge
+(
+·ge
+)
+
+92 
+exû±
+ 
+PageNÙAnIÁeg”
+:
+
+93 
+abouts
+ = 
+p
+.
+	$·ge
+(1)
+
+94 
+exû±
+ 
+Em±yPage
+:
+
+95 
+abouts
+ = 
+p
+.
+	$·ge
+(
+p
+.
+num_·ges
+)
+
+96  
 	`»nd”_to_»¥Ú£
-('blog/about.html', {'fÜm':
+('webblog/about.html', {'fÜm':
 fÜm
-, 'about':
-about
+, 'abouts':
+abouts
 }, cÚ‹xt_š¡ªû=Reque¡CÚ‹xtÔeque¡))
 
-88 
+98 @
+ÿche_·ge
+(3600, 
+ÿche
+="filecache")
+
+99 
 def
  
 	$cÚù
@@ -51171,13 +52197,13 @@ def
 »que¡
 ):
 
-89 
+100 
 »que¡
 .
 m‘hod
  == "POST":
 
-90 
+101 
 fÜm
  = 
 	$CÚùFÜm
@@ -51187,89 +52213,71 @@ fÜm
 POST
 )
 
-91 
+102 
 fÜm
 .
 	$is_v®id
 ():
 
-92 
+103 
 fÜm
 .
 	$§ve
 ()
 
-93 
+104  
+	`»nd”_to_»¥Ú£
+('tips.html')
+
+105 
 admš_ema
- = 
-·¿ms
-.
-cÚù_ema_admš
-.
-admš
+ = "daipeng123456@gmail.com"
 
-
-94 
-	`£nd_ema
+106 
+	`£nd_ma
 ('è”ç³»æˆ‘ä»¬', 
 fÜm
 .
 ş—Ãd_d©a
-.
-cÚ‹Á
-, 
-EMAIL_HOST_USER
-, ['da’g123456@gma.com'], 
+['cÚ‹Á'], "da’g123456@gma.com", ['da’g123456@gma.com'], 
 ç_s’y
 =
 F®£
 )
 
-95 
+107 
 True
  =ğ
 fÜm
 .
 ş—Ãd_d©a
-.
-if_acû±_ema
-:
+['if_accept_email']:
 
-96 
-	`£nd_ema
+108 
+	`£nd_ma
 ('è”ç³»æˆ‘ä»¬', 
 fÜm
 .
 ş—Ãd_d©a
-.
-cÚ‹Á
-, 
-EMAIL_HOST_USER
-, [fÜm.ş—Ãd_d©a.
-ema
-,], 
+['cÚ‹Á'], "da’g123456@gma.com", [fÜm.ş—Ãd_d©a['ema'],], 
 ç_s’y
 =
 F®£
 )
 
-97  
-	`»nd”_to_»¥Ú£
-('tips.html')
-
-99 
+111 
 fÜm
  = 
 	$CÚùFÜm
 ()
 
-100  
+112  
 	`»nd”_to_»¥Ú£
-('blog/cÚù.html', {'fÜm': 
+('webblog/cÚù.html', {'fÜm': 
 fÜm
 }, cÚ‹xt_š¡ªû=Reque¡CÚ‹xtÔeque¡))
 
-102 
+114 
 def
  
 	$po¡_comm’t
@@ -51279,13 +52287,19 @@ def
 id
 ):
 
-103 
+115 
+»que¡
+.
+	$is_ajax
+(è
+ªd
+ 
 »que¡
 .
 m‘hod
  == 'POST':
 
-104 
+116 
 fÜm
  = 
 	$Comm’tFÜm
@@ -51295,37 +52309,43 @@ fÜm
 POST
 )
 
-105 
-blog
- = 
-Blog
-.
-objeùs
-.
-	$g‘
-(
-blog_id
-=
-id
-)
-
-106 #ià
+117 
 fÜm
 .
 is_v®id
 :
+
+118 
+fÜm
+.
+	$§ve
+()
+
+121 
+def
+ 
+	$sourû
+(
+»que¡
+):
+
+122 
+·ss
+
 
 	@
 1
 .
 1
 /usr/include
-43
-1767
+48
+1937
 /var/www/blog/blog/__init__.py
 /var/www/blog/blog/settings.py
 /var/www/blog/blog/urls.py
 /var/www/blog/blog/wsgi.py
+/var/www/blog/helps/__init__.py
+/var/www/blog/helps/pagHelp.py
 /var/www/blog/manage.py
 /var/www/blog/shell_spide.py
 /var/www/blog/static/admin/js/SelectBox.js
@@ -51354,14 +52374,17 @@ is_v®id
 /var/www/blog/static/js/blog.js
 /var/www/blog/webblog/__init__.py
 /var/www/blog/webblog/admin.py
+/var/www/blog/webblog/context_processors.py
 /var/www/blog/webblog/form.py
 /var/www/blog/webblog/management/__init__.py
 /var/www/blog/webblog/management/commands/__init__.py
 /var/www/blog/webblog/management/commands/_private.py
-/var/www/blog/webblog/management/commands/createCommand.py
 /var/www/blog/webblog/management/commands/tryTemplate.py
+/var/www/blog/webblog/middleware.py
 /var/www/blog/webblog/models.py
 /var/www/blog/webblog/static/common.js
 /var/www/blog/webblog/static/js/blog.js
 /var/www/blog/webblog/tests.py
+/var/www/blog/webblog/tests_bak/__init__.py
+/var/www/blog/webblog/tests_bak/client.py
 /var/www/blog/webblog/views.py
