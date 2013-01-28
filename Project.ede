@@ -1,0 +1,7 @@
+;; Object djangoblog
+;; EDE project file.
+(ede-proj-project "djangoblog"
+  :name "djangoblog"
+  :file "Project.ede"
+  :targets 'nil
+  )

@@ -107,6 +107,16 @@ class Contact(models.Model):
     
     def __unicode__(self):
         return '%(name)s with email: %(email)s' % ({'name':self.name, 'email':self.email})
+
+class Source(models.Model):
+    """
+    用于管理部分技术文档上传的model
+    """
+    author = models.CharField(max_length=10, default="hackrole", blank=True, verbose_name="姓名")
+    email =  models.EmailField(verbose_name="邮箱")
+    file_name = models.CharField(max_length=30, verbose_name="文件名")
+    file_desc = models.CharField(max_length=50, verbose_name="简单描述")
+    file_path = models.FileField(upload_to="sources", verbose_name="选择文件")
     
 class BlogSitemap(Sitemap):
     changefreq = "never"
@@ -120,3 +130,4 @@ class BlogSitemap(Sitemap):
     
     def location(self, obj):
         return "/blog/id/%s" % (obj.blog_id, )
+

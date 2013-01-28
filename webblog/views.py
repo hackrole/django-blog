@@ -11,9 +11,12 @@ from django.core.paginator import Paginator,PageNotAnInteger,EmptyPage
 from django.http import Http404
 from django.template.response import TemplateResponse
 from django.views.decorators.cache import cache_page
+import logging
+
 
 @cache_page(3600, cache="default")
 def index(request, page=1):
+    log = logging.getLogger('blog')
     blogs = Blog.objects.order_by("-pub_time")
     p = Paginator(blogs, 3)
     try:
@@ -22,6 +25,7 @@ def index(request, page=1):
         blogs = p.page(1)
     except EmptyPage:
         blogs = p.page(p.num_pages)
+        log.error("a request try to visit a not exist page")
 
     for blog in blogs:
         blog.comment_count = len(Comment.objects.filter(blog_id=blog.blog_id))
@@ -82,6 +86,10 @@ def about(request, page=1):
         form = AboutForm(request.POST)
         if form.is_valid():
             form.save()
+        else:
+            log = logging.getLogger('about')
+            log.Formatter('%(asctime)s %(levelname)s %(message)s'))
+            log.info("form valid false")
         return redirect('/blog/about/')
     
     form = AboutForm()
@@ -103,11 +111,25 @@ def contact(request):
             form.save()
             return render_to_response('tips.html')
             admin_email = "daipeng123456@gmail.com"
-            send_mail('联系我们', form.cleaned_data['content'], "daipeng123456@gmail.com", ['daipeng123456@gmail.com'], fail_silently=False)
+            send_mail(
+            '联系我们', 
+            form.cleaned_data['content'], 
+            "daipeng123456@gmail.com", 
+            ['daipeng123456@gmail.com'], 
+            fail_silently=False
+            )
             if True == form.cleaned_data['if_accept_email']:
-                send_mail('联系我们', form.cleaned_data['content'], "daipeng123456@gmail.com", [form.cleaned_data['email'],], fail_silently=False)
+                send_mail(
+                '联系我们', 
+                form.cleaned_data['content'], 
+                "daipeng123456@gmail.com", 
+                [form.cleaned_data['email'],], 
+                fail_silently=False
+                )
+        else:
+            log = loggging.getLogger('contact')
+            log.debug('contact form valid false')
 
-    
     form = ContactForm()
     return render_to_response('webblog/contact.html', {'form': form}, context_instance=RequestContext(request))
 
@@ -120,3 +142,4 @@ def post_comment(request, id):
 
 def source(request):
     pass
+

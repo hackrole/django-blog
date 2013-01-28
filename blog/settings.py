@@ -157,17 +157,28 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
+    'formats':{
+        'default':{
+            'format':'%(asctime)s %(threadName)s %(name)s %(linono)s',
+            },
+        },
     'filters': {
         'require_debug_false': {
-            '()': 'django.utils.log.RequireDebugFalse'
+            '()': 'django.utils.log.RequireDebugFalse',
         }
     },
     'handlers': {
         'mail_admins': {
             'level': 'ERROR',
-            'filters': ['require_debug_false'],
-            'class': 'django.utils.log.AdminEmailHandler'
-        }
+            'filters': [],
+            'class': 'django.utils.log.AdminEmailHandler',
+        },
+        'file_log': {
+            'level':'INFO',
+            'filters':[],
+            'class':'logging.handlers.RotatingFileHandler',
+            'filename':'log/blog'
+            },
     },
     'loggers': {
         'blog': {
@@ -176,18 +187,12 @@ LOGGING = {
             'propagate': True,
         },
         'about':{
-            'handlers': [],
+            'handlers': ['file_log'],
             'propagate': True,
             'level':'INFO',
             },
         'contact':{
-            'handlers': [],
-            'level': 'DEBUG',
-            'filters': []
-            },
-        'blog.comment':{
-            'handlers': [],
-            'propagate': False,
+            'handlers': ['file_log'],
             'level': 'DEBUG',
             },
     }

@@ -1,4 +1,4 @@
-cscope 15 /var/www/blog               0000297703
+cscope 15 /var/www/blog               0000300137
 	@/var/www/blog/blog/__init__.py
 
 	@/var/www/blog/blog/settings.py
@@ -1584,6 +1584,358 @@ H–loWÜldAµliÿtiÚ
 	@/var/www/blog/helps/__init__.py
 
 	@/var/www/blog/helps/pagHelp.py
+
+1 #!/
+u¤
+/
+bš
+/
+pythÚ2
+.7
+
+2 #codšg=
+utf
+-8
+
+4 
+äom
+ 
+	gdjªgo
+.
+	gcÜe
+.
+·gš©Ü
+ 
+impÜt
+ 
+Pagš©Ü
+
+
+6 
+şass
+ 
+	gPageH–p
+:
+
+8 
+äom
+ 
+a
+ 
+PagštÜ
+ 
+objeù
+ 
+ouut
+‡ 
+html
+-
+·ge
+ 
+¡ršg
+
+
+11 
+def
+ 
+	$__š™__
+(
+£lf
+, 
+p
+):
+
+13 
+š™
+
+
+15 
+	$isš¡ªû
+(
+p
+, 
+Pagš©Ü
+):
+
+16 
+£lf
+.
+p
+ =…
+
+18 
+¿i£
+ 
+	`Ty³E¼Ü
+("not‡ Pagintor object")
+
+19 #£lf.
+şass
+ = class
+
+23 
+def
+ 
+	$nÜm®Page
+(
+£lf
+, 
+cu¼’t_·ge
+ = 
+NÚe
+, 
+max_·ge
+=10, 
+fœ¡_ªd_’d
+=
+True
+, 
+´e_ªd_Ãxt
+=True, 
+if_gÙo
+=
+F®£
+):
+
+25 
+cu¼’t_·ge
+: 
+NÚe
+, 
+nÙ
+ 
+aùive
+ 
+cu¼’t
+ 
+·ge
+, aùiv
+the
+ 
+giv’
+…ag
+num
+, 
+like
+ current_page = 1.
+
+26 
+max_·ge
+: 
+the
+ 
+max
+ 
+show
+ 
+·ge
+ 
+nums
+,h
+Ùh”
+ 
+wl
+ 
+be
+ show 
+by
+ ...
+
+27 
+fœ¡_ªd_’d
+: 
+show
+ 
+the
+ 
+fœ¡
+ 
+ªd
+ 
+’d
+ 
+bu‰Ú
+.
+
+28 
+´e_ªd_Ãxt
+: 
+show
+ 
+´e
+ 
+ªd
+ 
+Ãxt
+ 
+bu‰Ú
+.
+
+29 
+if_gÙo
+: 
+show
+ 
+the
+ 
+bu‰Ú
+.
+
+32 
+p
+ = 
+£lf
+.p
+
+33 
+ouut
+ = []
+
+34 
+·ge
+ 
+š
+ 
+p
+.
+·ge_¿nge
+:
+
+35 
+·ge
+ >ğ
+max_·ge
+:
+
+36 
+s
+ = '<¨h»f="?·ge=%s" cÏss="cu¼’t">%s</a>...' % (
+·ge
+,…age)
+
+37 
+ouut
+.
+	$­³nd
+(
+s
+)
+
+39 
+cu¼’t_·ge
+ 
+is
+ 
+nÙ
+ 
+NÚe
+ 
+ªd
+ 
+·ge
+ =ğ
+cu¼»Á_·ge
+:
+
+40 
+s
+ = '<¨h»f="?·ge=%s" cÏss="cu¼’t">%s</a>' % (
+·ge
+,…age)
+
+42 
+s
+ğ'<¨h»f="?·ge=%s" cÏss="cu¼’t">%s</a>' % (
+·ge
+,…age)
+
+44 
+ouut
+.
+	$­³nd
+(
+s
+)
+
+46 
+´e_ªd_Ãxt
+:
+
+47 
+s1
+ = '<¨h»f="?·ge=%s" cÏss="´e">%s</a>' % (
+·ge
+, "ä¸Šä¸€é¡µ")
+
+48 
+s2
+ = '¨h»f="?·ge=%s" cÏss="Ãxt">%s</a>' % (
+·ge
+, "ä¸‹ä¸€é¡µ")
+
+49 
+ouut
+.
+	$š£¹
+(0, 
+s1
+)
+
+50 
+ouut
+.
+	$­³nd
+(
+s2
+)
+
+51 
+fœ¡_ªd_’d
+:
+
+52 
+s1
+ = '<¨h»f="?·ge=%s" cÏss="fœ¡">%s</a>' % (
+·ge
+, "é¦–é¡µ")
+
+53 
+s2
+ = '<¨h»f="?·ge=%s" cÏss="’d">%s</a>' % (
+·ge
+, "æœ«é¡µ")
+
+54 
+ouut
+.
+	$š£¹
+(0, 
+s1
+)
+
+55 
+ouut
+.
+	$­³nd
+(
+s2
+)
+
+56 #ià
+if_gÙo
+:
+
+58 
+ouut
+ = ''.
+	$još
+(
+ouut
+)
+
+59  
+ouut
+
 
 	@/var/www/blog/manage.py
 
@@ -51170,12 +51522,188 @@ c
 , 200)
 
 43 
+şass
+ 
+	$H–pTe¡
+(
+Te¡Ca£
+):
+
+44 
+def
+ 
+	$£tUp
+(
+£lf
+):
+
+45 
+·ss
+
+
+47 
+def
+ 
+	$‹¡_·ge_h–p
+(
+£lf
+):
+
+48 
+äom
+ 
+h–ps
+.
+·gH–p
+ 
+impÜt
+ 
+PageH–p
+
+
+49 
+äom
+ 
+djªgo
+.
+cÜe
+.
+·gš©Ü
+ 
+impÜt
+ 
+Pagš©Ü
+
+
+50 
+a1
+ = 
+	$¿nge
+(50)
+
+51 
+a2
+ = 
+	$¿nge
+(100)
+
+52 
+a3
+ = 
+	$¿nge
+(1000)
+
+53 
+p1
+ = 
+	$Pagš©Ü
+(
+a1
+, 10)
+
+54 
+p2
+ = 
+	$Pagš©Ü
+(
+a2
+, 10)
+
+55 
+p3
+ = 
+	$Pagš©Ü
+(
+a3
+, 10)
+
+56 
+r1
+ = 
+	`PageH–p
+(
+p1
+).
+	$nÜm®Page
+()
+
+57 
+r2
+ = 
+	`PageH–p
+(
+p2
+).
+	$nÜm®Page
+()
+
+58 
+r3
+ = 
+	`PageH–p
+(
+p3
+).
+	$nÜm®Page
+()
+
+60 
+£lf
+.
+	$as£¹Equ®
+(
+r2
+, 
+r3
+)
+
+61 
+£lf
+.
+	$as£¹NÙEqu®
+(
+r2
+, 
+r1
+)
+
+62 
+£lf
+.
+	`as£¹Equ®
+(-1, 
+r1
+.
+	`fšd
+('...'))
+
+63 
+£lf
+.
+	`as£¹NÙEqu®
+(-1, 
+r2
+.
+	`fšd
+('...'))
+
+64 
+£lf
+.
+	`as£¹NÙEqu®
+(-1, 
+r3
+.
+	`fšd
+('...'))
+
+68 
 def
  
 	$su™e
 ():
 
-44 
+69 
 su™e
  = 
 un™‹¡
@@ -51183,7 +51711,7 @@ un™‹¡
 	$Te¡Su™e
 ()
 
-45 
+70 
 su™e
 .
 	`addTe¡
@@ -51193,7 +51721,7 @@ su™e
 	`AboutTe¡Ca£
 ('test_data_not_empty'))
 
-46 
+71 
 su™e
 .
 	`addTe¡
@@ -51201,7 +51729,15 @@ su™e
 	`SimTe¡
 ('test_addition'))
 
-47 
+72 
+su™e
+.
+	`addTe¡
+(
+	`H–pTe¡
+('test_page_help'))
+
+73 
 su™e
 .
 	`addTe¡
@@ -51209,7 +51745,7 @@ su™e
 	`BlogTe¡
 ('test_blogIndex'))
 
-48  
+74  
 su™e
 
 
