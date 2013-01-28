@@ -41,7 +41,7 @@ urlpatterns += patterns('webblog',
                         url(r'^blog/about/$', 'views.about'),
                         url(r'^blog/contact/$', 'views.contact'),
                         url(r'^blog/source/$', 'views.source'),
-                        
+                        url(r'^blog/history/$', 'views.surce_his'),
 )
 if settings.DEBUG == True:
     urlpatterns += staticfiles_urlpatterns()

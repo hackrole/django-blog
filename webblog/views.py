@@ -11,6 +11,7 @@ from django.core.paginator import Paginator,PageNotAnInteger,EmptyPage
 from django.http import Http404
 from django.template.response import TemplateResponse
 from django.views.decorators.cache import cache_page
+from django.views.decorators.csrf import csrf_exempt
 import logging
 
 
@@ -88,7 +89,6 @@ def about(request, page=1):
             form.save()
         else:
             log = logging.getLogger('about')
-            log.Formatter('%(asctime)s %(levelname)s %(message)s'))
             log.info("form valid false")
         return redirect('/blog/about/')
     
@@ -139,7 +139,19 @@ def post_comment(request, id):
         if form.is_valid:
             form.save()
 
-
+@csrf_exempt
 def source(request):
-    pass
+    if request.method == "POST":
+        form = SourceForm(request.POST, request.FILES)
+        if form.is_valid():
+            # handle_uploaded_file(request.FILES['file'])
+            form.save()
+            return render_to_response('webblog/success.html', context_instance=RequestContext(request))
+    else:
+        form = SourceForm()
+    return render_to_response('webblog/upload.html', { 'form':form}, context_instance=RequestContext(request))
+
+def surce_his(request):
+    sources = Source.objects.all()
+    return render_to_response('webblog/sulist.html', {'sources':sources}, context_instance=RequestContext(request))
 

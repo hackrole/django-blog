@@ -1,0 +1,14 @@
+{% extends "blog-base.html" %}
+
+{% block main_content %}
+<p style="color:red">上传文件</p>
+{% for source in sources %}
+<p>{{ source.author }},邮箱 {{ source.email|default:'' }}</p>
+<p>文件名:{{ source.file_name }}</p>
+<p>描述:{{ source.file_desc }}<p>
+<p><a style="color:blue" href="uploads/{{ source.file_path }}">下载</a></p>
+{% endfor %}
+
+{% endblock %}
+
+

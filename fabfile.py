@@ -1,6 +1,7 @@
 from __future__ import with_statement
-from fabric.api import local,settings, abort
+from fabric.api import local,settings, abort,run
 from fabric.contrib.console import confirm
+
 
 def prepare_deploy():
     local("python manage.py test webblog")
@@ -16,5 +17,8 @@ def test():
 
 def uname():
     local("echo `uname -a`")
+
+def deploy():
+    pass
 
 
