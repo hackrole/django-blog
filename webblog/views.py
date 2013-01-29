@@ -13,7 +13,7 @@ from django.template.response import TemplateResponse
 from django.views.decorators.cache import cache_page
 from django.views.decorators.csrf import csrf_exempt
 import logging
-
+from helps.redisHelp import RedisHelp
 
 @cache_page(3600, cache="default")
 def index(request, page=1):
@@ -38,7 +38,13 @@ def index(request, page=1):
 def cate(request, cate, page=1):
     if cate is None:
         raise Http404
-
+    redis_key = "blog_cate_pv_%s_%s" % (cate, page)
+    r = RedisHelp()
+    if r.get(redis_key):
+        v = (int)r.get(redis_key)
+    else:
+        v = 0
+    r.set(redis_key, v+1)
     blogs = Blog.objects.filter(category=Category.objects.get(category_id=cate))
     p = Paginator(blogs, 3)
     try:
@@ -55,6 +61,13 @@ def tag(request, tid, page=1):
     if tid is None:
         raise Http404
 
+    redis_key = "blog_tag_pv_%s_%s" % (tid, page)
+    r = RedisHelp()    
+    if r.get(redis_key):
+        v = r.get(redis_key)
+    else:
+        v = 0
+    r.set(redis_key, v+1)
     tag = Tag.objects.get(tag_id=tid)
     blogs = tag.blog.filter(is_closed=False)
     p = Paginator(blogs, 3)
@@ -75,6 +88,13 @@ def detail(request, id):
             comment.blog = Blog.objects.get(blog_id=id)
             comment.save()
             return redirect("/blog/")
+    redis_key = "blog_detail_%s" % (id)
+    r = RedisHelp()
+    if r.get(redis_key):
+        v = r.get(redis_key)
+    else:
+        v = 0
+    r.set(redis_key, v+1)
     blog = Blog.objects.get(blog_id=id)
     comments = Comment.objects.filter(blog=blog)
     commentForm = CommentForm()

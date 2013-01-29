@@ -23,5 +23,7 @@ startmemcache-dev:
 endmemcache-dev:
 	kill `cate /var/run/mem.pid` 
 
+
+
 clean:
 	rm -rf ctags etags cscope* filenametags
