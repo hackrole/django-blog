@@ -41,7 +41,7 @@ def cate(request, cate, page=1):
     redis_key = "blog_cate_pv_%s_%s" % (cate, page)
     r = RedisHelp()
     if r.get(redis_key):
-        v = (int)r.get(redis_key)
+        v = int(r.get(redis_key))
     else:
         v = 0
     r.set(redis_key, v+1)

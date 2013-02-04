@@ -137,6 +137,7 @@ INSTALLED_APPS = (
     # # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
     'webblog',
+    'filebrowser',
 )
 # List of processors used by RequestContext to populate the context.
 # Each one should be a callable that takes the request object as its

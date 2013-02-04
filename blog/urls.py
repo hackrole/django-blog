@@ -6,6 +6,7 @@ from blog import settings
 from webblog.models import BlogSitemap
 from django.contrib.sitemaps import views as sitemaps_views
 from django.views.decorators.cache import cache_page
+from filebrowser.sites import site
 
 admin.autodiscover()
 
@@ -43,5 +44,10 @@ urlpatterns += patterns('webblog',
                         url(r'^blog/source/$', 'views.source'),
                         url(r'^blog/history/$', 'views.surce_his'),
 )
+
+urlpatterns += patterns('',
+                        url(r'^admin/filebrowser/', include(site.urls)),
+)
+
 if settings.DEBUG == True:
     urlpatterns += staticfiles_urlpatterns()
